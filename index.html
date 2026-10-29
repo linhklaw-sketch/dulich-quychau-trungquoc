@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lịch trình du lịch Quý Châu (Guizhou) 5 ngày 4 đêm, 20/11 → 24/11/2026: bản đồ, khoảng cách, ăn uống và tiếng Trung du lịch.">
+<meta name="theme-color" content="#b5502e">
+<title>Quý Châu 5N4Đ (20/11 → 24/11/2026)</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --bg-card: #ffffff;
+    --ink: #1f2a24;
+    --ink-soft: #5b6660;
+    --accent: #b5502e;
+    --accent-soft: #e9c9b5;
+    --teal: #2f7d6d;
+    --line: #d8cfc2;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161a17; --bg-card: #1f2521; --ink: #f1ece3;
+      --ink-soft: #a9a297; --accent: #e08a5f; --accent-soft: #4a352a; --line: #33372f; --teal: #5fbfa9;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161a17; --bg-card: #1f2521; --ink: #f1ece3;
+    --ink-soft: #a9a297; --accent: #e08a5f; --accent-soft: #4a352a; --line: #33372f; --teal: #5fbfa9;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 32px 20px 60px; }
+  header { margin-bottom: 20px; }
+  .eyebrow { font-size: 17px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { font-size: clamp(24px, 5vw, 32px); margin: 6px 0 8px; letter-spacing: -0.01em; }
+  header p { color: var(--ink-soft); margin: 2px 0; font-size: 14.5px; }
+
+  .map-card {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 20px;
+    padding: 8px 4px 4px; margin: 20px 0 28px; overflow: hidden; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .map-card svg { width: 100%; height: auto; display: block; }
+  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; padding: 12px 16px 14px; font-size: 12.5px; color: var(--ink-soft); }
+  .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  nav.jump {
+    display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 26px;
+  }
+  nav.jump a {
+    font-size: 12.5px; color: var(--accent); text-decoration: none;
+    border: 1px solid var(--accent-soft); padding: 5px 11px; border-radius: 999px;
+  }
+
+  .day {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px 20px; margin-bottom: 16px; scroll-margin-top: 16px;
+  }
+  .day h2 { font-size: 16.5px; margin: 0 0 2px; color: var(--accent); }
+  .day .subtitle { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 12px; }
+  .day .note {
+    font-size: 12.5px; color: var(--ink-soft); font-style: italic; margin-bottom: 10px;
+  }
+
+  ul.stops { list-style: none; margin: 0; padding: 0; }
+  ul.stops li { padding: 9px 0; border-top: 1px solid var(--line); }
+  ul.stops li:first-child { border-top: none; }
+  a.pin {
+    display: inline-block; margin-top: 6px; font-size: 12px; color: var(--accent);
+    text-decoration: none; border: 1px solid var(--accent-soft); padding: 3px 9px;
+    border-radius: 999px; white-space: nowrap;
+  }
+  a.pin:hover { background: var(--accent-soft); }
+  .row { display: flex; gap: 10px; align-items: baseline; }
+  .stop-time { font-size: 12px; color: var(--accent); font-weight: 700; min-width: 92px; }
+  .stop-name { font-weight: 600; font-size: 14.5px; }
+  .stop-detail { color: var(--ink-soft); font-size: 13px; margin-top: 3px; margin-left: 102px; }
+  .stop-detail ul { margin: 4px 0 0; padding-left: 18px; }
+  .stop-detail li { padding: 1px 0; border: none; }
+  @media (max-width: 480px) {
+    .stop-detail { margin-left: 0; }
+    .row { flex-wrap: wrap; }
+  }
+
+  table.summary { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll table.summary { min-width: 640px; }
+  .table-scroll table.summary.wide { min-width: 720px; }
+  table.summary.wide td { line-height: 1.5; }
+  table.summary th, table.summary td {
+    border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top;
+  }
+  table.summary th { color: var(--accent); background: var(--accent-soft); font-weight: 700; }
+  table.summary tr.far td { font-weight: 700; }
+  table.summary tr.far td:first-child { color: var(--accent); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tags span {
+    font-size: 12px; background: var(--accent-soft); color: var(--accent);
+    padding: 3px 10px; border-radius: 999px; font-weight: 600;
+  }
+
+  ol.notes { padding-left: 20px; font-size: 13.5px; color: var(--ink-soft); }
+  ol.notes li { margin-bottom: 6px; }
+
+  .gallery {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin-top: 10px;
+  }
+  .gallery figure {
+    margin: 0; background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: 14px; overflow: hidden; padding: 0;
+  }
+  .gallery svg { width: 100%; height: auto; display: block; }
+  .gallery figcaption {
+    font-size: 12.5px; font-weight: 600; text-align: center; padding: 8px 6px 10px; color: var(--ink);
+  }
+
+
+  .tabbar {
+    display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--bg); padding: 10px 0 12px; margin: 6px 0 14px;
+    scrollbar-width: none;
+  }
+  .tabbar::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    color: var(--ink-soft); background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: 999px; padding: 7px 14px; line-height: 1.2; text-align: center;
+  }
+  .tab small { display: block; font-size: 10.5px; font-weight: 500; opacity: .85; margin-top: 1px; }
+  .tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab-panel { display: none; scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 66px); }
+  .tab-panel.active { display: block; }
+  table.summary.food td:first-child { white-space: nowrap; min-width: 150px; }
+  .table-scroll table.summary.food { min-width: 640px; }
+  .food-note { font-size: 12.5px; color: var(--ink-soft); margin: 10px 0 0; line-height: 1.5; }
+
+  .mp-box { fill: var(--bg); stroke: var(--line); }
+  .mp-boxacc { stroke: var(--accent); }
+  .mp-t { fill: var(--ink); }
+  .mp-s { fill: var(--ink-soft); }
+  .mp-line { stroke: var(--ink-soft); }
+  .mp-lineacc { stroke: var(--accent); }
+  .mp-lbl { fill: var(--bg-card); stroke: var(--line); }
+  .mp-dot { fill: var(--accent); }
+  .day-map { margin: 4px 0 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-card); padding: 6px; overflow: hidden; }
+  .day-map svg { display: block; width: 100%; height: auto; }
+  .hotel-card { border: 1px solid var(--accent-soft); background: var(--bg); border-radius: 12px; padding: 12px 14px; margin: 4px 0 14px; font-size: 13.5px; line-height: 1.5; }
+  .hotel-card b.h { color: var(--accent); }
+  .hotel-card .meta { color: var(--ink-soft); font-size: 12.5px; }
+  .ticket-box { border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; margin: 4px 0 14px; font-size: 13px; line-height: 1.55; background: var(--bg); }
+  .ticket-box b.h { color: var(--accent); }
+
+  .zh-search { width: 100%; font: inherit; font-size: 14px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); margin: 4px 0 10px; }
+  .zh-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .zh-chip { font: inherit; font-size: 12px; color: var(--accent); background: var(--bg); border: 1px solid var(--accent-soft); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+  .zh-all { display: inline-block; font: inherit; font-size: 12.5px; color: var(--accent); background: transparent; border: 1px solid var(--accent-soft); border-radius: 999px; padding: 5px 12px; margin: 0 0 8px; cursor: pointer; }
+  .zh-grid { display: block; }
+  .zh-grid.two { display: flex; gap: 16px; align-items: flex-start; }
+  .zh-col { flex: 1 1 0; min-width: 0; }
+  .zh-sec { margin: 0 0 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); overflow: hidden; scroll-margin-top: 12px; }
+  .zh-h { font-size: 15px; font-weight: 700; margin: 0; padding: 11px 14px; color: var(--accent); background: var(--accent-soft); display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer; }
+  .zh-h:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .zh-big { font-size: 16px; font-weight: 400; margin-right: 4px; }
+  .zh-chev { font-size: 16px; transition: transform .2s; }
+  .zh-sec.open .zh-chev { transform: rotate(180deg); }
+  .zh-body { display: none; padding: 8px 0 4px; }
+  .zh-sec.open .zh-body { display: block; }
+  .zh-sub { font-size: 12.5px; color: var(--ink-soft); margin: 0 14px 6px; }
+  ul.zh-list { list-style: none; margin: 0; padding: 0; }
+  li.zh-item { padding: 8px 14px; border-top: 1px dashed var(--line); cursor: pointer; break-inside: avoid; }
+  li.zh-item:hover, li.zh-item:focus-visible { background: var(--bg-card); outline: none; }
+  .zh-hz { font-size: 17px; font-weight: 400; line-height: 1.3; }
+  .zh-py { font-size: 12px; color: var(--accent); margin-top: 1px; }
+  .zh-vi { font-size: 13px; margin-top: 1px; }
+  .zh-note { font-size: 11.5px; color: var(--ink-soft); margin-top: 2px; font-style: italic; }
+  .zh-empty { font-size: 13px; color: var(--ink-soft); }
+  @media (min-width: 700px) {
+    .zh-all { display: none; }
+    .zh-body { display: block; }
+    .zh-chev { display: none; }
+    .zh-h { cursor: default; }
+  }
+  #zhZoom { position: fixed; inset: 0; z-index: 50; background: var(--bg); display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; padding-top: calc(24px + env(safe-area-inset-top, 0px)); padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+  #zhZoom.open { display: flex; }
+  #zhZoom .z-hz { font-size: clamp(34px, 9vw, 64px); font-weight: 400; line-height: 1.3; }
+  #zhZoom .z-py { font-size: clamp(16px, 4vw, 24px); color: var(--accent); margin-top: 12px; }
+  #zhZoom .z-vi { font-size: clamp(15px, 3.6vw, 20px); color: var(--ink-soft); margin-top: 10px; }
+  #zhZoom button { margin-top: 28px; font: inherit; font-size: 14px; padding: 9px 22px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+  .py { color: var(--accent); font-size: 0.86em; font-weight: 500; white-space: normal; }
+  table.summary tr.grp td { background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px; }
+  #toTop { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 40;
+    width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--accent); color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,.22); opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .2s, transform .2s, visibility .2s; }
+  #toTop.show { opacity: 1; visibility: visible; transform: none; }
+  #toTop:hover { filter: brightness(1.1); }
+  #toTop:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .mp-boxteal { stroke: var(--teal); }
+  .mp-lineteal { stroke: var(--teal); }
+  .mp-dotteal { fill: var(--teal); }
+  .map-cap { font-size: 12.5px; font-weight: 600; color: var(--accent); margin: 6px 2px 4px; display: flex; align-items: center; gap: 7px; }
+  .map-cap .cdot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; flex: 0 0 auto; }
+  .map-cap.teal { color: var(--teal); }
+  .map-cap.teal .cdot { background: var(--teal); }
+  /* Thanh tab: hiện đủ tất cả tab, xếp 2 hàng trên điện thoại */
+  .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; overflow: visible; position: static; padding: 6px 0 12px; margin: 6px 0 12px; }
+  .tab { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 46px; padding: 6px 3px; font-size: 12.5px; line-height: 1.15; border-radius: 12px; white-space: normal; overflow-wrap: anywhere; }
+  .tab small { font-size: 10.5px; }
+  @media (min-width: 700px) {
+    .tabbar { grid-template-columns: repeat(10, minmax(0, 1fr)); position: sticky; top: env(safe-area-inset-top, 0px); }
+    .tab { font-size: 13px; padding: 6px 2px; }
+  }
+  @media print {
+    .tabbar { display: none; }
+    #toTop { display: none !important; }
+    .day-map { break-inside: avoid; page-break-inside: avoid; }
+    .map-cap { break-after: avoid; page-break-after: avoid; }
+    .zh-search, .zh-chips, .zh-all, #zhZoom { display: none !important; }
+    .zh-grid, .zh-grid.two { display: block !important; }
+    .zh-sec { break-inside: auto; }
+    .zh-body { display: block !important; }
+    .zh-chev { display: none !important; }
+    ul.zh-list { column-count: 2; column-gap: 18px; }
+    li.zh-item { padding: 5px 2px; break-inside: avoid; }
+    .zh-hz { font-size: 14px; }
+    .zh-py, .zh-vi { font-size: 10.5px; }
+    .zh-note { font-size: 9.5px; }
+    .zh-sec { margin-top: 10px; }
+    .tab-panel { display: block !important; }
+  }
+  @media print {
+    .table-scroll { overflow: visible; }
+    .table-scroll table.summary, .table-scroll table.summary.wide, .table-scroll table.summary.food { min-width: 0; width: 100%; }
+    table.summary.food td:first-child { white-space: normal; min-width: 0; }
+    table.summary { font-size: 11.5px; }
+  }
+  footer { text-align: center; color: var(--ink-soft); font-size: 12.5px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Lịch trình du lịch</div>
+    <h1>Quý Châu (Guizhou) 5N4Đ (20/11 → 24/11/2026)</h1>
+    <p>Base: Quý Dương · 3 đêm tại Yibon International Hotel (Quý Dương, khu Penshuichi) + 1 đêm tại First Seeing Panorama Hotel (Tây Giang)</p>
+  </header>
+
+  <div class="tabbar" role="tablist" aria-label="Các mục lịch trình">
+    <button class="tab active" role="tab" id="btn-tomtat" data-tab="tomtat" aria-selected="true" aria-controls="tab-tomtat">Tóm tắt</button>
+    <button class="tab" role="tab" id="btn-day1" data-tab="day1" aria-selected="false" aria-controls="tab-day1">Day 1<small>20/11</small></button>
+    <button class="tab" role="tab" id="btn-day2" data-tab="day2" aria-selected="false" aria-controls="tab-day2">Day 2<small>21/11</small></button>
+    <button class="tab" role="tab" id="btn-day3" data-tab="day3" aria-selected="false" aria-controls="tab-day3">Day 3<small>22/11</small></button>
+    <button class="tab" role="tab" id="btn-day4" data-tab="day4" aria-selected="false" aria-controls="tab-day4">Day 4<small>23/11</small></button>
+    <button class="tab" role="tab" id="btn-day5" data-tab="day5" aria-selected="false" aria-controls="tab-day5">Day 5<small>24/11</small></button>
+    <button class="tab" role="tab" id="btn-khoangcach" data-tab="khoangcach" aria-selected="false" aria-controls="tab-khoangcach">Khoảng<br>cách</button>
+    <button class="tab" role="tab" id="btn-anuong" data-tab="anuong" aria-selected="false" aria-controls="tab-anuong">Ăn uống</button>
+    <button class="tab" role="tab" id="btn-tiengtrung" data-tab="tiengtrung" aria-selected="false" aria-controls="tab-tiengtrung">Tiếng Trung</button>
+    <button class="tab" role="tab" id="btn-luuy" data-tab="luuy" aria-selected="false" aria-controls="tab-luuy">Lưu ý</button>
+  </div>
+
+  <section class="tab-panel active" id="tab-tomtat" role="tabpanel" aria-labelledby="btn-tomtat">
+  <div class="map-card">
+    <svg viewBox="0 56 700 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ tuyến đường minh họa">
+  <line x1="350" y1="190" x2="120" y2="130" stroke="#3f6b5a" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
+  <line x1="350" y1="190" x2="590" y2="140" stroke="#b5502e" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
+  <line x1="350" y1="190" x2="300" y2="320" stroke="#6b5a94" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
+  <circle cx="350" cy="190" r="10" fill="#2b3a34"/><circle cx="350" cy="190" r="16" fill="none" stroke="#2b3a34" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="120" cy="130" r="9" fill="#3f6b5a"/><circle cx="590" cy="140" r="9" fill="#b5502e"/><circle cx="300" cy="320" r="9" fill="#6b5a94"/>
+  <text class="mp-t" x="374" y="214" font-size="17.5" font-weight="700" fill="#2b3a34">Quý Dương</text>
+  <text class="mp-s" x="374" y="234" font-size="13.5" fill="#5b6660">Yibon Hotel (3 đêm) · KWE</text>
+  <text x="120" y="86" text-anchor="middle" font-size="16.5" font-weight="700" fill="#3f6b5a">Hoàng Quả Thụ</text>
+  <text class="mp-s" x="120" y="106" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 2 · Tây, An Thuận</text>
+  <text x="590" y="92" text-anchor="middle" font-size="16.5" font-weight="700" fill="#b5502e">Tây Giang</text>
+  <text class="mp-s" x="590" y="112" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 4–5 · Đông, ở lại 1 đêm</text>
+  <text x="300" y="352" text-anchor="middle" font-size="16.5" font-weight="700" fill="#6b5a94">Libo Xiaoqikong</text>
+  <text class="mp-s" x="300" y="372" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 3 · Nam, xa nhất</text>
+</svg>
+    <div class="map-legend">
+      <span><span class="dot" style="background:#3f6b5a"></span>Day 2 · Tây</span>
+      <span><span class="dot" style="background:#6b5a94"></span>Day 3 · Nam</span>
+      <span><span class="dot" style="background:#b5502e"></span>Day 4–5 · Đông (ngủ 1 đêm)</span>
+    </div>
+  </div>
+
+
+  <div class="day" id="tomtat">
+    <h2>Tóm tắt route 5 ngày</h2>
+    <p style="font-size:12.5px;color:var(--ink-soft);margin:-4px 0 10px;"><b>In đậm</b> = địa điểm tham quan chính trong ngày.</p>
+    <div class="table-scroll">
+    <table class="summary wide">
+      <tr><th>Ngày</th><th>Tuyến</th><th>Giới thiệu địa điểm chính</th></tr>
+      <tr><td>Day 1<br>(20/11/2026)</td>
+        <td>Việt Nam → Quý Dương → Minsheng Road → <b>Qingyun Market</b> → <b>Jiaxiu Tower</b></td>
+        <td><b>Jiaxiu Tower (甲秀楼 <span class="py">(Jiǎxiù Lóu)</span>)</b>: biểu tượng của Quý Dương, lầu gỗ ba tầng dựng trên tảng đá giữa sông Nam Minh, xây từ thời Minh (1598) và được trùng tu nhiều lần; đẹp nhất khi lên đèn buổi tối. <b>Qingyun Market</b>: khu chợ văn hóa – sáng tạo với hàng thủ công, quà lưu niệm và ăn vặt địa phương.</td></tr>
+      <tr><td>Day 2<br>(21/11/2026)</td>
+        <td>Quý Dương → <b>Đại thác Hoàng Quả Thụ</b> → Water Curtain Cave → <b>Doupotang</b> → <b>Tianxing Bridge</b> → Quý Dương</td>
+        <td><b>Hoàng Quả Thụ (黄果树 <span class="py">(Huángguǒshù)</span>)</b>: một trong những thác lớn nhất châu Á (cao khoảng 77 m, rộng hơn 100 m), có hang Thủy Liêm sau màn nước để đi xuyên qua. <b>Doupotang</b>: thác rộng trên 100 m, là một trong những cảnh quay phim Tây Du Ký 1986. <b>Tianxing Bridge</b>: khu rừng đá karst, hang Thiên Tinh và thác Ngân Liên Trụy Đàm, có “Bước chân đời người” với 365 phiến đá.</td></tr>
+      <tr><td>Day 3<br>(22/11/2026)</td>
+        <td>Quý Dương → Libo Xiaoqikong → <b>Wolongtan</b> → Cuigu Waterfall → Water Forest → <b>Xiaoqikong Ancient Bridge</b> → Quý Dương</td>
+        <td><b>Xiaoqikong (小七孔 <span class="py">(Xiǎoqīkǒng)</span>)</b>: thung lũng karst nổi tiếng với nước xanh ngọc, thuộc vùng karst Libo – một phần Di sản thế giới UNESCO “Karst Nam Trung Quốc”. <b>Cầu cổ Xiaoqikong</b>: cầu đá bảy nhịp xây năm 1836, dài khoảng 25 m, phủ dây leo và dương xỉ. <b>Wolongtan</b>: nơi sông ngầm karst trồi lên, nổi tiếng với thác hình lưỡi liềm.</td></tr>
+      <tr><td>Day 4<br>(23/11/2026)</td>
+        <td>Quý Dương → <b>Xijiang Qianhu Miao Village</b> → bảo tàng + phố cổ → chụp trang phục Miêu → Fengyu Bridge → <b>đài quan sát ngắm đèn</b> → <b>ngủ lại Tây Giang</b></td>
+        <td><b>Tây Giang Thiên Hộ Miêu Trại (西江千户苗寨 <span class="py">(Xījiāng Qiānhù Miáozhài)</span>)</b>: làng người Miêu lớn nhất Trung Quốc với hơn nghìn hộ, nhà sàn gỗ dựng dọc sườn núi. Nổi bật với văn hóa Miêu: trang phục và trang sức bạc, nhạc cụ lô sênh (lusheng), lễ mời rượu; về đêm cả thung lũng lên đèn rất đẹp.</td></tr>
+      <tr><td>Day 5<br>(24/11/2026)</td>
+        <td>Ngắm mây sáng sớm ở Tây Giang → Kaili → Quý Dương → <b>Minsheng Road</b> → rảnh buổi chiều → 16:30 ra sân bay → Việt Nam</td>
+        <td><b>Sáng sớm Tây Giang</b>: mây sương phủ trên các mái nhà sàn gỗ, đẹp nhất nếu ở homestay lưng chừng núi. <b>Minsheng Road (民生路 <span class="py">(Mínshēng Lù)</span>)</b>: phố ẩm thực ăn vặt gần trung tâm Quý Dương, nổi tiếng với khoai tây chiên, khoai tây bọc trứng và luoguo, hợp cho bữa trưa cuối chuyến.</td></tr>
+    </table>
+    </div>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-day1" role="tabpanel" aria-labelledby="btn-day1">
+  <div class="day" id="d1">
+    <h2>Day 1 (20/11/2026) — Việt Nam → Quý Dương</h2>
+    <div class="subtitle">Minsheng Road → Qingyun Market → Jiaxiu Tower</div>
+    <div class="hotel-card"><b class="h">Khách sạn Quý Dương: Yibon International Hotel</b> (逸柏国际酒店 贵阳喷水池国贸广场店 <span class="py">(Yìbǎi Guójì Jiǔdiàn, Guìyáng Pēnshuǐchí Guómào Guǎngchǎng diàn)</span>)<br>
+      28th Floor, Zhenhua Technology Building, No. 1 Zhonghua North Road, Yunyan District, Quý Dương.<br>
+      <span class="meta">Ở 3 đêm: 20, 21, 22/11 (trả phòng sáng 23/11). Nhận phòng sau 14:00, trả phòng trước 14:00. Khách sạn nằm ở tầng 28. Gửi vali ở lễ tân sáng 23/11 đến khi quay lại 24/11.</span></div>
+    <div class="day-map"><svg viewBox="0 0 700 444" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bản đồ Day 1: khách sạn, Minsheng Road, Qingyun Market, Jiaxiu Tower" width="100%"><title>Bản đồ Day 1: khách sạn, Minsheng Road, Qingyun Market, Jiaxiu Tower</title><line class="mp-line mp-lineacc" x1="298" y1="84" x2="355" y2="158" stroke="#b5502e" stroke-width="2"/><line class="mp-line mp-lineacc" x1="355" y1="158" x2="363" y2="377" stroke="#b5502e" stroke-width="2"/><line class="mp-line mp-lineacc" x1="363" y1="377" x2="399" y2="163" stroke="#b5502e" stroke-width="2"/><line class="mp-line" x1="399" y1="163" x2="298" y2="84" stroke="#5b6660" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="193" y="110" width="127" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="257" y="125" font-size="13.5" text-anchor="middle" fill="#5b6660">~0,7 km · đi bộ</text><rect class="mp-lbl" x="191" y="277" width="165" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="274" y="292" font-size="13.5" text-anchor="middle" fill="#5b6660">~1,7 km · taxi/đi bộ</text><rect class="mp-lbl" x="409" y="251" width="120" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="469" y="266" font-size="13.5" text-anchor="middle" fill="#5b6660">~1,7 km · taxi</text><rect class="mp-lbl" x="346" y="88" width="165" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="429" y="103" font-size="13.5" text-anchor="middle" fill="#5b6660">~1,0 km về khách sạn</text><circle class="mp-dot" cx="298" cy="84" r="11" fill="#b5502e"/><text class="mp-w" x="298" y="88" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">KS</text><circle class="mp-dot" cx="355" cy="158" r="11" fill="#b5502e"/><text class="mp-w" x="355" y="162" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1</text><circle class="mp-dot" cx="363" cy="377" r="11" fill="#b5502e"/><text class="mp-w" x="363" y="381" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2</text><circle class="mp-dot" cx="399" cy="163" r="11" fill="#b5502e"/><text class="mp-w" x="399" y="167" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">3</text><text class="mp-t" x="278" y="70" font-size="15.5" text-anchor="end" fill="#1f2a24" font-weight="700">Yibon International Hotel</text><text class="mp-s" x="278" y="88" font-size="13.5" text-anchor="end" fill="#5b6660">Khu Penshuichi · Zhonghua North Rd</text><text class="mp-t" x="333" y="188" font-size="15.5" text-anchor="end" fill="#1f2a24" font-weight="700">1 · Minsheng Road</text><text class="mp-s" x="333" y="205" font-size="13.5" text-anchor="end" fill="#5b6660">Ăn nhẹ 16:30</text><text class="mp-t" x="421" y="168" font-size="15.5" text-anchor="start" fill="#1f2a24" font-weight="700">3 · Jiaxiu Tower</text><text class="mp-s" x="421" y="185" font-size="13.5" text-anchor="start" fill="#5b6660">Ngắm đèn 19:15</text><text class="mp-t" x="385" y="382" font-size="15.5" text-anchor="start" fill="#1f2a24" font-weight="700">2 · Qingyun Market</text><text class="mp-s" x="385" y="399" font-size="13.5" text-anchor="start" fill="#5b6660">Ăn tối 17:45</text><text class="mp-s" x="20" y="28" font-size="13.5" text-anchor="start" fill="#5b6660">Khoảng cách đường chim bay, vị trí tính từ tọa độ</text><text class="mp-s" x="680" y="28" font-size="13.5" text-anchor="end" fill="#5b6660">Sân bay KWE: ~10 km phía đông nam</text></svg></div>
+    <ul class="stops">
+      <li><div class="row"><span class="stop-time">09:55</span><span class="stop-name">Hạ cánh tại Quý Dương</span></div>
+        <div class="stop-detail">Guiyang Longdongbao Airport 贵阳龙洞堡国际机场 <span class="py">(Guìyáng Lóngdòngbǎo Guójì Jīchǎng)</span>. Dự trù khoảng 60–90 phút cho nhập cảnh, lấy hành lý, SIM/eSIM, Alipay/WeChat Pay, vệ sinh, mua nước.</div></li>
+      <li><div class="row"><span class="stop-time">11:00–12:00</span><span class="stop-name">Sân bay → Yibon International Hotel</span></div>
+        <div class="stop-detail">~10 km đường chim bay, ~20–30 phút taxi/xe đặt app (ước tính). Khách sạn mang tên khu Penshuichi nên cũng có thể đi metro tuyến 2 đến ga Penshuichi, bạn nên kiểm tra lại tuyến trên bản đồ. Nhận phòng chính thức sau 14:00 nên bạn hỏi gửi hành lý sớm hoặc nhận phòng sớm. Từ đây chỉ mang túi nhỏ, pin dự phòng, passport, áo khoác mỏng.</div></li>
+      <li><div class="row"><span class="stop-time">12:00–13:00</span><span class="stop-name">Ăn trưa + nghỉ ngơi</span></div>
+        <div class="stop-detail">Đến sớm hơn dự kiến nên có thêm cả buổi trưa rảnh — ăn nhẹ gần khách sạn (Minsheng Road cách khoảng 0,7 km) rồi nghỉ.</div></li>
+      <li><div class="row"><span class="stop-time">13:00–15:00</span><span class="stop-name">Thời gian rảnh (tùy chọn)</span></div>
+        <div class="stop-detail">Nếu còn sức: có thể ghé <b>Bảo tàng Quý Châu</b> (nhớ mang giấy tờ tùy thân + đặt trước — 20/11 là thứ Sáu nên vẫn mở cửa). Nếu muốn nghỉ ngơi cho buổi tối dài thì cứ ở khách sạn.</div></li>
+      <li><div class="row"><span class="stop-time">15:00–16:15</span><span class="stop-name">Nghỉ tại khách sạn</span></div>
+        <div class="stop-detail">Nhận phòng sau 14:00, thay đồ, chuẩn bị ra ngoài buổi tối.</div></li>
+      <li><div class="row"><span class="stop-time">16:30–17:30</span><span class="stop-name">Minsheng Road 民生路 <span class="py">(Mínshēng Lù)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:EjFNaW4gU2hlbmcgTHUsIEd1aSBZYW5nIFNoaSwgR3VpIFpob3UgU2hlbmcsIENoaW5hIi4qLAoUChIJG1RwWdb6wzYRH3BXSVzseKQSFAoSCTcb7FXDZ782EVVkMdjAgTMX" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Cách khách sạn ~0,7 km, đi bộ được. Ăn nhẹ (để dành bụng cho Qingyun Market tối nay). Món ưu tiên:
+          <ul><li>蛋包洋芋 <span class="py">(dàn bāo yángyù)</span> — khoai tây bọc trứng</li><li>现炸洋芋片 <span class="py">(xiàn zhà yángyù piàn)</span> — khoai tây chiên</li><li>烙锅 <span class="py">(làoguō)</span> — luoguo</li></ul></div></li>
+      <li><div class="row"><span class="stop-time">17:45–19:00</span><span class="stop-name">Qingyun Market 青云集市 <span class="py">(Qīngyún jíshì)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJW7SyEORnvzYRqPiDGbK88Go" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">~1,7 km từ Minsheng Road (taxi/đi bộ). Đi khi bắt đầu lên đèn, ~1g15p: ăn tối, dạo, xem quầy handmade, mua lưu niệm, chụp ảnh. Không nên nán quá lâu vì còn Jiaxiu Tower, đẹp nhất khi lên đèn.</div></li>
+      <li><div class="row"><span class="stop-time">19:15–20:10</span><span class="stop-name">Jiaxiu Tower 甲秀楼 <span class="py">(Jiǎxiù Lóu)</span></span></div>
+        <a class="pin" href="https://maps.google.com/?cid=2150337532506882639" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">~1,7 km từ Qingyun Market (taxi). Đi đúng lúc trời tối và tháp đã lên đèn, ~45–50 phút. Đi dọc bờ sông, chụp toàn cảnh + phản chiếu mặt nước, không cần vào sâu bên trong.</div></li>
+      <li><div class="row"><span class="stop-time">20:15–20:45</span><span class="stop-name">Về Yibon International Hotel nghỉ</span></div>
+        <div class="stop-detail">Jiaxiu Tower cách khách sạn ~1,0 km. Day 2 phải xuất phát sớm (~07:00). Lịch Day 1 nhẹ, đã bỏ White House để có thời gian nghỉ sau chuyến bay.</div></li>
+    </ul>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-day2" role="tabpanel" aria-labelledby="btn-day2">
+  <div class="day" id="d2">
+    <h2>Day 2 (21/11/2026) — Quý Dương → Hoàng Quả Thụ → Quý Dương</h2>
+    <div class="note">Bản vừa: đi 4 điểm nhưng chỉ đi nửa sau Tianxing Bridge, về Quý Dương khoảng 18:40.</div>
+    <div class="map-cap"><span class="cdot"></span>Hành trình từ khách sạn Yibon đến khu Hoàng Quả Thụ (màu cam)</div>
+    <div class="day-map"><svg viewBox="0 0 700 174" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hành trình Day 2 từ khách sạn đến khu Hoàng Quả Thụ" width="100%"><title>Hành trình Day 2 từ khách sạn đến khu Hoàng Quả Thụ</title><rect class="mp-box" x="12.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="87" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Yibon Hotel</text><text class="mp-s" x="87" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Xuất phát ~07:00</text><rect class="mp-box" x="187.33333333333334" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="262" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Ga Quý Dương Bắc</text><text class="mp-s" x="262" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Tàu ~07:30</text><rect class="mp-box" x="362.6666666666667" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="438" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Anshun West</text><text class="mp-s" x="438" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Đến ~08:10</text><rect class="mp-box" x="538.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="613" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Hoàng Quả Thụ</text><text class="mp-s" x="613" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Cổng khu · ~09:15</text><line class="mp-line mp-lineacc" x1="164" y1="55" x2="185" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="99" y="101" width="152" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="175" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~6 km · taxi 20–30p</text><line class="mp-line mp-lineacc" x1="339" y1="55" x2="361" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="274" y="101" width="152" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="350" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~90 km · tàu 30–40p</text><line class="mp-line mp-lineacc" x1="515" y1="55" x2="536" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="453" y="101" width="145" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="525" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~45 km · xe 45–60p</text><text class="mp-s" x="12" y="158" font-size="13" text-anchor="start" fill="#5b6660">Màu cam: đường di chuyển. Về cùng tuyến ngược lại, tàu ~17:30.</text></svg></div>
+    <div class="map-cap teal"><span class="cdot"></span>Tham quan các điểm trong khu Hoàng Quả Thụ (màu xanh lục)</div>
+    <div class="day-map"><svg viewBox="0 0 700 516" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bản đồ tham quan trong khu Hoàng Quả Thụ" width="100%"><title>Bản đồ tham quan trong khu Hoàng Quả Thụ</title><rect class="mp-box" x="30" y="8" width="176" height="58" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="118" y="31" font-size="14" text-anchor="middle" fill="#1f2a24" font-weight="700">Cổng Hoàng Quả Thụ</text><text class="mp-s" x="118" y="50" font-size="11" text-anchor="middle" fill="#5b6660">Đến ~09:15</text><line class="mp-line mp-lineteal" x1="206" y1="38" x2="322" y2="132" stroke="#2f7d6d" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="221" y="67" width="81" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="262" y="82" font-size="12" text-anchor="middle" fill="#5b6660">xe nội khu</text><line class="mp-line mp-lineteal" x1="330" y1="138" x2="398" y2="58" stroke="#2f7d6d" stroke-width="2"/><rect class="mp-lbl" x="425" y="101" width="115" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="482" y="116" font-size="12" text-anchor="middle" fill="#5b6660">~0,9 km · đi bộ</text><line class="mp-line mp-lineteal" x1="398" y1="58" x2="452" y2="330" stroke="#2f7d6d" stroke-width="2"/><line class="mp-lbl" x1="411" y1="203" x2="433" y2="185" stroke="#ffffff" stroke-width="7"/><rect class="mp-lbl" x="444" y="183" width="135" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="511" y="198" font-size="12" text-anchor="middle" fill="#5b6660">~6 km · xe nội khu</text><text class="mp-s" x="401" y="198" font-size="16" text-anchor="middle" fill="#5b6660">≈</text><circle class="mp-dotteal" cx="330" cy="138" r="13" fill="#2f7d6d"/><text class="mp-w" x="330" y="142" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1</text><circle class="mp-dotteal" cx="398" cy="58" r="13" fill="#2f7d6d"/><text class="mp-w" x="398" y="62" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2</text><circle class="mp-dotteal" cx="452" cy="330" r="13" fill="#2f7d6d"/><text class="mp-w" x="452" y="334" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">3</text><text class="mp-t" x="422" y="56" font-size="16" text-anchor="start" fill="#1f2a24" font-weight="700">2 · Doupotang</text><text class="mp-s" x="422" y="76" font-size="13.5" text-anchor="start" fill="#5b6660">~1 giờ</text><text class="mp-t" x="306" y="168" font-size="16" text-anchor="end" fill="#1f2a24" font-weight="700">1 · Đại thác</text><text class="mp-s" x="306" y="188" font-size="13.5" text-anchor="end" fill="#5b6660">~1 giờ</text><text class="mp-s" x="306" y="206" font-size="13.5" text-anchor="end" fill="#5b6660">+ hang Thủy Liêm ~45 phút</text><text class="mp-t" x="476" y="328" font-size="16" text-anchor="start" fill="#1f2a24" font-weight="700">3 · Tianxing Bridge</text><text class="mp-s" x="476" y="348" font-size="13.5" text-anchor="start" fill="#5b6660">Nửa sau, ~2 giờ</text><line class="mp-line mp-lineteal" x1="452" y1="344" x2="452" y2="392" stroke="#2f7d6d" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="497" y="363" width="135" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="564" y="378" font-size="12" text-anchor="middle" fill="#5b6660">~45 km · xe 45–60p</text><rect class="mp-box" x="347" y="394" width="220" height="58" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="457" y="417" font-size="14" text-anchor="middle" fill="#1f2a24" font-weight="700">Ra bến Tianxing</text><text class="mp-s" x="457" y="436" font-size="11" text-anchor="middle" fill="#5b6660">Xe về Anshun West</text><text class="mp-s" x="30" y="482" font-size="12" text-anchor="start" fill="#5b6660">Số 1–2–3 là thứ tự tham quan. Chặng Doupotang → Tianxing vẽ rút gọn, không theo tỷ lệ.</text><text class="mp-s" x="30" y="500" font-size="12" text-anchor="start" fill="#5b6660">Đại thác ↔ Tianxing Bridge cách ~5,5 km đường chim bay.</text></svg></div>
+    <div class="ticket-box"><b class="h">Vé và chi phí (mùa cao điểm 01/03–30/11, tham khảo)</b><br>
+      Vé vào khu 160 tệ · xe tham quan 50 tệ · bảo hiểm 10 tệ. Gói vé vào khu + xe tham quan thường bán khoảng 220 tệ/người, cộng bảo hiểm khoảng 230 tệ.<br>
+      Tùy chọn: thang cuốn đại thác 30 tệ một chiều (50 tệ khứ hồi), cáp treo Tianxing Bridge 10 tệ.<br>
+      <b class="h">Đặt trước:</b> vé vào khu đặt được tối đa 15 ngày trước và tối thiểu 1 ngày trước. Hang Thủy Liêm cần đặt thêm bằng mã QR của khu thắng cảnh. Giá có thể thay đổi, bạn xem lại trên kênh bán chính thức khi đặt.<br>
+      <b class="h">Xe từ ga Anshun West vào khu:</b> taxi/xe đặt app (~45 km) nhanh hơn. Xe buýt từ ga khoảng 22 tệ nhưng có thể ghé bến khác, một khách ghi mất khoảng 2 giờ, bạn nên dự phòng thêm thời gian nếu đi xe buýt.</div>
+    <ul class="stops">
+      <li><div class="row"><span class="stop-time">07:30–08:10</span><span class="stop-name">Tàu Quý Dương Bắc → Anshun West</span></div>
+        <div class="stop-detail">~90 km, ~30–40 phút. Từ Yibon Hotel ra ga Quý Dương Bắc ~6 km, dự trù thêm 20–30 phút.</div></li>
+      <li><div class="row"><span class="stop-time">08:15–09:15</span><span class="stop-name">Anshun West → cổng khu Hoàng Quả Thụ</span></div>
+        <div class="stop-detail">~45 km, ~45–60 phút bằng taxi/xe đặt app.</div></li>
+      <li><div class="row"><span class="stop-time">09:15–09:30</span><span class="stop-name">Soát vé, lên xe tham quan nội khu</span></div></li>
+      <li><div class="row"><span class="stop-time">09:30–10:30</span><span class="stop-name">Đại thác Hoàng Quả Thụ 黄果树大瀑布 <span class="py">(Huángguǒshù dà pùbù)</span></span></div>
+        <a class="pin" href="https://maps.google.com/?cid=13498627350660636970" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">~1 giờ.</div></li>
+      <li><div class="row"><span class="stop-time">10:30–11:15</span><span class="stop-name">Hang Thủy Liêm 水帘洞 <span class="py">(Shuǐlián Dòng)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJ5RxLqDbcxjYRnp2uigKux6k" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">~45 phút, đi xuyên sau màn nước, mặc áo mưa. Nhớ đặt chỗ trước bằng mã QR.</div></li>
+      <li><div class="row"><span class="stop-time">11:15–12:00</span><span class="stop-name">Ăn trưa nhanh trong khu</span></div></li>
+      <li><div class="row"><span class="stop-time">12:00–13:15</span><span class="stop-name">Doupotang 陡坡塘 <span class="py">(Dǒupōtáng)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJxezJMDvcxjYRJ6j67uFVPyI" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Di chuyển ~0,9 km (~15 phút, đi bộ hoặc xe nội khu) rồi tham quan ~1 giờ. Cảnh thác rộng, gắn với Tây Du Ký 1986.</div></li>
+      <li><div class="row"><span class="stop-time">13:15–13:45</span><span class="stop-name">Xe nội khu sang Tianxing Bridge</span></div>
+        <div class="stop-detail">~6 km đường chim bay, ~30 phút bằng xe nội khu.</div></li>
+      <li><div class="row"><span class="stop-time">13:45–15:45</span><span class="stop-name">Tianxing Bridge 天星桥 <span class="py">(Tiānxīng Qiáo)</span> (nửa sau)</span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJLVAggPvdxjYRD1tctUjQd9w" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">~2 giờ: hang Thiên Tinh và thác Ngân Liên Trụy Đàm, rồi ra bằng cáp treo/thang nếu muốn đỡ leo.</div></li>
+      <li><div class="row"><span class="stop-time">15:45–17:00</span><span class="stop-name">Ra bến, xe về Anshun West</span></div>
+        <div class="stop-detail">~15 phút ra bến + ~45–60 phút xe (~45 km). Thứ tự xe nội khu một chiều có thể khác lịch này, bạn hỏi nhân viên cổng; nếu ngược thì đảo thứ tự các điểm.</div></li>
+      <li><div class="row"><span class="stop-time">17:00–17:30</span><span class="stop-name">Buffer, chờ tàu</span></div></li>
+      <li><div class="row"><span class="stop-time">17:30–18:10</span><span class="stop-name">Tàu Anshun West → Quý Dương Bắc</span></div>
+        <div class="stop-detail">~90 km, ~30–40 phút. Về Yibon Hotel khoảng 18:40.</div></li>
+    </ul>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-day3" role="tabpanel" aria-labelledby="btn-day3">
+  <div class="day" id="d3">
+    <h2>Day 3 (22/11/2026) — Quý Dương → Libo Xiaoqikong → Quý Dương</h2>
+    <div class="note">Ngày cần xuất phát sớm nhất.</div>
+    <div class="map-cap"><span class="cdot"></span>Hành trình từ khách sạn Yibon đến khu Xiaoqikong (màu cam)</div>
+    <div class="day-map"><svg viewBox="0 0 700 174" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hành trình Day 3 từ khách sạn đến khu Xiaoqikong" width="100%"><title>Hành trình Day 3 từ khách sạn đến khu Xiaoqikong</title><rect class="mp-box" x="12.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="87" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Yibon Hotel</text><text class="mp-s" x="87" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Xuất phát ~05:30</text><rect class="mp-box" x="187.33333333333334" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="262" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Ga Quý Dương Bắc</text><text class="mp-s" x="262" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Tàu ~06:00–06:30</text><rect class="mp-box" x="362.6666666666667" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="438" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Ga Libo</text><text class="mp-s" x="438" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Đến ~07:30</text><rect class="mp-box" x="538.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="613" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Xiaoqikong</text><text class="mp-s" x="613" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Cửa Tây · ~08:15</text><line class="mp-line mp-lineacc" x1="164" y1="55" x2="185" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="99" y="101" width="152" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="175" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~6 km · taxi 20–30p</text><line class="mp-line mp-lineacc" x1="339" y1="55" x2="361" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="281" y="101" width="138" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="350" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~175 km · tàu ~1h</text><line class="mp-line mp-lineacc" x1="515" y1="55" x2="536" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="442" y="101" width="167" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="525" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~30–35 km · xe 40–45p</text><text class="mp-s" x="12" y="158" font-size="13" text-anchor="start" fill="#5b6660">Màu cam: đường di chuyển. Chiều ra cửa Đông, về Libo rồi tàu về Quý Dương.</text></svg></div>
+    <div class="map-cap teal"><span class="cdot"></span>Tham quan các điểm trong khu Xiaoqikong (màu xanh lục)</div>
+    <div class="day-map"><svg viewBox="0 0 700 517.2251840000191" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bản đồ tham quan trong khu Xiaoqikong" width="100%"><title>Bản đồ tham quan trong khu Xiaoqikong</title><line class="mp-line mp-lineteal" x1="65" y1="70" x2="69" y2="161" stroke="#2f7d6d" stroke-width="2"/><rect class="mp-lbl" x="93" y="104" width="169" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="177" y="119" font-size="12" text-anchor="middle" fill="#5b6660">~1 km · shuttle + đi bộ</text><line class="mp-line mp-lineteal" x1="69" y1="161" x2="636" y2="307" stroke="#2f7d6d" stroke-width="2"/><rect class="mp-lbl" x="211" y="223" width="283" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="352" y="238" font-size="12" text-anchor="middle" fill="#5b6660">~6 km · shuttle + đi bộ (đường chim bay)</text><circle class="mp-dotteal" cx="65" cy="70" r="18" fill="#2f7d6d"/><text class="mp-w" x="65" y="74" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Tây</text><circle class="mp-dotteal" cx="69" cy="161" r="13" fill="#2f7d6d"/><text class="mp-w" x="69" y="165" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1</text><circle class="mp-dotteal" cx="636" cy="307" r="13" fill="#2f7d6d"/><text class="mp-w" x="636" y="311" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2</text><text class="mp-t" x="93" y="76" font-size="16" text-anchor="start" fill="#1f2a24" font-weight="700">Cửa Tây Xiaoqikong</text><text class="mp-t" x="93" y="163" font-size="16" text-anchor="start" fill="#1f2a24" font-weight="700">1 · Wolongtan</text><text class="mp-s" x="225" y="163" font-size="13.5" text-anchor="start" fill="#5b6660">~1 giờ</text><text class="mp-s" x="462" y="168" font-size="12" text-anchor="middle" fill="#5b6660">Giữa tuyến (chưa có tọa độ):</text><text class="mp-t" x="462" y="186" font-size="13" text-anchor="middle" fill="#1f2a24" font-weight="600">Cuigu Waterfall ~1 giờ · Water Forest ~1h45</text><text class="mp-t" x="616" y="345" font-size="16" text-anchor="end" fill="#1f2a24" font-weight="700">2 · Cầu cổ Xiaoqikong</text><text class="mp-s" x="616" y="365" font-size="13.5" text-anchor="end" fill="#5b6660">~1h45</text><line class="mp-line mp-lineteal" x1="636" y1="321" x2="636" y2="409" stroke="#2f7d6d" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="360" y="386" width="216" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="468" y="401" font-size="12" text-anchor="middle" fill="#5b6660">~30–35 km · taxi/xe bus 40–45p</text><rect class="mp-box" x="440" y="411.2251840000191" width="230" height="58" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="555" y="434" font-size="14" text-anchor="middle" fill="#1f2a24" font-weight="700">Ra cửa Đông</text><text class="mp-s" x="555" y="453" font-size="11" text-anchor="middle" fill="#5b6660">Xe về ga Libo</text><text class="mp-s" x="30" y="499" font-size="12" text-anchor="start" fill="#5b6660">Đi cửa Tây → cửa Đông. Quãng đường đi bộ + shuttle thực tế dài hơn đường chim bay.</text></svg></div>
+    <ul class="stops">
+      <li><div class="row"><span class="stop-time">05:30</span><span class="stop-name">Rời Yibon Hotel → ga Quý Dương Bắc</span></div>
+        <div class="stop-detail">~6 km, ~20–30 phút taxi. Ăn sáng mang đi. Giờ tàu thực tế bạn chọn sau khi vé mở bán (nên là chuyến khởi hành khoảng 06:00–06:30).</div></li>
+      <li><div class="row"><span class="stop-time">06:00–07:30</span><span class="stop-name">Tàu → Libo 荔波 <span class="py">(Lìbō)</span></span></div>
+        <div class="stop-detail">~175 km, ~1 giờ tàu + thời gian ra ga hai đầu. Từ ga, tiếp tục đi xe tới khu Xiaoqikong 小七孔 <span class="py">(Xiǎoqīkǒng)</span> (~30-35 km, ~40-45 phút).</div></li>
+      <li><div class="row"><span class="stop-time">08:15–08:45</span><span class="stop-name">Vào khu thắng cảnh</span></div>
+        <div class="stop-detail">Ưu tiên cửa Tây vào — cửa Đông ra để tuyến thuận hơn.</div></li>
+      <li><div class="row"><span class="stop-time">09:00–10:00</span><span class="stop-name">Wolongtan 卧龙潭 <span class="py">(Wòlóng Tán)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJpVcV9mmfuTYR4P_r39xSsVU" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Điểm chụp ảnh chính, ~1 giờ: hồ nước xanh, thác hình lưỡi liềm, đường gỗ, rừng cây.</div></li>
+      <li><div class="row"><span class="stop-time">10:15–11:15</span><span class="stop-name">Cuigu Waterfall 翠谷瀑布 <span class="py">(Cuìgǔ pùbù)</span></span></div>
+        <div class="stop-detail">Tham quan, chụp ảnh, nghỉ chân trước đoạn đi bộ dài hơn. Đã bỏ Yuanyang Lake (chèo thuyền hay phải xếp hàng) để giữ sức và tiến độ.</div></li>
+      <li><div class="row"><span class="stop-time">11:30–12:15</span><span class="stop-name">Ăn trưa đơn giản trong khu</span></div></li>
+      <li><div class="row"><span class="stop-time">12:30–14:15</span><span class="stop-name">Water Forest / Stone Forest</span></div>
+        <div class="stop-detail">Đi bộ xuyên rừng và các cụm thác nhỏ — đường ướt, giày chống trượt quan trọng.</div></li>
+      <li><div class="row"><span class="stop-time">14:30–16:15</span><span class="stop-name">Xiaoqikong Ancient Bridge 小七孔古桥 <span class="py">(Xiǎoqīkǒng gǔqiáo)</span></span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJ8SniyZeeuTYRUkyJomncWRc" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Đi tiếp ~1.6km. Một trong những phần đẹp nhất — không vội. Chụp cầu cổ, dòng nước xanh, rừng hai bên, thác nhỏ gần cầu.</div></li>
+      <li><div class="row"><span class="stop-time">16:15–16:45</span><span class="stop-name">Ra cửa Đông</span></div>
+        <div class="stop-detail">Shuttle/xe về khu ga.</div></li>
+      <li><div class="row"><span class="stop-time">16:45–17:30</span><span class="stop-name">Di chuyển về ga Libo (Libo Station)</span></div>
+        <div class="stop-detail">~30-35 km, ~40-45 phút — taxi/xe bus khu du lịch, cùng tuyến chiều đi</div></li>
+      <li><div class="row"><span class="stop-time">17:30–18:30</span><span class="stop-name">Chờ tàu, mua đồ ăn nhẹ</span></div>
+        <div class="stop-detail">Bữa tối ăn ở Quý Dương nên bạn mua nước và đồ ăn nhẹ để lót bụng trong lúc chờ và trên tàu.</div></li>
+      <li><div class="row"><span class="stop-time">~18:30–19:30</span><span class="stop-name">Tàu Libo → Quý Dương Bắc</span></div>
+        <div class="stop-detail">~175 km, ~1 giờ — cùng tuyến tàu cao tốc chiều ngược lại. Giờ tàu thực tế bạn chọn khi vé mở bán.</div></li>
+      <li><div class="row"><span class="stop-time">19:30–20:00</span><span class="stop-name">Ga Quý Dương Bắc → Yibon Hotel</span></div>
+        <div class="stop-detail">~6 km, ~20–30 phút taxi/xe đặt app.</div></li>
+      <li><div class="row"><span class="stop-time">20:00–21:00</span><span class="stop-name">Ăn tối ở Quý Dương</span></div>
+        <div class="stop-detail">Ăn gần khách sạn (Minsheng Road cách ~0,7 km), ví dụ canh chua cá hoặc lẩu bò nước chua. Xem tab Ăn uống, rồi nghỉ sớm vì sáng mai xuất phát 08:00.</div></li>
+    </ul>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-day4" role="tabpanel" aria-labelledby="btn-day4">
+  <div class="day" id="d4">
+    <h2>Day 4 (23/11/2026) — Quý Dương → Tây Giang Thiên Hộ Miêu Trại (ở lại 1 đêm)</h2>
+    <div class="note">Xuất phát 08:00 vì đêm trước đã dậy sớm đi Libo. Sáng check-out Yibon Hotel, gửi vali ở lễ tân, chỉ mang balo gọn. Đi thẳng từ cổng vào lõi làng, nhận phòng khách sạn lúc leo lên đài quan sát.</div>
+    <div class="hotel-card"><b class="h">Khách sạn Tây Giang: First Seeing Panorama Hotel</b> (Xijiang Qianhu Miaozhai Observation Deck)<br>
+      Scenic Viewing Platform, Xijiang Qianhu Miao Village, Lôi Sơn, Quý Châu.<br>
+      <span class="meta">Ở 1 đêm: 23/11 đến 24/11. Khách sạn ở lưng chừng đồi, đi cầu thang lên; nằm trong khu thắng cảnh nên cần vé vào khu và đi shuttle. Bến xe khách đường dài Tây Giang cách khách sạn khoảng 1,9 km.</span></div>
+    <div class="map-cap"><span class="cdot"></span>Hành trình từ khách sạn Yibon đến Tây Giang (màu cam)</div>
+    <div class="day-map"><svg viewBox="0 0 700 174" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hành trình Day 4 từ khách sạn đến Tây Giang" width="100%"><title>Hành trình Day 4 từ khách sạn đến Tây Giang</title><rect class="mp-box" x="12.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="87" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Yibon Hotel</text><text class="mp-s" x="87" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Xuất phát 08:00</text><rect class="mp-box" x="187.33333333333334" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="262" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Ga Quý Dương Bắc</text><text class="mp-s" x="262" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Tàu ~08:30</text><rect class="mp-box" x="362.6666666666667" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="438" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Kaili South</text><text class="mp-s" x="438" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Đến ~09:10</text><rect class="mp-box" x="538.0" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="613" y="49" font-size="13.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Cổng Tây Giang</text><text class="mp-s" x="613" y="70" font-size="13" text-anchor="middle" fill="#5b6660">Đến ~11:00</text><line class="mp-line mp-lineacc" x1="164" y1="55" x2="185" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="99" y="101" width="152" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="175" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~6 km · taxi 20–30p</text><line class="mp-line mp-lineacc" x1="339" y1="55" x2="361" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="270" y="101" width="160" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="350" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~125 km · tàu 30–40p</text><line class="mp-line mp-lineacc" x1="515" y1="55" x2="536" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="453" y="101" width="145" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="525" y="116" font-size="13" text-anchor="middle" fill="#5b6660">~45 km · xe 1–1,5h</text><text class="mp-s" x="12" y="158" font-size="13" text-anchor="start" fill="#5b6660">Màu cam: đường di chuyển. Vali gửi lại Yibon Hotel, nhận lại ngày 24/11.</text></svg></div>
+    <div class="map-cap teal"><span class="cdot"></span>Tham quan các điểm trong làng Tây Giang (màu xanh lục)</div>
+    <div class="day-map"><svg viewBox="0 0 700 650.656960000071" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bản đồ tham quan trong làng Tây Giang" width="100%"><title>Bản đồ tham quan trong làng Tây Giang</title><line class="mp-line" x1="74" y1="340" x2="319" y2="343" stroke="#5b6660" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="130" y="363" width="128" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="194" y="378" font-size="12" text-anchor="middle" fill="#5b6660">~1,5 km · shuttle</text><line class="mp-line mp-lineteal" x1="333" y1="344" x2="290" y2="414" stroke="#2f7d6d" stroke-width="2"/><line class="mp-line mp-lineteal" x1="290" y1="414" x2="554" y2="543" stroke="#2f7d6d" stroke-width="2"/><line class="mp-line mp-lineteal" x1="554" y1="543" x2="470" y2="111" stroke="#2f7d6d" stroke-width="2"/><rect class="mp-lbl" x="342" y="368" width="115" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="399" y="383" font-size="12" text-anchor="middle" fill="#5b6660">~0,2 km · đi bộ</text><rect class="mp-lbl" x="371" y="507" width="115" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="428" y="522" font-size="12" text-anchor="middle" fill="#5b6660">~0,7 km · đi bộ</text><rect class="mp-lbl" x="524" y="346" width="169" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="608" y="361" font-size="12" text-anchor="middle" fill="#5b6660">~1,1 km · đi bộ lên dốc</text><circle class="mp-dotteal" cx="56" cy="340" r="18" fill="#2f7d6d"/><text class="mp-w" x="56" y="344" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Cổng</text><circle class="mp-dotteal" cx="333" cy="344" r="13" fill="#2f7d6d"/><text class="mp-w" x="333" y="348" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1</text><circle class="mp-dotteal" cx="290" cy="414" r="13" fill="#2f7d6d"/><text class="mp-w" x="290" y="418" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2</text><circle class="mp-dotteal" cx="554" cy="543" r="13" fill="#2f7d6d"/><text class="mp-w" x="554" y="547" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">3</text><circle class="mp-dotteal" cx="470" cy="111" r="13" fill="#2f7d6d"/><text class="mp-w" x="470" y="115" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">4</text><text class="mp-t" x="30" y="292" font-size="16" text-anchor="start" fill="#1f2a24" font-weight="700">Cổng Tây (ví dụ)</text><text class="mp-s" x="30" y="310" font-size="12" text-anchor="start" fill="#5b6660">Cổng Bắc chưa có tọa độ</text><text class="mp-t" x="363" y="306" font-size="16" text-anchor="middle" fill="#1f2a24" font-weight="700">1 · Lusheng + Bảo tàng Miêu</text><text class="mp-s" x="363" y="326" font-size="13.5" text-anchor="middle" fill="#5b6660">~2 giờ</text><text class="mp-t" x="268" y="418" font-size="16" text-anchor="end" fill="#1f2a24" font-weight="700">2 · Phố cổ / Youfang</text><text class="mp-s" x="268" y="438" font-size="13.5" text-anchor="end" fill="#5b6660">Thuê trang phục, chụp ảnh ~1h45</text><text class="mp-t" x="530" y="577" font-size="16" text-anchor="end" fill="#1f2a24" font-weight="700">3 · Cầu Phong Vũ số 1 (ước tính)</text><text class="mp-s" x="530" y="597" font-size="13.5" text-anchor="end" fill="#5b6660">~30 phút</text><text class="mp-t" x="448" y="113" font-size="16" text-anchor="end" fill="#1f2a24" font-weight="700">4 · Đài quan sát + khách sạn</text><text class="mp-s" x="448" y="133" font-size="13.5" text-anchor="end" fill="#5b6660">~1h45 · nghỉ đêm 23/11 (ước tính)</text><line class="mp-line mp-lineteal" x1="470" y1="97" x2="470" y2="68" stroke="#2f7d6d" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="499" y="77" width="135" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="566" y="92" font-size="12" text-anchor="middle" fill="#5b6660">~45 km · xe 1–1,5h</text><rect class="mp-box" x="360.4570000000399" y="8" width="220" height="58" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="470" y="31" font-size="14" text-anchor="middle" fill="#1f2a24" font-weight="700">Ra Kaili South</text><text class="mp-s" x="470" y="50" font-size="11" text-anchor="middle" fill="#5b6660">Sáng 24/11 · xe khởi hành 08:00</text><text class="mp-s" x="30" y="635" font-size="12" text-anchor="start" fill="#5b6660">Khoảng cách đường chim bay, đường thật nhiều bậc thang/dốc hơn. Điểm "ước tính" suy từ khách sạn lân cận.</text></svg></div>
+    <ul class="stops">
+      <li><div class="row"><span class="stop-time">08:00</span><span class="stop-name">Rời Yibon Hotel → ga Quý Dương Bắc</span></div>
+        <div class="stop-detail">~6 km, ~20–30 phút. Check-out và gửi vali tại lễ tân (xin hỏi trước khách sạn có nhận gửi qua đêm không).</div></li>
+      <li><div class="row"><span class="stop-time">08:30–09:10</span><span class="stop-name">Tàu Quý Dương Bắc → Kaili South</span></div>
+        <div class="stop-detail">~125 km, ~30–40 phút</div></li>
+      <li><div class="row"><span class="stop-time">09:30–11:00</span><span class="stop-name">Kaili South → cổng khu Tây Giang</span></div>
+        <div class="stop-detail">~45 km, ~1–1,5h (đường núi). Nên đặt taxi/xe đặt app trước. Bảo tài xế đi "西江千户苗寨北门 <span class="py">(Xījiāng Qiānhù Miáozhài běi mén)</span>" (cổng Bắc), vì cổng này gần phố thương mại và quảng trường Lusheng. Cổng Tây nằm trên cao, đi xuống dốc qua cửa hàng rồi lên shuttle.</div></li>
+      <li><div class="row"><span class="stop-time">11:00–11:45</span><span class="stop-name">Soát vé, shuttle vào lõi làng</span></div>
+        <div class="stop-detail">Có thể gặp nghi thức rót rượu chào khách ở quảng trường cổng (10:30–12:00). Mang hộ chiếu.</div></li>
+      <li><div class="row"><span class="stop-time">11:45–12:30</span><span class="stop-name">Ăn trưa ở phố ăn uống gần quảng trường Lusheng</span></div></li>
+      <li><div class="row"><span class="stop-time">12:30–14:30</span><span class="stop-name">Quảng trường Lusheng + Bảo tàng Miêu</span></div>
+        <a class="pin" href="https://maps.google.com/?cid=18273901835131507566" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Hai điểm nằm sát nhau. Bảo tàng miễn phí, mang giấy tờ. Một hướng dẫn ghi múa hát ở quảng trường lúc 14:00–14:45, hướng dẫn khác ghi 11:00, bạn kiểm tra lại giờ ngày 23/11.</div></li>
+      <li><div class="row"><span class="stop-time">14:30–16:15</span><span class="stop-name">Thuê trang phục Miêu + chụp ảnh ở khu phố cổ / Youfang Street</span></div>
+        <a class="pin" href="https://maps.google.com/?cid=17675991002733940876" target="_blank" rel="noopener">Xem bản đồ</a></li>
+      <li><div class="row"><span class="stop-time">16:15–16:45</span><span class="stop-name">Cầu Phong Vũ số 1 (Fengyu Bridge)</span></div>
+        <div class="stop-detail">~0,7 km từ phố cổ, điểm thấp nhất bên sông. Chụp ảnh rồi bắt đầu leo. Mệt thì bỏ điểm này, leo thẳng từ phố cổ để tiết kiệm ~30 phút.</div></li>
+      <li><div class="row"><span class="stop-time">16:45–17:15</span><span class="stop-name">Leo lên đài quan sát, nhận phòng First Seeing Panorama Hotel</span></div>
+        <div class="stop-detail">~1,1 km đường chim bay nhưng nhiều bậc thang, dành 30 phút. Có người khuân vác giúp hành lý theo review.</div></li>
+      <li><div class="row"><span class="stop-time">17:15–19:00</span><span class="stop-name">Đài quan sát: hoàng hôn và làng lên đèn</span></div>
+        <div class="stop-detail">Phần không nên bỏ của chuyến đi.</div></li>
+      <li><div class="row"><span class="stop-time">19:00–21:00</span><span class="stop-name">Ăn tối + dạo đêm</span></div>
+        <div class="stop-detail">Thử tiệc bàn dài của người Miêu (nên đặt trước) với nghi thức mời rượu "cao sơn lưu thủy". Nghỉ đêm tại khách sạn.</div></li>
+    </ul>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-day5" role="tabpanel" aria-labelledby="btn-day5">
+  <div class="day" id="d5">
+    <h2>Day 5 (24/11/2026) — Tây Giang → Quý Dương → Sân bay → Việt Nam</h2>
+    <div class="note">Rời Tây Giang 08:00; còn dư buổi chiều ở Quý Dương trước khi ra sân bay lúc 16:30.</div>
+    <div class="day-map"><svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bản đồ Day 5: Tây Giang về Quý Dương và ra sân bay" width="100%"><title>Bản đồ Day 5: Tây Giang về Quý Dương và ra sân bay</title><rect class="mp-box" x="30" y="24" width="170" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="115" y="49" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Tây Giang</text><text class="mp-s" x="115" y="70" font-size="13.5" text-anchor="middle" fill="#5b6660">Rời 08:00</text><rect class="mp-box" x="270" y="24" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="345" y="49" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Kaili South</text><text class="mp-s" x="345" y="70" font-size="13.5" text-anchor="middle" fill="#5b6660">Đến ~09:30</text><rect class="mp-box" x="490" y="24" width="180" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="580" y="49" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Ga Quý Dương Bắc</text><text class="mp-s" x="580" y="70" font-size="13.5" text-anchor="middle" fill="#5b6660">Đến ~11:00</text><line class="mp-line mp-lineacc" x1="200" y1="55" x2="270" y2="55" stroke="#b5502e" stroke-width="2"/><line class="mp-line mp-lineacc" x1="420" y1="55" x2="490" y2="55" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="160" y="101" width="150" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="235" y="116" font-size="13.5" text-anchor="middle" fill="#5b6660">~45 km · xe 1–1,5h</text><rect class="mp-lbl" x="372" y="101" width="165" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="455" y="116" font-size="13.5" text-anchor="middle" fill="#5b6660">~125 km · tàu 30–40p</text><line class="mp-line mp-lineacc" x1="580" y1="86" x2="580" y2="184" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="528" y="127" width="105" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="580" y="142" font-size="13.5" text-anchor="middle" fill="#5b6660">~6 km · taxi</text><rect class="mp-box" x="490" y="184" width="180" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="580" y="209" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Yibon Hotel</text><text class="mp-s" x="580" y="230" font-size="13.5" text-anchor="middle" fill="#5b6660">Lấy vali ~11:30</text><rect class="mp-box" x="270" y="184" width="150" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="345" y="209" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Minsheng Road</text><text class="mp-s" x="345" y="230" font-size="13.5" text-anchor="middle" fill="#5b6660">Ăn trưa 12:00</text><rect class="mp-box" x="30" y="184" width="170" height="62" rx="9" fill="#faf7f2" stroke="#d8cfc2" stroke-width="1"/><text class="mp-t" x="115" y="209" font-size="15.5" text-anchor="middle" fill="#1f2a24" font-weight="700">Sân bay KWE</text><text class="mp-s" x="115" y="230" font-size="13.5" text-anchor="middle" fill="#5b6660">Bay 19:35</text><line class="mp-line mp-lineacc" x1="490" y1="215" x2="420" y2="215" stroke="#b5502e" stroke-width="2"/><rect class="mp-lbl" x="391" y="163" width="127" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="455" y="178" font-size="13.5" text-anchor="middle" fill="#5b6660">~0,7 km · đi bộ</text><line class="mp-line" x1="270" y1="215" x2="200" y2="215" stroke="#5b6660" stroke-width="2" stroke-dasharray="5 5"/><rect class="mp-lbl" x="160" y="261" width="150" height="20" rx="5" fill="#ffffff" stroke="#d8cfc2" stroke-width="0.6"/><text class="mp-s" x="235" y="276" font-size="13.5" text-anchor="middle" fill="#5b6660">~10 km · rời 16:30</text><text class="mp-s" x="30" y="312" font-size="13" text-anchor="start" fill="#5b6660">Buổi chiều 13:30–16:00 rảnh quanh khu Penshuichi/Nanming. 16:30 ra sân bay.</text></svg></div>
+    <ul class="stops">
+      <li><div class="row"><span class="stop-time">06:30–07:30</span><span class="stop-name">Dậy sớm ngắm mây + ăn sáng</span></div>
+        <div class="stop-detail">Ngắm mây và sương phủ quanh bản làng từ khách sạn. Nhờ khách sạn hoặc đặt xe sẵn từ tối hôm trước cho chuyến 08:00 (đường núi buổi sáng khó bắt xe tại chỗ).</div></li>
+      <li><div class="row"><span class="stop-time">08:00–09:30</span><span class="stop-name">Tây Giang → Kaili South</span></div>
+        <div class="stop-detail">~45 km, ~1–1,5h bằng xe/taxi. Ngoài taxi còn có xe buýt khu du lịch, các nguồn ghi giá khoảng 25–50 tệ, bạn hỏi giờ chạy trước.</div></li>
+      <li><div class="row"><span class="stop-time">10:00–11:00</span><span class="stop-name">Tàu Kaili South → Quý Dương Bắc</span></div>
+        <div class="stop-detail">~125 km, ~30–40 phút — cùng tuyến tàu cao tốc chiều ngược lại. Nên mua vé loại có nhiều chuyến quanh 10:00–11:00 để còn chuyến dự phòng.</div></li>
+      <li><div class="row"><span class="stop-time">11:00–11:30</span><span class="stop-name">Ga Quý Dương Bắc → Yibon Hotel</span></div>
+        <div class="stop-detail">~6 km, ~20–30 phút. Lấy lại vali đã gửi.</div></li>
+      <li><div class="row"><span class="stop-time">12:00–13:30</span><span class="stop-name">Minsheng Road 民生路 <span class="py">(Mínshēng Lù)</span> — ăn trưa</span></div>
+        <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJF7fStNtnvzYRtGN1X8Sl9LA" target="_blank" rel="noopener">Xem bản đồ</a>
+        <div class="stop-detail">Cách khách sạn ~0,7 km, đi bộ được. Thử món chưa ăn ở Day 1.</div></li>
+      <li><div class="row"><span class="stop-time">13:30–16:00</span><span class="stop-name">Thời gian rảnh buổi chiều</span></div>
+        <div class="stop-detail">Nghỉ, cà phê, mua đặc sản/quà gần khách sạn hoặc dạo lại Jiaxiu Tower ban ngày (~1,0 km từ khách sạn). Nếu xe/tàu sáng bị trễ thì dùng khoảng này làm buffer.</div></li>
+      <li><div class="row"><span class="stop-time">16:00–16:30</span><span class="stop-name">Kiểm tra đồ, lấy hành lý</span></div>
+        <div class="stop-detail">Kiểm tra: passport, điện thoại, sạc/pin dự phòng, ví, đồ mua sắm, hành lý ký gửi.</div></li>
+      <li><div class="row"><span class="stop-time">16:30–17:15</span><span class="stop-name">Rời Yibon Hotel → Guiyang Longdongbao Airport</span></div>
+        <div class="stop-detail">~10 km đường chim bay, ~20–30 phút nếu thông thoáng; dự trù thêm buffer giờ tan tầm. Xuất phát đúng 16:30.</div></li>
+      <li><div class="row"><span class="stop-time">17:15–19:00</span><span class="stop-name">Làm thủ tục chuyến bay quốc tế</span></div>
+        <div class="stop-detail">Check-in, ký gửi hành lý, an ninh, xuất cảnh. Không trễ hơn 17:30 để còn thời gian cho xuất cảnh.</div></li>
+      <li><div class="row"><span class="stop-time">19:35</span><span class="stop-name">Bay về SGN (quá cảnh Quảng Châu)</span></div>
+        <div class="stop-detail">Đến Tân Sơn Nhất lúc 01:20 ngày 25/11/2026.</div></li>
+    </ul>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-khoangcach" role="tabpanel" aria-labelledby="btn-khoangcach">
+  <div class="day" id="khoangcach">
+    <h2>Khoảng cách giữa các điểm chính</h2>
+    <div class="table-scroll">
+    <table class="summary">
+      <tr><th>Chặng</th><th>Khoảng cách</th><th>Thời gian</th><th>Phương tiện</th></tr>
+      <tr class="grp"><td colspan="4">Day 1 (20/11/2026): Quý Dương</td></tr>
+      <tr><td>Sân bay KWE → Yibon Hotel</td><td>~10 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app (hoặc metro tuyến 2)</td></tr>
+      <tr><td>Yibon Hotel → Minsheng Road</td><td>~0,7 km</td><td>~10-15 phút</td><td>Đi bộ</td></tr>
+      <tr><td>Minsheng Road → Qingyun Market</td><td>~1,7 km</td><td>~10-20 phút</td><td>Taxi / đi bộ</td></tr>
+      <tr><td>Qingyun Market → Jiaxiu Tower</td><td>~1,7 km</td><td>~10-20 phút</td><td>Taxi / đi bộ</td></tr>
+      <tr><td>Jiaxiu Tower → Yibon Hotel</td><td>~1,0 km</td><td>~15 phút</td><td>Đi bộ / taxi</td></tr>
+      <tr class="grp"><td colspan="4">Day 2 (21/11/2026): Hoàng Quả Thụ</td></tr>
+      <tr><td>Yibon Hotel → ga Quý Dương Bắc</td><td>~6 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app / metro</td></tr>
+      <tr class="far"><td>Quý Dương Bắc → Anshun West</td><td>~90 km</td><td>~30 phút</td><td>Tàu cao tốc (G/D-train)</td></tr>
+      <tr><td>Anshun West → Khu Hoàng Quả Thụ</td><td>~45 km</td><td>~45p-1h (taxi)</td><td>Taxi / xe đặt app; xe buýt ~22 tệ có thể chậm hơn nhiều</td></tr>
+      <tr><td>Trong khu: Đại thác → Doupotang</td><td>~0,9 km</td><td>~15 phút</td><td>Đi bộ / xe nội khu</td></tr>
+      <tr><td>Trong khu: Doupotang → Tianxing Bridge</td><td>~6 km</td><td>~30 phút</td><td>Xe nội khu (shuttle)</td></tr>
+      <tr><td>Khu Hoàng Quả Thụ → Anshun West (về)</td><td>~45 km</td><td>~45p-1h</td><td>Taxi / xe đặt app, cùng tuyến chiều đi</td></tr>
+      <tr class="far"><td>Anshun West → Quý Dương Bắc (về)</td><td>~90 km</td><td>~30 phút</td><td>Tàu cao tốc, cùng tuyến chiều ngược lại</td></tr>
+      <tr class="grp"><td colspan="4">Day 3 (22/11/2026): Libo · Xiaoqikong</td></tr>
+      <tr><td>Yibon Hotel → ga Quý Dương Bắc</td><td>~6 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app</td></tr>
+      <tr class="far"><td>Quý Dương Bắc → Libo</td><td>~175 km</td><td>~1 giờ</td><td>Tàu cao tốc (G/D-train)</td></tr>
+      <tr><td>Ga Libo → Xiaoqikong (cửa Tây)</td><td>~30-35 km</td><td>~40-45 phút</td><td>Taxi / xe bus khu du lịch</td></tr>
+      <tr><td>Xiaoqikong: cửa Tây → Wolongtan</td><td>~1 km</td><td>~15 phút</td><td>Shuttle nội khu + đi bộ</td></tr>
+      <tr><td>Xiaoqikong: Wolongtan → cầu cổ</td><td>~6 km</td><td>Cả buổi</td><td>Đi bộ + shuttle nội khu</td></tr>
+      <tr><td>Xiaoqikong (cửa Đông) → Ga Libo (về)</td><td>~30-35 km</td><td>~40-45 phút</td><td>Taxi / xe bus khu du lịch</td></tr>
+      <tr class="far"><td>Libo → Quý Dương Bắc (về)</td><td>~175 km</td><td>~1 giờ</td><td>Tàu cao tốc, cùng tuyến chiều ngược lại</td></tr>
+      <tr class="grp"><td colspan="4">Day 4 (23/11/2026): Tây Giang</td></tr>
+      <tr><td>Yibon Hotel → ga Quý Dương Bắc</td><td>~6 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app / metro</td></tr>
+      <tr class="far"><td>Quý Dương Bắc → Kaili South</td><td>~125 km</td><td>~30-40 phút</td><td>Tàu cao tốc (G/D-train)</td></tr>
+      <tr><td>Kaili South → Tây Giang</td><td>~45 km</td><td>~1-1,5h</td><td>Taxi / xe đặt app, hoặc xe buýt khu du lịch (đường núi)</td></tr>
+      <tr><td>Tây Giang: Lusheng + Bảo tàng → phố cổ Youfang</td><td>~0,2 km</td><td>~5 phút</td><td>Đi bộ</td></tr>
+      <tr><td>Tây Giang: phố cổ → cầu Phong Vũ số 1</td><td>~0,7 km</td><td>~15 phút</td><td>Đi bộ</td></tr>
+      <tr><td>Tây Giang: cầu số 1 → đài quan sát / khách sạn</td><td>~1,1 km</td><td>~30 phút</td><td>Đi bộ lên dốc / xe điện</td></tr>
+      <tr class="grp"><td colspan="4">Day 5 (24/11/2026): Tây Giang → Quý Dương → Sân bay</td></tr>
+      <tr><td>Tây Giang → Kaili South</td><td>~45 km</td><td>~1-1,5h</td><td>Taxi / xe đặt app, hoặc xe buýt, cùng tuyến chiều đi</td></tr>
+      <tr class="far"><td>Kaili South → Quý Dương Bắc</td><td>~125 km</td><td>~30-40 phút</td><td>Tàu cao tốc, cùng tuyến chiều ngược lại</td></tr>
+      <tr><td>Ga Quý Dương Bắc → Yibon Hotel</td><td>~6 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app / metro</td></tr>
+      <tr><td>Yibon Hotel → Minsheng Road (ăn trưa)</td><td>~0,7 km</td><td>~10-15 phút</td><td>Đi bộ</td></tr>
+      <tr><td>Yibon Hotel → Sân bay KWE</td><td>~10 km</td><td>~20-30 phút</td><td>Taxi / xe đặt app</td></tr>
+    </table>
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);margin-top:8px;"><b>In đậm</b> = chặng đi xa (≥90km, di chuyển liên thành phố bằng tàu cao tốc). Khoảng cách/thời gian mang tính tham khảo, có thể chênh lệch tùy tuyến xe và giờ cao điểm. Vé tàu cao tốc nên đặt trước qua app 12306 hoặc Trip.com.</p>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-anuong" role="tabpanel" aria-labelledby="btn-anuong">
+  <div class="day">
+    <h2>Day 1 (20/11/2026) — Quý Dương</h2>
+    <div class="subtitle">Minsheng Road · Qingyun Market · Jiaxiu Tower</div>
+    <div class="table-scroll">
+    <table class="summary food">
+      <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
+      <tr><td><b>烙锅 <span class="py">(làoguō)</span> Luoguo</b></td><td>Lẩu/nướng trên chảo gang kiểu Quý Châu: khoai tây, xúc xích, thịt</td><td>Minsheng Road. Quán tham khảo: 大胖刘烙锅 <span class="py">(Dàpàng Liú làoguō)</span> (xúc xích Anshun, thịt bò)</td></tr>
+      <tr><td><b>蛋包洋芋 <span class="py">(dàn bāo yángyù)</span> · 现炸洋芋片 <span class="py">(xiàn zhà yángyù piàn)</span></b></td><td>Khoai tây bọc trứng; khoai tây chiên tại chỗ</td><td>Minsheng Road, ăn vặt trước khi sang Qingyun Market</td></tr>
+      <tr><td><b>丝娃娃 <span class="py">(sīwáwa)</span> Si Wa Wa</b></td><td>Bánh tráng mỏng cuốn giá, dưa leo, rau củ và hơn chục loại nhân, chấm nước chua đỏ</td><td>Qingyun Market hoặc Minsheng Road (Haochi Food Street)</td></tr>
+      <tr><td><b>烤鱼 <span class="py">(kǎoyú)</span> · 烤串 <span class="py">(kǎochuàn)</span></b></td><td>Cá nướng và thịt xiên nướng</td><td>Qingyun Market, được gọi là khu ăn đêm của Quý Dương</td></tr>
+      <tr><td><b>酸汤鱼 <span class="py">(suāntāng yú)</span> Canh chua cá</b></td><td>Món "linh hồn" của Quý Châu, vị chua cay: chua nhiều hơn cay</td><td>老凯里酸汤鱼 <span class="py">(Lǎo Kǎilǐ suāntāng yú)</span> (Lao Kaili) là chuỗi được nhiều người nhắc, có chi nhánh ở Quý Dương</td></tr>
+      <tr><td><b>酸汤牛肉火锅 <span class="py">(suāntāng niúròu huǒguō)</span></b></td><td>Lẩu bò nước chua</td><td>Nhiều chi nhánh ở Quý Dương, ví dụ 胡子哥酸汤牛肉火锅 <span class="py">(Húzigē suāntāng niúròu huǒguō)</span> (bạn đã lưu trong file)</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Ưu tiên ăn nhẹ ở Minsheng Road (16:30) để còn bụng cho Qingyun Market lúc 17:45. Nếu muốn ăn lẩu hoặc canh chua cá thì để dành cho tối hôm sau khi về Quý Dương.</p>
+  </div>
+
+  <div class="day">
+    <h2>Day 2 (21/11/2026) — Anshun · Hoàng Quả Thụ</h2>
+    <div class="subtitle">Ga Anshun West · khu Hoàng Quả Thụ</div>
+    <div class="table-scroll">
+    <table class="summary food">
+      <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
+      <tr><td><b>安顺裹卷 <span class="py">(Ānshùn guǒjuǎn)</span> Anshun Guojuan</b></td><td>Bánh cuốn kiểu An Thuận: vỏ mỏng cuốn rau củ, nước sốt chua cay</td><td>Đặc sản An Thuận, chủ yếu ở trung tâm thành phố (phố Gufu, phố Jiangye). Nếu lịch không ghé trung tâm thì bỏ qua</td></tr>
+      <tr><td><b>破酥包 <span class="py">(pòsū bāo)</span> Posubao</b></td><td>Bánh bao vỏ giòn nhiều lớp, nhân mặn hoặc ngọt, hợp ăn sáng</td><td>Mua sáng sớm hoặc trong ngày; ở Quý Dương có quán 玉记安顺酥包 <span class="py">(Yùjì Ānshùn sūbāo)</span> chi nhánh Minsheng Road (số 18)</td></tr>
+      <tr><td><b>多多面 <span class="py">(duōduō miàn)</span> Duoduo</b></td><td>Nồi lẩu nhỏ kiểu mì, nước chua cay từ cà chua và ớt lên men</td><td>Đặc sản An Thuận; ăn trưa quanh khu Hoàng Quả Thụ nếu có quán</td></tr>
+      <tr><td><b>酸汤鱼 <span class="py">(suāntāng yú)</span> · 农家菜 <span class="py">(nóngjiā cài)</span></b></td><td>Canh chua cá, món nông gia</td><td>Nhà hàng gần khu Hoàng Quả Thụ; chọn quán đông khách để đảm bảo vệ sinh</td></tr>
+      <tr><td><b>Gà cay An Thuận 辣子鸡 <span class="py">(làzi jī)</span></b></td><td>Gà ta xào nhiều ớt và gia vị</td><td>Ăn nếu có điều kiện, hợp bữa tối nhưng bạn về Quý Dương 19:40</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Day 2 chỉ ăn trưa nhanh trong khu nên đừng kỳ vọng nhiều. Bạn nên mang nước và đồ ăn nhẹ vì đi bộ rất nhiều.</p>
+  </div>
+
+  <div class="day">
+    <h2>Day 3 (22/11/2026) — Libo · Xiaoqikong</h2>
+    <div class="subtitle">Cửa Đông Xiaoqikong · thị trấn Mengliu kiểu Buyi</div>
+    <div class="table-scroll">
+    <table class="summary food">
+      <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
+      <tr><td><b>鱼包韭菜 <span class="py">(yú bāo jiǔcài)</span> Cá nhồi hẹ</b></td><td>Cá chép nhồi hẹ và rượu gạo, món lễ của người Thủy (Shui)</td><td>Nhà hàng ở Libo; nếu không có thì bỏ qua vì món này thường cần chuẩn bị lâu</td></tr>
+      <tr><td><b>荔波烤鱼 <span class="py">(Lìbō kǎoyú)</span> · 炸鱼 <span class="py">(zháyú)</span></b></td><td>Cá nướng/chiên kiểu Libo, thịt ngọt, không tanh</td><td>Quán ở Libo và khu thắng cảnh; ăn khi còn nóng</td></tr>
+      <tr><td><b>酸汤鱼 <span class="py">(suāntāng yú)</span> Canh chua cá Libo</b></td><td>Canh chua cá sông, vị cay chua đậm</td><td>Nhà hàng ở Libo, ví dụ 苗家酸汤鱼 <span class="py">(Miáojiā suāntāng yú)</span></td></tr>
+      <tr><td><b>荔波米片 <span class="py">(Lìbō mǐpiàn)</span></b></td><td>Bánh gạo giòn, vị hơi ngọt</td><td>Ăn vặt kèm bữa cơm ở thị trấn Mengliu</td></tr>
+      <tr><td><b>五色糯米饭 <span class="py">(wǔsè nuòmǐfàn)</span> · 黑糯米饭 <span class="py">(hēi nuòmǐfàn)</span></b></td><td>Xôi ngũ sắc nhuộm từ thực vật của người Buyi</td><td>Quán ở thị trấn Mengliu hoặc Libo, hợp ăn kèm các món mặn</td></tr>
+      <tr><td><b>Các món người Dao 瑶家菜 <span class="py">(Yáojiā cài)</span></b></td><td>Có một dãy quán ngay ngoài trung tâm du khách ở cửa Đông, chủ yếu món người Dao</td><td>Một vài gia vị có thể lạ miệng, hỏi trước món nào ít cay</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Bữa tối ăn ở Quý Dương sau khi về (khoảng 20:00, gần khách sạn). Các món Libo ở bảng trên hợp cho bữa trưa ở khu thắng cảnh hoặc thị trấn Mengliu (có quán 寨上肴 <span class="py">(Zhàishàng Yáo)</span> gần cầu cổ). Đồ ăn trong khu bị nhận xét là đắt, nên mang thêm đồ ăn nhẹ.</p>
+  </div>
+
+  <div class="day">
+    <h2>Day 4 (23/11/2026) — Tây Giang</h2>
+    <div class="subtitle">Phố ăn uống · phố cổ · khu đài quan sát</div>
+    <div class="table-scroll">
+    <table class="summary food">
+      <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
+      <tr><td><b>酸汤鱼 <span class="py">(suāntāng yú)</span> Canh chua cá Miêu</b></td><td>Món "linh hồn" của làng: cá ruộng nấu canh chua lên men từ quả maola dại</td><td>Quán trên phố cổ hoặc Youfang Street, ví dụ 黔山溪 <span class="py">(Qiánshānxī)</span> (canh chua chuẩn di sản). Một số khách thấy nước lạt, hỏi thêm ớt</td></tr>
+      <tr><td><b>长桌宴 <span class="py">(chángzhuōyàn)</span> Tiệc bàn dài</b></td><td>Tiệc người Miêu có thịt xông khói, canh chua cá, xôi ngũ sắc, nghi thức mời rượu "cao sơn lưu thủy"</td><td>Khoảng 50–80 tệ/người, nên đặt trước. Hợp làm bữa tối Day 4</td></tr>
+      <tr><td><b>苗王鱼 <span class="py">(Miáowáng yú)</span> Cá vua Miêu</b></td><td>Cá nấu chín giã nhuyễn trộn ớt nướng, tỏi, được gọi là "vịt quay Bắc Kinh của người Miêu"</td><td>Nhà hàng trong làng</td></tr>
+      <tr><td><b>Thịt xông khói Miêu 腊肉 <span class="py">(làròu)</span></b></td><td>Thịt hun khói, thái lát ăn trực tiếp hoặc xào, ăn kèm xôi</td><td>Nhà hàng/quán lẻ trong làng</td></tr>
+      <tr><td><b>糍粑 <span class="py">(cíbā)</span> Bánh nếp giã tay</b></td><td>Bánh nếp giã tại chỗ, phủ bột đậu nành và đường nâu, mềm ngọt</td><td>Phố cổ, ăn vặt lúc đi dạo</td></tr>
+      <tr><td><b>Rượu gạo Miêu 米酒 <span class="py">(mǐjiǔ)</span></b></td><td>Rượu nếp nhà làm, độ cồn thấp, ngọt dịu</td><td>Thường đi kèm tiệc bàn dài. Uống vừa phải nếu hôm sau phải dậy sớm</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Ngày này bạn đến ~11:00 nên bữa trưa ăn ở phố ăn uống gần quảng trường Lusheng. Có thể gặp nghi thức rót rượu chào khách ở quảng trường cổng (10:30–12:00 và 15:30–17:00).</p>
+  </div>
+
+  <div class="day">
+    <h2>Day 5 (24/11/2026) — Tây Giang · Quý Dương</h2>
+    <div class="subtitle">Sáng ở Tây Giang · trưa Minsheng Road</div>
+    <div class="table-scroll">
+    <table class="summary food">
+      <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
+      <tr><td><b>Xôi ngũ sắc 彩色糯米饭 <span class="py">(cǎisè nuòmǐfàn)</span></b></td><td>Xôi nhuộm màu từ thực vật</td><td>Ăn sáng ở Tây Giang. Thời điểm hợp là 7:00–10:00, nhưng bạn nên ăn sớm vì phải rời 08:00</td></tr>
+      <tr><td><b>Bánh nếp giã tay 糍粑 <span class="py">(cíbā)</span></b></td><td>Ngọt, mềm, ăn nhanh</td><td>Phố cổ, mua mang đi cho tiện lên xe</td></tr>
+      <tr><td><b>Bún/mì gạo trên phố cổ</b></td><td>Món sáng đơn giản</td><td>Quán ngay trên phố cổ Tây Giang</td></tr>
+      <tr><td><b>破酥包 <span class="py">(pòsū bāo)</span> Posubao + 烙锅 <span class="py">(làoguō)</span></b></td><td>Bánh bao giòn đặc sản An Thuận và chảo gang Quý Châu</td><td>Minsheng Road: 玉记安顺酥包 <span class="py">(Yùjì Ānshùn sūbāo)</span> (số 18) và các quán luoguo, bù lại món bạn không ăn ở An Thuận</td></tr>
+      <tr><td><b>肠旺面 <span class="py">(chángwàng miàn)</span> Mì Trường Vượng</b></td><td>Mì trứng dai, lòng heo, tiết, thịt ba chỉ giòn, nước dùng cay thơm</td><td>Truyền thống là món sáng nên dễ hết nếu đến muộn, bạn nên hỏi quán còn không. Một số quán nổi tiếng: 老三肠旺面 <span class="py">(Lǎosān chángwàng miàn)</span>, 金家肠旺面 <span class="py">(Jīnjiā chángwàng miàn)</span></td></tr>
+      <tr><td><b>豆腐圆子 <span class="py">(dòufu yuánzi)</span> Tofu viên chiên</b></td><td>Giòn ngoài mềm trong, chấm nước ớt rau diếp cá</td><td>Quán ăn vặt trên Minsheng Road (Haochi Food Street)</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Trước khi ra sân bay lúc 16:30 bạn nên ăn chắc bụng, vì thủ tục bay và xuất cảnh kéo dài đến 19:00.</p>
+  </div>
+
+  <p class="food-note" style="margin:0;">Tổng hợp từ các hướng dẫn du lịch (Trip.com và các trang địa phương). Quán, giá và giờ mở cửa có thể thay đổi, bạn nên kiểm tra lại trước khi đi. 折耳根 <span class="py">(zhé'ěrgēn)</span> (diếp cá) hay xuất hiện trong món Quý Châu, bạn báo trước nếu không ăn được.</p>
+  </section>
+
+  <section class="tab-panel" id="tab-tiengtrung" role="tabpanel" aria-labelledby="btn-tiengtrung">
+  <div class="day" id="zhtravel">
+    <h2>Tiếng Trung du lịch</h2>
+    <div class="subtitle">Câu dùng ngay cho chuyến đi, xếp theo tình huống. Bấm vào một câu để phóng to, đưa màn hình cho tài xế, nhân viên khách sạn hay người bán hàng xem. Nguồn: Sổ tay tiếng Trung của O Linh.</div>
+    <input type="search" id="zhSearch" class="zh-search" placeholder="Tìm câu: chữ Hán, pinyin hoặc tiếng Việt" aria-label="Tìm câu tiếng Trung">
+    <button type="button" class="zh-all" id="zhAll">Mở tất cả chủ đề</button>
+    <div class="zh-chips"><button type="button" class="zh-chip" data-go="zh-chao">Chào hỏi và nhờ giúp</button><button type="button" class="zh-chip" data-go="zh-baobieu">Biển báo hay gặp</button><button type="button" class="zh-chip" data-go="zh-sanbay">Sân bay và quá cảnh</button><button type="button" class="zh-chip" data-go="zh-dilai">Đi lại</button><button type="button" class="zh-chip" data-go="zh-khachsan">Khách sạn</button><button type="button" class="zh-chip" data-go="zh-anuong">Ăn uống</button><button type="button" class="zh-chip" data-go="zh-monan">Món Quý Châu nên thử</button><button type="button" class="zh-chip" data-go="zh-giavi">Gia vị</button><button type="button" class="zh-chip" data-go="zh-douong">Trà sữa và cà phê</button><button type="button" class="zh-chip" data-go="zh-goinuoc">Gọi đồ uống</button><button type="button" class="zh-chip" data-go="zh-muasam">Mua sắm và thanh toán</button><button type="button" class="zh-chip" data-go="zh-diadanh">Địa danh</button><button type="button" class="zh-chip" data-go="zh-khancap">Khẩn cấp và sức khỏe</button></div>
+        <div class="zh-grid">
+    <div class="zh-sec open" id="zh-chao">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="true"><span class="zh-ht"><span class="zh-big">问候 <span class="py">(wènhòu)</span></span> Chào hỏi và nhờ giúp</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Mấy câu mở đầu, và cách xin người ta nói chậm hoặc viết ra.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="你好！" data-py="Nǐ hǎo!" data-vi="Xin chào."><div class="zh-hz">你好！</div><div class="zh-py">Nǐ hǎo!</div><div class="zh-vi">Xin chào.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="谢谢！" data-py="Xièxie!" data-vi="Cảm ơn."><div class="zh-hz">谢谢！</div><div class="zh-py">Xièxie!</div><div class="zh-vi">Cảm ơn.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不好意思。" data-py="Bù hǎoyìsi." data-vi="Xin lỗi, làm phiền một chút."><div class="zh-hz">不好意思。</div><div class="zh-py">Bù hǎoyìsi.</div><div class="zh-vi">Xin lỗi, làm phiền một chút.</div><div class="zh-note">Dùng khi gọi người, nhờ việc nhỏ, đi lách qua đám đông.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我是越南人。" data-py="Wǒ shì Yuènán rén." data-vi="Tôi là người Việt Nam."><div class="zh-hz">我是越南人。</div><div class="zh-py">Wǒ shì Yuènán rén.</div><div class="zh-vi">Tôi là người Việt Nam.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我只会说一点儿中文。" data-py="Wǒ zhǐ huì shuō yìdiǎnr Zhōngwén." data-vi="Tôi chỉ biết nói một chút tiếng Trung."><div class="zh-hz">我只会说一点儿中文。</div><div class="zh-py">Wǒ zhǐ huì shuō yìdiǎnr Zhōngwén.</div><div class="zh-vi">Tôi chỉ biết nói một chút tiếng Trung.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="请说慢一点儿。" data-py="Qǐng shuō màn yìdiǎnr." data-vi="Làm ơn nói chậm một chút."><div class="zh-hz">请说慢一点儿。</div><div class="zh-py">Qǐng shuō màn yìdiǎnr.</div><div class="zh-vi">Làm ơn nói chậm một chút.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="请再说一遍。" data-py="Qǐng zài shuō yí biàn." data-vi="Làm ơn nói lại lần nữa."><div class="zh-hz">请再说一遍。</div><div class="zh-py">Qǐng zài shuō yí biàn.</div><div class="zh-vi">Làm ơn nói lại lần nữa.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我听不懂。" data-py="Wǒ tīng bu dǒng." data-vi="Tôi nghe không hiểu."><div class="zh-hz">我听不懂。</div><div class="zh-py">Wǒ tīng bu dǒng.</div><div class="zh-vi">Tôi nghe không hiểu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以写下来吗？" data-py="Kěyǐ xiě xiàlai ma?" data-vi="Bạn viết ra giúp tôi được không?"><div class="zh-hz">可以写下来吗？</div><div class="zh-py">Kěyǐ xiě xiàlai ma?</div><div class="zh-vi">Bạn viết ra giúp tôi được không?</div><div class="zh-note">Nhìn chữ Hán, bạn có thể đoán nghĩa qua âm Hán Việt.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="你会说英语吗？" data-py="Nǐ huì shuō Yīngyǔ ma?" data-vi="Bạn có nói được tiếng Anh không?"><div class="zh-hz">你会说英语吗？</div><div class="zh-py">Nǐ huì shuō Yīngyǔ ma?</div><div class="zh-vi">Bạn có nói được tiếng Anh không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以帮我拍张照吗？" data-py="Kěyǐ bāng wǒ pāi zhāng zhào ma?" data-vi="Chụp giúp tôi một tấm ảnh được không?"><div class="zh-hz">可以帮我拍张照吗？</div><div class="zh-py">Kěyǐ bāng wǒ pāi zhāng zhào ma?</div><div class="zh-vi">Chụp giúp tôi một tấm ảnh được không?</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-baobieu">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">标志 <span class="py">(biāozhì)</span></span> Biển báo hay gặp</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Đọc được những chữ này là đỡ lạc ở sân bay, nhà ga, nhà hàng.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="推" data-py="tuī" data-vi="Đẩy (cửa)"><div class="zh-hz">推</div><div class="zh-py">tuī</div><div class="zh-vi">Đẩy (cửa)</div><div class="zh-note">Chữ bộ Thủ đã học. Cửa ghi 推 thì đẩy.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="拉" data-py="lā" data-vi="Kéo (cửa)"><div class="zh-hz">拉</div><div class="zh-py">lā</div><div class="zh-vi">Kéo (cửa)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="入口" data-py="rùkǒu" data-vi="Lối vào"><div class="zh-hz">入口</div><div class="zh-py">rùkǒu</div><div class="zh-vi">Lối vào</div></li>
+        <li class="zh-item" tabindex="0" data-zh="出口" data-py="chūkǒu" data-vi="Lối ra"><div class="zh-hz">出口</div><div class="zh-py">chūkǒu</div><div class="zh-vi">Lối ra</div></li>
+        <li class="zh-item" tabindex="0" data-zh="洗手间 / 卫生间" data-py="xǐshǒujiān / wèishēngjiān" data-vi="Nhà vệ sinh"><div class="zh-hz">洗手间 / 卫生间</div><div class="zh-py">xǐshǒujiān / wèishēngjiān</div><div class="zh-vi">Nhà vệ sinh</div></li>
+        <li class="zh-item" tabindex="0" data-zh="男 / 女" data-py="nán / nǚ" data-vi="Nam / Nữ"><div class="zh-hz">男 / 女</div><div class="zh-py">nán / nǚ</div><div class="zh-vi">Nam / Nữ</div></li>
+        <li class="zh-item" tabindex="0" data-zh="出发 / 到达" data-py="chūfā / dàodá" data-vi="Khởi hành / Đến"><div class="zh-hz">出发 / 到达</div><div class="zh-py">chūfā / dàodá</div><div class="zh-vi">Khởi hành / Đến</div></li>
+        <li class="zh-item" tabindex="0" data-zh="售票处" data-py="shòupiàochù" data-vi="Quầy bán vé"><div class="zh-hz">售票处</div><div class="zh-py">shòupiàochù</div><div class="zh-vi">Quầy bán vé</div></li>
+        <li class="zh-item" tabindex="0" data-zh="安全出口" data-py="ānquán chūkǒu" data-vi="Lối thoát hiểm"><div class="zh-hz">安全出口</div><div class="zh-py">ānquán chūkǒu</div><div class="zh-vi">Lối thoát hiểm</div></li>
+        <li class="zh-item" tabindex="0" data-zh="禁止吸烟" data-py="jìnzhǐ xīyān" data-vi="Cấm hút thuốc"><div class="zh-hz">禁止吸烟</div><div class="zh-py">jìnzhǐ xīyān</div><div class="zh-vi">Cấm hút thuốc</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-sanbay">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">机场 <span class="py">(jīchǎng)</span></span> Sân bay và quá cảnh</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Cho chặng nối chuyến ở Quảng Châu và lúc đến Quý Dương.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="我在广州转机。" data-py="Wǒ zài Guǎngzhōu zhuǎnjī." data-vi="Tôi nối chuyến ở Quảng Châu."><div class="zh-hz">我在广州转机。</div><div class="zh-py">Wǒ zài Guǎngzhōu zhuǎnjī.</div><div class="zh-vi">Tôi nối chuyến ở Quảng Châu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="中转柜台在哪儿？" data-py="Zhōngzhuǎn guìtái zài nǎr?" data-vi="Quầy nối chuyến ở đâu?"><div class="zh-hz">中转柜台在哪儿？</div><div class="zh-py">Zhōngzhuǎn guìtái zài nǎr?</div><div class="zh-vi">Quầy nối chuyến ở đâu?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="请问，几号登机口？" data-py="Qǐngwèn, jǐ hào dēngjīkǒu?" data-vi="Cho hỏi, cửa ra máy bay số mấy?"><div class="zh-hz">请问，几号登机口？</div><div class="zh-py">Qǐngwèn, jǐ hào dēngjīkǒu?</div><div class="zh-vi">Cho hỏi, cửa ra máy bay số mấy?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="航班延误了吗？" data-py="Hángbān yánwù le ma?" data-vi="Chuyến bay bị trễ à?"><div class="zh-hz">航班延误了吗？</div><div class="zh-py">Hángbān yánwù le ma?</div><div class="zh-vi">Chuyến bay bị trễ à?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="行李在哪儿取？" data-py="Xíngli zài nǎr qǔ?" data-vi="Lấy hành lý ở đâu?"><div class="zh-hz">行李在哪儿取？</div><div class="zh-py">Xíngli zài nǎr qǔ?</div><div class="zh-vi">Lấy hành lý ở đâu?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="这是我的护照。" data-py="Zhè shì wǒ de hùzhào." data-vi="Đây là hộ chiếu của tôi."><div class="zh-hz">这是我的护照。</div><div class="zh-py">Zhè shì wǒ de hùzhào.</div><div class="zh-vi">Đây là hộ chiếu của tôi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我要去贵阳。" data-py="Wǒ yào qù Guìyáng." data-vi="Tôi đi Quý Dương."><div class="zh-hz">我要去贵阳。</div><div class="zh-py">Wǒ yào qù Guìyáng.</div><div class="zh-vi">Tôi đi Quý Dương.</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-dilai">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">交通 <span class="py">(jiāotōng)</span></span> Đi lại</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Taxi, tàu điện ngầm, tàu cao tốc. Cách hỏi đường và nghe chỉ đường.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="我想去这儿。" data-py="Wǒ xiǎng qù zhèr." data-vi="Tôi muốn đến chỗ này."><div class="zh-hz">我想去这儿。</div><div class="zh-py">Wǒ xiǎng qù zhèr.</div><div class="zh-vi">Tôi muốn đến chỗ này.</div><div class="zh-note">Vừa nói vừa chỉ vào địa chỉ hoặc bản đồ.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我想打车去机场。" data-py="Wǒ xiǎng dǎ chē qù jīchǎng." data-vi="Tôi muốn bắt taxi ra sân bay."><div class="zh-hz">我想打车去机场。</div><div class="zh-py">Wǒ xiǎng dǎ chē qù jīchǎng.</div><div class="zh-vi">Tôi muốn bắt taxi ra sân bay.</div><div class="zh-note">打车 là gọi taxi. Chữ 打 đã học trong bộ Thủ.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="到这儿多少钱？" data-py="Dào zhèr duōshao qián?" data-vi="Đi đến đây bao nhiêu tiền?"><div class="zh-hz">到这儿多少钱？</div><div class="zh-py">Dào zhèr duōshao qián?</div><div class="zh-vi">Đi đến đây bao nhiêu tiền?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="远吗？" data-py="Yuǎn ma?" data-vi="Có xa không?"><div class="zh-hz">远吗？</div><div class="zh-py">Yuǎn ma?</div><div class="zh-vi">Có xa không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="请在这儿停车。" data-py="Qǐng zài zhèr tíng chē." data-vi="Làm ơn dừng xe ở đây."><div class="zh-hz">请在这儿停车。</div><div class="zh-py">Qǐng zài zhèr tíng chē.</div><div class="zh-vi">Làm ơn dừng xe ở đây.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="地铁站在哪儿？" data-py="Dìtiě zhàn zài nǎr?" data-vi="Ga tàu điện ngầm ở đâu?"><div class="zh-hz">地铁站在哪儿？</div><div class="zh-py">Dìtiě zhàn zài nǎr?</div><div class="zh-vi">Ga tàu điện ngầm ở đâu?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我要一张去凯里南的票。" data-py="Wǒ yào yì zhāng qù Kǎilǐ nán de piào." data-vi="Tôi muốn mua một vé đi ga Khải Lý Nam."><div class="zh-hz">我要一张去凯里南的票。</div><div class="zh-py">Wǒ yào yì zhāng qù Kǎilǐ nán de piào.</div><div class="zh-vi">Tôi muốn mua một vé đi ga Khải Lý Nam.</div><div class="zh-note">Ga tàu cao tốc thường dùng để đi tiếp xe buýt vào Tây Giang.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="检票口在哪儿？" data-py="Jiǎnpiàokǒu zài nǎr?" data-vi="Cửa soát vé ở đâu?"><div class="zh-hz">检票口在哪儿？</div><div class="zh-py">Jiǎnpiàokǒu zài nǎr?</div><div class="zh-vi">Cửa soát vé ở đâu?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="一直走 / 往左拐 / 往右拐" data-py="yìzhí zǒu / wǎng zuǒ guǎi / wǎng yòu guǎi" data-vi="Đi thẳng / rẽ trái / rẽ phải"><div class="zh-hz">一直走 / 往左拐 / 往右拐</div><div class="zh-py">yìzhí zǒu / wǎng zuǒ guǎi / wǎng yòu guǎi</div><div class="zh-vi">Đi thẳng / rẽ trái / rẽ phải</div><div class="zh-note">Để nghe hiểu khi người ta chỉ đường.</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-khachsan">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">酒店 <span class="py">(jiǔdiàn)</span></span> Khách sạn</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Nhận phòng, trả phòng và gửi hành lý trong lúc đi Tây Giang.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="我预订了房间。" data-py="Wǒ yùdìng le fángjiān." data-vi="Tôi đã đặt phòng."><div class="zh-hz">我预订了房间。</div><div class="zh-py">Wǒ yùdìng le fángjiān.</div><div class="zh-vi">Tôi đã đặt phòng.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="几点退房？" data-py="Jǐ diǎn tuìfáng?" data-vi="Mấy giờ trả phòng?"><div class="zh-hz">几点退房？</div><div class="zh-py">Jǐ diǎn tuìfáng?</div><div class="zh-vi">Mấy giờ trả phòng?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我要退房。" data-py="Wǒ yào tuìfáng." data-vi="Tôi muốn trả phòng."><div class="zh-hz">我要退房。</div><div class="zh-py">Wǒ yào tuìfáng.</div><div class="zh-vi">Tôi muốn trả phòng.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以寄存行李吗？" data-py="Kěyǐ jìcún xíngli ma?" data-vi="Có thể gửi hành lý ở đây không?"><div class="zh-hz">可以寄存行李吗？</div><div class="zh-py">Kěyǐ jìcún xíngli ma?</div><div class="zh-vi">Có thể gửi hành lý ở đây không?</div><div class="zh-note">Dùng hôm 23/11 khi trả phòng ở Quý Dương để đi Tây Giang.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="一共五件行李。" data-py="Yígòng wǔ jiàn xíngli." data-vi="Tổng cộng năm kiện hành lý."><div class="zh-hz">一共五件行李。</div><div class="zh-py">Yígòng wǔ jiàn xíngli.</div><div class="zh-vi">Tổng cộng năm kiện hành lý.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我明天回来取。" data-py="Wǒ míngtiān huílai qǔ." data-vi="Ngày mai tôi quay lại lấy."><div class="zh-hz">我明天回来取。</div><div class="zh-py">Wǒ míngtiān huílai qǔ.</div><div class="zh-vi">Ngày mai tôi quay lại lấy.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="WiFi密码是多少？" data-py="WiFi mìmǎ shì duōshao?" data-vi="Mật khẩu WiFi là gì?"><div class="zh-hz">WiFi密码是多少？</div><div class="zh-py">WiFi mìmǎ shì duōshao?</div><div class="zh-vi">Mật khẩu WiFi là gì?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="房间太冷了。" data-py="Fángjiān tài lěng le." data-vi="Phòng lạnh quá."><div class="zh-hz">房间太冷了。</div><div class="zh-py">Fángjiān tài lěng le.</div><div class="zh-vi">Phòng lạnh quá.</div><div class="zh-note">Quý Châu cuối tháng 11 khá lạnh và ẩm.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以加一床被子吗？" data-py="Kěyǐ jiā yì chuáng bèizi ma?" data-vi="Cho thêm một cái chăn được không?"><div class="zh-hz">可以加一床被子吗？</div><div class="zh-py">Kěyǐ jiā yì chuáng bèizi ma?</div><div class="zh-vi">Cho thêm một cái chăn được không?</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-anuong">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">吃饭 <span class="py">(chīfàn)</span></span> Ăn uống</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Gọi món, dặn bớt cay, tính tiền.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="服务员！" data-py="Fúwùyuán!" data-vi="Phục vụ ơi!"><div class="zh-hz">服务员！</div><div class="zh-py">Fúwùyuán!</div><div class="zh-vi">Phục vụ ơi!</div></li>
+        <li class="zh-item" tabindex="0" data-zh="有菜单吗？" data-py="Yǒu càidān ma?" data-vi="Có thực đơn không?"><div class="zh-hz">有菜单吗？</div><div class="zh-py">Yǒu càidān ma?</div><div class="zh-vi">Có thực đơn không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我要这个。" data-py="Wǒ yào zhège." data-vi="Tôi lấy món này."><div class="zh-hz">我要这个。</div><div class="zh-py">Wǒ yào zhège.</div><div class="zh-vi">Tôi lấy món này.</div><div class="zh-note">Chỉ vào ảnh món trên thực đơn.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要辣。" data-py="Bú yào là." data-vi="Đừng cho cay."><div class="zh-hz">不要辣。</div><div class="zh-py">Bú yào là.</div><div class="zh-vi">Đừng cho cay.</div><div class="zh-note">Ở Quý Châu, món “không cay” vẫn có thể hơi cay.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="微辣。" data-py="Wēi là." data-vi="Cay nhẹ thôi."><div class="zh-hz">微辣。</div><div class="zh-py">Wēi là.</div><div class="zh-vi">Cay nhẹ thôi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我不吃辣。" data-py="Wǒ bù chī là." data-vi="Tôi không ăn cay."><div class="zh-hz">我不吃辣。</div><div class="zh-py">Wǒ bù chī là.</div><div class="zh-vi">Tôi không ăn cay.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要放折耳根。" data-py="Bú yào fàng zhé&#x27;ěrgēn." data-vi="Đừng cho rễ diếp cá."><div class="zh-hz">不要放折耳根。</div><div class="zh-py">Bú yào fàng zhé&#x27;ěrgēn.</div><div class="zh-vi">Đừng cho rễ diếp cá.</div><div class="zh-note">折耳根 có mùi rất nồng, được cho vào rất nhiều món Quý Châu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="好吃！" data-py="Hǎochī!" data-vi="Ngon quá!"><div class="zh-hz">好吃！</div><div class="zh-py">Hǎochī!</div><div class="zh-vi">Ngon quá!</div></li>
+        <li class="zh-item" tabindex="0" data-zh="一瓶水。" data-py="Yì píng shuǐ." data-vi="Một chai nước."><div class="zh-hz">一瓶水。</div><div class="zh-py">Yì píng shuǐ.</div><div class="zh-vi">Một chai nước.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="打包。" data-py="Dǎbāo." data-vi="Gói mang về."><div class="zh-hz">打包。</div><div class="zh-py">Dǎbāo.</div><div class="zh-vi">Gói mang về.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="买单。" data-py="Mǎidān." data-vi="Tính tiền."><div class="zh-hz">买单。</div><div class="zh-py">Mǎidān.</div><div class="zh-vi">Tính tiền.</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-monan">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">美食 <span class="py">(měishí)</span></span> Món Quý Châu nên thử</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Tên món để đọc thực đơn hoặc hỏi người bán.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="酸汤鱼" data-py="suāntāng yú" data-vi="Cá nấu nước dùng chua kiểu Quý Châu"><div class="zh-hz">酸汤鱼</div><div class="zh-py">suāntāng yú</div><div class="zh-vi">Cá nấu nước dùng chua kiểu Quý Châu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="丝娃娃" data-py="sīwáwa" data-vi="Bánh tráng mỏng tự cuốn rau sợi, chan nước chấm chua cay"><div class="zh-hz">丝娃娃</div><div class="zh-py">sīwáwa</div><div class="zh-vi">Bánh tráng mỏng tự cuốn rau sợi, chan nước chấm chua cay</div><div class="zh-note">Tên “em bé quấn tã” vì cuốn xong trông như vậy.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="肠旺面" data-py="chángwàng miàn" data-vi="Mì lòng heo và tiết, nước dùng dầu ớt"><div class="zh-hz">肠旺面</div><div class="zh-py">chángwàng miàn</div><div class="zh-vi">Mì lòng heo và tiết, nước dùng dầu ớt</div></li>
+        <li class="zh-item" tabindex="0" data-zh="花溪牛肉粉" data-py="Huāxī niúròu fěn" data-vi="Bún bò Hoa Khê"><div class="zh-hz">花溪牛肉粉</div><div class="zh-py">Huāxī niúròu fěn</div><div class="zh-vi">Bún bò Hoa Khê</div></li>
+        <li class="zh-item" tabindex="0" data-zh="豆米火锅" data-py="dòumǐ huǒguō" data-vi="Lẩu đậu"><div class="zh-hz">豆米火锅</div><div class="zh-py">dòumǐ huǒguō</div><div class="zh-vi">Lẩu đậu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="糯米饭" data-py="nuòmǐfàn" data-vi="Xôi, món sáng phổ biến ở Quý Dương"><div class="zh-hz">糯米饭</div><div class="zh-py">nuòmǐfàn</div><div class="zh-vi">Xôi, món sáng phổ biến ở Quý Dương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="洋芋粑" data-py="yángyùbā" data-vi="Bánh khoai tây chiên giòn"><div class="zh-hz">洋芋粑</div><div class="zh-py">yángyùbā</div><div class="zh-vi">Bánh khoai tây chiên giòn</div></li>
+        <li class="zh-item" tabindex="0" data-zh="恋爱豆腐果" data-py="liàn&#x27;ài dòufuguǒ" data-vi="Đậu phụ nướng nhồi nước chấm, tên gọi là “đậu phụ yêu đương”"><div class="zh-hz">恋爱豆腐果</div><div class="zh-py">liàn&#x27;ài dòufuguǒ</div><div class="zh-vi">Đậu phụ nướng nhồi nước chấm, tên gọi là “đậu phụ yêu đương”</div></li>
+        <li class="zh-item" tabindex="0" data-zh="长桌宴" data-py="chángzhuōyàn" data-vi="Tiệc bàn dài của người Miêu, gặp ở Tây Giang"><div class="zh-hz">长桌宴</div><div class="zh-py">chángzhuōyàn</div><div class="zh-vi">Tiệc bàn dài của người Miêu, gặp ở Tây Giang</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-giavi">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">调料 <span class="py">(tiáoliào)</span></span> Gia vị</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Đọc chai lọ trên bàn, dặn bớt hay bỏ gia vị, và mấy loại ớt, nước chấm riêng của Quý Châu.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="调料" data-py="tiáoliào" data-vi="Gia vị (nói chung)"><div class="zh-hz">调料</div><div class="zh-py">tiáoliào</div><div class="zh-vi">Gia vị (nói chung)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="盐" data-py="yán" data-vi="Muối"><div class="zh-hz">盐</div><div class="zh-py">yán</div><div class="zh-vi">Muối</div></li>
+        <li class="zh-item" tabindex="0" data-zh="糖" data-py="táng" data-vi="Đường"><div class="zh-hz">糖</div><div class="zh-py">táng</div><div class="zh-vi">Đường</div></li>
+        <li class="zh-item" tabindex="0" data-zh="酱油" data-py="jiàngyóu" data-vi="Xì dầu, nước tương"><div class="zh-hz">酱油</div><div class="zh-py">jiàngyóu</div><div class="zh-vi">Xì dầu, nước tương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="醋" data-py="cù" data-vi="Giấm"><div class="zh-hz">醋</div><div class="zh-py">cù</div><div class="zh-vi">Giấm</div><div class="zh-note">吃醋 (ăn giấm) nghĩa bóng là “ghen”.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="味精 / 鸡精" data-py="wèijīng / jījīng" data-vi="Bột ngọt / hạt nêm gà"><div class="zh-hz">味精 / 鸡精</div><div class="zh-py">wèijīng / jījīng</div><div class="zh-vi">Bột ngọt / hạt nêm gà</div></li>
+        <li class="zh-item" tabindex="0" data-zh="蚝油" data-py="háoyóu" data-vi="Dầu hào"><div class="zh-hz">蚝油</div><div class="zh-py">háoyóu</div><div class="zh-vi">Dầu hào</div></li>
+        <li class="zh-item" tabindex="0" data-zh="香油" data-py="xiāngyóu" data-vi="Dầu mè"><div class="zh-hz">香油</div><div class="zh-py">xiāngyóu</div><div class="zh-vi">Dầu mè</div></li>
+        <li class="zh-item" tabindex="0" data-zh="辣椒" data-py="làjiāo" data-vi="Ớt"><div class="zh-hz">辣椒</div><div class="zh-py">làjiāo</div><div class="zh-vi">Ớt</div></li>
+        <li class="zh-item" tabindex="0" data-zh="辣椒油 / 红油" data-py="làjiāoyóu / hóngyóu" data-vi="Dầu ớt"><div class="zh-hz">辣椒油 / 红油</div><div class="zh-py">làjiāoyóu / hóngyóu</div><div class="zh-vi">Dầu ớt</div></li>
+        <li class="zh-item" tabindex="0" data-zh="花椒" data-py="huājiāo" data-vi="Hoa tiêu, hạt làm tê đầu lưỡi"><div class="zh-hz">花椒</div><div class="zh-py">huājiāo</div><div class="zh-vi">Hoa tiêu, hạt làm tê đầu lưỡi</div><div class="zh-note">Vị tê gọi là 麻 má, như trong 麻辣 (tê cay).</div></li>
+        <li class="zh-item" tabindex="0" data-zh="胡椒" data-py="hújiāo" data-vi="Hạt tiêu"><div class="zh-hz">胡椒</div><div class="zh-py">hújiāo</div><div class="zh-vi">Hạt tiêu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="葱 / 葱花" data-py="cōng / cōnghuā" data-vi="Hành lá / hành lá thái nhỏ"><div class="zh-hz">葱 / 葱花</div><div class="zh-py">cōng / cōnghuā</div><div class="zh-vi">Hành lá / hành lá thái nhỏ</div></li>
+        <li class="zh-item" tabindex="0" data-zh="姜" data-py="jiāng" data-vi="Gừng"><div class="zh-hz">姜</div><div class="zh-py">jiāng</div><div class="zh-vi">Gừng</div></li>
+        <li class="zh-item" tabindex="0" data-zh="蒜 / 蒜泥" data-py="suàn / suànní" data-vi="Tỏi / tỏi băm"><div class="zh-hz">蒜 / 蒜泥</div><div class="zh-py">suàn / suànní</div><div class="zh-vi">Tỏi / tỏi băm</div></li>
+        <li class="zh-item" tabindex="0" data-zh="香菜" data-py="xiāngcài" data-vi="Rau mùi (ngò)"><div class="zh-hz">香菜</div><div class="zh-py">xiāngcài</div><div class="zh-vi">Rau mùi (ngò)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="芝麻" data-py="zhīma" data-vi="Vừng (mè)"><div class="zh-hz">芝麻</div><div class="zh-py">zhīma</div><div class="zh-vi">Vừng (mè)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="八角 / 桂皮" data-py="bājiǎo / guìpí" data-vi="Hoa hồi / quế"><div class="zh-hz">八角 / 桂皮</div><div class="zh-py">bājiǎo / guìpí</div><div class="zh-vi">Hoa hồi / quế</div></li>
+        <li class="zh-item" tabindex="0" data-zh="豆豉" data-py="dòuchǐ" data-vi="Đậu xị, đậu đen lên men"><div class="zh-hz">豆豉</div><div class="zh-py">dòuchǐ</div><div class="zh-vi">Đậu xị, đậu đen lên men</div></li>
+        <li class="zh-item" tabindex="0" data-zh="糊辣椒" data-py="húlàjiāo" data-vi="Ớt khô rang cháy xém rồi giã, linh hồn nước chấm Quý Châu"><div class="zh-hz">糊辣椒</div><div class="zh-py">húlàjiāo</div><div class="zh-vi">Ớt khô rang cháy xém rồi giã, linh hồn nước chấm Quý Châu</div><div class="zh-note">Có khi viết 煳辣椒 hoặc 胡辣椒, đều là một thứ.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="糟辣椒" data-py="zāolàjiāo" data-vi="Ớt tươi giã, ủ muối lên men, vị chua cay"><div class="zh-hz">糟辣椒</div><div class="zh-py">zāolàjiāo</div><div class="zh-vi">Ớt tươi giã, ủ muối lên men, vị chua cay</div><div class="zh-note">Một nguyên liệu chính của nước canh chua đỏ trong 酸汤鱼.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="糍粑辣椒" data-py="cíbā làjiāo" data-vi="Ớt khô ngâm mềm rồi giã nhuyễn, phi dầu cho thơm"><div class="zh-hz">糍粑辣椒</div><div class="zh-py">cíbā làjiāo</div><div class="zh-vi">Ớt khô ngâm mềm rồi giã nhuyễn, phi dầu cho thơm</div></li>
+        <li class="zh-item" tabindex="0" data-zh="油辣子" data-py="yóulàzi" data-vi="Ớt ngâm dầu kiểu Quý Châu"><div class="zh-hz">油辣子</div><div class="zh-py">yóulàzi</div><div class="zh-vi">Ớt ngâm dầu kiểu Quý Châu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="木姜子" data-py="mùjiāngzǐ" data-vi="Hạt màng tang, mùi thơm hăng kiểu sả chanh"><div class="zh-hz">木姜子</div><div class="zh-py">mùjiāngzǐ</div><div class="zh-vi">Hạt màng tang, mùi thơm hăng kiểu sả chanh</div><div class="zh-note">Hay có trong 酸汤鱼 và nước chấm. Mùi rất riêng, nếm thử trước.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="蘸水" data-py="zhànshuǐ" data-vi="Chén nước chấm pha riêng cho từng người"><div class="zh-hz">蘸水</div><div class="zh-py">zhànshuǐ</div><div class="zh-vi">Chén nước chấm pha riêng cho từng người</div><div class="zh-note">Ăn lẩu, ăn 酸汤鱼 đều có. Thường pha từ 糊辣椒, 折耳根, 木姜子, tỏi, hành.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少辣 / 不要太辣" data-py="shǎo là / bú yào tài là" data-vi="Ít cay / đừng cay quá"><div class="zh-hz">少辣 / 不要太辣</div><div class="zh-py">shǎo là / bú yào tài là</div><div class="zh-vi">Ít cay / đừng cay quá</div></li>
+        <li class="zh-item" tabindex="0" data-zh="微辣 / 中辣 / 特辣" data-py="wēilà / zhōnglà / tèlà" data-vi="Cay nhẹ / cay vừa / rất cay"><div class="zh-hz">微辣 / 中辣 / 特辣</div><div class="zh-py">wēilà / zhōnglà / tèlà</div><div class="zh-vi">Cay nhẹ / cay vừa / rất cay</div><div class="zh-note">Nhiều quán cho chọn cấp độ cay lúc gọi món.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="太辣了！" data-py="Tài là le!" data-vi="Cay quá!"><div class="zh-hz">太辣了！</div><div class="zh-py">Tài là le!</div><div class="zh-vi">Cay quá!</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少酸 / 不要太酸" data-py="shǎo suān / bú yào tài suān" data-vi="Ít chua / đừng chua quá"><div class="zh-hz">少酸 / 不要太酸</div><div class="zh-py">shǎo suān / bú yào tài suān</div><div class="zh-vi">Ít chua / đừng chua quá</div></li>
+        <li class="zh-item" tabindex="0" data-zh="微酸" data-py="wēisuān" data-vi="Chua nhẹ"><div class="zh-hz">微酸</div><div class="zh-py">wēisuān</div><div class="zh-vi">Chua nhẹ</div><div class="zh-note">Gọi lẩu 酸汤鱼 có thể chọn nồi chua nhẹ nếu không quen ăn chua.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少放点儿醋。" data-py="Shǎo fàng diǎnr cù." data-vi="Cho ít giấm thôi."><div class="zh-hz">少放点儿醋。</div><div class="zh-py">Shǎo fàng diǎnr cù.</div><div class="zh-vi">Cho ít giấm thôi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少油 / 不要太油" data-py="shǎo yóu / bú yào tài yóu" data-vi="Ít dầu / đừng nhiều dầu quá"><div class="zh-hz">少油 / 不要太油</div><div class="zh-py">shǎo yóu / bú yào tài yóu</div><div class="zh-vi">Ít dầu / đừng nhiều dầu quá</div></li>
+        <li class="zh-item" tabindex="0" data-zh="清淡一点儿。" data-py="Qīngdàn yìdiǎnr." data-vi="Nấu thanh đạm một chút."><div class="zh-hz">清淡一点儿。</div><div class="zh-py">Qīngdàn yìdiǎnr.</div><div class="zh-vi">Nấu thanh đạm một chút.</div><div class="zh-note">清淡 là ít dầu mỡ, nêm nhẹ tay.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="太油了。" data-py="Tài yóu le." data-vi="Nhiều dầu mỡ quá."><div class="zh-hz">太油了。</div><div class="zh-py">Tài yóu le.</div><div class="zh-vi">Nhiều dầu mỡ quá.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少盐 / 少放点儿盐" data-py="shǎo yán / shǎo fàng diǎnr yán" data-vi="Ít muối / cho ít muối thôi"><div class="zh-hz">少盐 / 少放点儿盐</div><div class="zh-py">shǎo yán / shǎo fàng diǎnr yán</div><div class="zh-vi">Ít muối / cho ít muối thôi</div></li>
+        <li class="zh-item" tabindex="0" data-zh="淡一点儿。" data-py="Dàn yìdiǎnr." data-vi="Nhạt một chút."><div class="zh-hz">淡一点儿。</div><div class="zh-py">Dàn yìdiǎnr.</div><div class="zh-vi">Nhạt một chút.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="太咸了。" data-py="Tài xián le." data-vi="Mặn quá."><div class="zh-hz">太咸了。</div><div class="zh-py">Tài xián le.</div><div class="zh-vi">Mặn quá.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少辣、少油、少盐。" data-py="Shǎo là, shǎo yóu, shǎo yán." data-vi="Ít cay, ít dầu, ít muối."><div class="zh-hz">少辣、少油、少盐。</div><div class="zh-py">Shǎo là, shǎo yóu, shǎo yán.</div><div class="zh-vi">Ít cay, ít dầu, ít muối.</div><div class="zh-note">Mẫu chung: 少 + vị = bớt vị đó; 不要太 + vị = đừng quá; 太 + vị + 了 = quá… (than phiền); 不要放 + gia vị = đừng cho.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要放味精。" data-py="Bú yào fàng wèijīng." data-vi="Đừng cho bột ngọt."><div class="zh-hz">不要放味精。</div><div class="zh-py">Bú yào fàng wèijīng.</div><div class="zh-vi">Đừng cho bột ngọt.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要放香菜。" data-py="Bú yào fàng xiāngcài." data-vi="Đừng cho rau mùi."><div class="zh-hz">不要放香菜。</div><div class="zh-py">Bú yào fàng xiāngcài.</div><div class="zh-vi">Đừng cho rau mùi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要放花椒。" data-py="Bú yào fàng huājiāo." data-vi="Đừng cho hoa tiêu."><div class="zh-hz">不要放花椒。</div><div class="zh-py">Bú yào fàng huājiāo.</div><div class="zh-vi">Đừng cho hoa tiêu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="蘸水不要太辣。" data-py="Zhànshuǐ bú yào tài là." data-vi="Nước chấm đừng cay quá."><div class="zh-hz">蘸水不要太辣。</div><div class="zh-py">Zhànshuǐ bú yào tài là.</div><div class="zh-vi">Nước chấm đừng cay quá.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="有醋吗？" data-py="Yǒu cù ma?" data-vi="Có giấm không?"><div class="zh-hz">有醋吗？</div><div class="zh-py">Yǒu cù ma?</div><div class="zh-vi">Có giấm không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="酸、甜、苦、辣、咸、麻" data-py="suān, tián, kǔ, là, xián, má" data-vi="Chua, ngọt, đắng, cay, mặn, tê"><div class="zh-hz">酸、甜、苦、辣、咸、麻</div><div class="zh-py">suān, tián, kǔ, là, xián, má</div><div class="zh-vi">Chua, ngọt, đắng, cay, mặn, tê</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-douong">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">饮品 <span class="py">(yǐnpǐn)</span></span> Trà sữa và cà phê</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Tên đồ uống trên menu và mấy chuỗi quán hay gặp.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="奶茶" data-py="nǎichá" data-vi="Trà sữa"><div class="zh-hz">奶茶</div><div class="zh-py">nǎichá</div><div class="zh-vi">Trà sữa</div></li>
+        <li class="zh-item" tabindex="0" data-zh="珍珠奶茶" data-py="zhēnzhū nǎichá" data-vi="Trà sữa trân châu"><div class="zh-hz">珍珠奶茶</div><div class="zh-py">zhēnzhū nǎichá</div><div class="zh-vi">Trà sữa trân châu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="果茶 / 水果茶" data-py="guǒchá / shuǐguǒchá" data-vi="Trà trái cây"><div class="zh-hz">果茶 / 水果茶</div><div class="zh-py">guǒchá / shuǐguǒchá</div><div class="zh-vi">Trà trái cây</div></li>
+        <li class="zh-item" tabindex="0" data-zh="柠檬茶" data-py="níngméngchá" data-vi="Trà chanh"><div class="zh-hz">柠檬茶</div><div class="zh-py">níngméngchá</div><div class="zh-vi">Trà chanh</div></li>
+        <li class="zh-item" tabindex="0" data-zh="纯茶" data-py="chúnchá" data-vi="Trà nguyên vị, không sữa"><div class="zh-hz">纯茶</div><div class="zh-py">chúnchá</div><div class="zh-vi">Trà nguyên vị, không sữa</div></li>
+        <li class="zh-item" tabindex="0" data-zh="奶盖 / 芝士奶盖" data-py="nǎigài / zhīshì nǎigài" data-vi="Lớp kem sữa phủ trên / kem cheese"><div class="zh-hz">奶盖 / 芝士奶盖</div><div class="zh-py">nǎigài / zhīshì nǎigài</div><div class="zh-vi">Lớp kem sữa phủ trên / kem cheese</div></li>
+        <li class="zh-item" tabindex="0" data-zh="咖啡" data-py="kāfēi" data-vi="Cà phê"><div class="zh-hz">咖啡</div><div class="zh-py">kāfēi</div><div class="zh-vi">Cà phê</div></li>
+        <li class="zh-item" tabindex="0" data-zh="美式" data-py="měishì" data-vi="Americano"><div class="zh-hz">美式</div><div class="zh-py">měishì</div><div class="zh-vi">Americano</div><div class="zh-note">Gọi tắt của 美式咖啡.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="拿铁" data-py="nátiě" data-vi="Latte"><div class="zh-hz">拿铁</div><div class="zh-py">nátiě</div><div class="zh-vi">Latte</div></li>
+        <li class="zh-item" tabindex="0" data-zh="生椰拿铁" data-py="shēngyē nátiě" data-vi="Latte nước cốt dừa"><div class="zh-hz">生椰拿铁</div><div class="zh-py">shēngyē nátiě</div><div class="zh-vi">Latte nước cốt dừa</div><div class="zh-note">Món bán chạy của Luckin (瑞幸).</div></li>
+        <li class="zh-item" tabindex="0" data-zh="卡布奇诺" data-py="kǎbùqínuò" data-vi="Cappuccino"><div class="zh-hz">卡布奇诺</div><div class="zh-py">kǎbùqínuò</div><div class="zh-vi">Cappuccino</div></li>
+        <li class="zh-item" tabindex="0" data-zh="浓缩" data-py="nóngsuō" data-vi="Espresso"><div class="zh-hz">浓缩</div><div class="zh-py">nóngsuō</div><div class="zh-vi">Espresso</div></li>
+        <li class="zh-item" tabindex="0" data-zh="招牌" data-py="zhāopái" data-vi="Món đặc trưng của quán"><div class="zh-hz">招牌</div><div class="zh-py">zhāopái</div><div class="zh-vi">Món đặc trưng của quán</div><div class="zh-note">Trên menu hay ghi 招牌 hoặc 人气 (được yêu thích).</div></li>
+        <li class="zh-item" tabindex="0" data-zh="瑞幸 / 库迪" data-py="Ruìxìng / Kùdí" data-vi="Luckin Coffee / Cotti Coffee, hai chuỗi cà phê rẻ phổ biến"><div class="zh-hz">瑞幸 / 库迪</div><div class="zh-py">Ruìxìng / Kùdí</div><div class="zh-vi">Luckin Coffee / Cotti Coffee, hai chuỗi cà phê rẻ phổ biến</div></li>
+        <li class="zh-item" tabindex="0" data-zh="蜜雪冰城 / 喜茶 / 霸王茶姬" data-py="Mìxuě Bīngchéng / Xǐchá / Bàwáng Chájī" data-vi="Mixue / Heytea / Chagee, các chuỗi trà sữa lớn"><div class="zh-hz">蜜雪冰城 / 喜茶 / 霸王茶姬</div><div class="zh-py">Mìxuě Bīngchéng / Xǐchá / Bàwáng Chájī</div><div class="zh-vi">Mixue / Heytea / Chagee, các chuỗi trà sữa lớn</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-goinuoc">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">点单 <span class="py">(diǎndān)</span></span> Gọi đồ uống</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Size, nóng lạnh, đá, đường, topping, rồi ghép thành một câu gọi trọn vẹn.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="大杯 / 中杯 / 小杯" data-py="dà bēi / zhōng bēi / xiǎo bēi" data-vi="Ly lớn / vừa / nhỏ"><div class="zh-hz">大杯 / 中杯 / 小杯</div><div class="zh-py">dà bēi / zhōng bēi / xiǎo bēi</div><div class="zh-vi">Ly lớn / vừa / nhỏ</div><div class="zh-note">杯 là lượng từ cho ly: 一杯奶茶 = một ly trà sữa.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="冰的 / 热的" data-py="bīng de / rè de" data-vi="Lạnh / nóng"><div class="zh-hz">冰的 / 热的</div><div class="zh-py">bīng de / rè de</div><div class="zh-vi">Lạnh / nóng</div></li>
+        <li class="zh-item" tabindex="0" data-zh="常温 / 温的" data-py="chángwēn / wēn de" data-vi="Nhiệt độ thường / ấm"><div class="zh-hz">常温 / 温的</div><div class="zh-py">chángwēn / wēn de</div><div class="zh-vi">Nhiệt độ thường / ấm</div></li>
+        <li class="zh-item" tabindex="0" data-zh="正常冰" data-py="zhèngcháng bīng" data-vi="Đá bình thường"><div class="zh-hz">正常冰</div><div class="zh-py">zhèngcháng bīng</div><div class="zh-vi">Đá bình thường</div></li>
+        <li class="zh-item" tabindex="0" data-zh="少冰" data-py="shǎo bīng" data-vi="Ít đá"><div class="zh-hz">少冰</div><div class="zh-py">shǎo bīng</div><div class="zh-vi">Ít đá</div></li>
+        <li class="zh-item" tabindex="0" data-zh="去冰" data-py="qù bīng" data-vi="Bỏ đá"><div class="zh-hz">去冰</div><div class="zh-py">qù bīng</div><div class="zh-vi">Bỏ đá</div><div class="zh-note">去冰 vẫn là nước lạnh, chỉ không có viên đá. Muốn không lạnh hẳn thì chọn 常温.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="多冰" data-py="duō bīng" data-vi="Nhiều đá"><div class="zh-hz">多冰</div><div class="zh-py">duō bīng</div><div class="zh-vi">Nhiều đá</div></li>
+        <li class="zh-item" tabindex="0" data-zh="全糖 / 标准糖" data-py="quántáng / biāozhǔn táng" data-vi="Ngọt bình thường (100%)"><div class="zh-hz">全糖 / 标准糖</div><div class="zh-py">quántáng / biāozhǔn táng</div><div class="zh-vi">Ngọt bình thường (100%)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="七分糖" data-py="qī fēn táng" data-vi="70% đường"><div class="zh-hz">七分糖</div><div class="zh-py">qī fēn táng</div><div class="zh-vi">70% đường</div><div class="zh-note">分 ở đây là phần mười: 七分 = 7/10.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="半糖 / 五分糖" data-py="bàn táng / wǔ fēn táng" data-vi="Nửa đường (50%)"><div class="zh-hz">半糖 / 五分糖</div><div class="zh-py">bàn táng / wǔ fēn táng</div><div class="zh-vi">Nửa đường (50%)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="三分糖 / 少糖" data-py="sān fēn táng / shǎo táng" data-vi="30% đường / ít đường"><div class="zh-hz">三分糖 / 少糖</div><div class="zh-py">sān fēn táng / shǎo táng</div><div class="zh-vi">30% đường / ít đường</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不另外加糖 / 无糖" data-py="bù lìngwài jiā táng / wú táng" data-vi="Không thêm đường / không đường"><div class="zh-hz">不另外加糖 / 无糖</div><div class="zh-py">bù lìngwài jiā táng / wú táng</div><div class="zh-vi">Không thêm đường / không đường</div><div class="zh-note">不另外加糖 nghĩa là không cho thêm đường, nước vẫn có thể hơi ngọt từ sữa, trái cây.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="加料 / 小料" data-py="jiāliào / xiǎoliào" data-vi="Thêm topping / topping"><div class="zh-hz">加料 / 小料</div><div class="zh-py">jiāliào / xiǎoliào</div><div class="zh-vi">Thêm topping / topping</div></li>
+        <li class="zh-item" tabindex="0" data-zh="珍珠 / 波霸" data-py="zhēnzhū / bōbà" data-vi="Trân châu / trân châu hạt to"><div class="zh-hz">珍珠 / 波霸</div><div class="zh-py">zhēnzhū / bōbà</div><div class="zh-vi">Trân châu / trân châu hạt to</div></li>
+        <li class="zh-item" tabindex="0" data-zh="椰果" data-py="yēguǒ" data-vi="Thạch dừa"><div class="zh-hz">椰果</div><div class="zh-py">yēguǒ</div><div class="zh-vi">Thạch dừa</div></li>
+        <li class="zh-item" tabindex="0" data-zh="布丁" data-py="bùdīng" data-vi="Pudding"><div class="zh-hz">布丁</div><div class="zh-py">bùdīng</div><div class="zh-vi">Pudding</div></li>
+        <li class="zh-item" tabindex="0" data-zh="仙草" data-py="xiāncǎo" data-vi="Sương sáo"><div class="zh-hz">仙草</div><div class="zh-py">xiāncǎo</div><div class="zh-vi">Sương sáo</div></li>
+        <li class="zh-item" tabindex="0" data-zh="芋圆" data-py="yùyuán" data-vi="Viên khoai môn dẻo"><div class="zh-hz">芋圆</div><div class="zh-py">yùyuán</div><div class="zh-vi">Viên khoai môn dẻo</div></li>
+        <li class="zh-item" tabindex="0" data-zh="红豆" data-py="hóngdòu" data-vi="Đậu đỏ"><div class="zh-hz">红豆</div><div class="zh-py">hóngdòu</div><div class="zh-vi">Đậu đỏ</div></li>
+        <li class="zh-item" tabindex="0" data-zh="加一份珍珠。" data-py="Jiā yí fèn zhēnzhū." data-vi="Thêm một phần trân châu."><div class="zh-hz">加一份珍珠。</div><div class="zh-py">Jiā yí fèn zhēnzhū.</div><div class="zh-vi">Thêm một phần trân châu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不要珍珠。" data-py="Bú yào zhēnzhū." data-vi="Không lấy trân châu."><div class="zh-hz">不要珍珠。</div><div class="zh-py">Bú yào zhēnzhū.</div><div class="zh-vi">Không lấy trân châu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以换燕麦奶吗？" data-py="Kěyǐ huàn yànmàinǎi ma?" data-vi="Đổi sang sữa yến mạch được không?"><div class="zh-hz">可以换燕麦奶吗？</div><div class="zh-py">Kěyǐ huàn yànmàinǎi ma?</div><div class="zh-vi">Đổi sang sữa yến mạch được không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不加奶。" data-py="Bù jiā nǎi." data-vi="Không cho sữa."><div class="zh-hz">不加奶。</div><div class="zh-py">Bù jiā nǎi.</div><div class="zh-vi">Không cho sữa.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="有什么推荐的？" data-py="Yǒu shénme tuījiàn de?" data-vi="Có món gì nên thử không?"><div class="zh-hz">有什么推荐的？</div><div class="zh-py">Yǒu shénme tuījiàn de?</div><div class="zh-vi">Có món gì nên thử không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我要一杯珍珠奶茶，大杯，少冰，三分糖。" data-py="Wǒ yào yì bēi zhēnzhū nǎichá, dà bēi, shǎo bīng, sān fēn táng." data-vi="Cho tôi một ly trà sữa trân châu, ly lớn, ít đá, 30% đường."><div class="zh-hz">我要一杯珍珠奶茶，大杯，少冰，三分糖。</div><div class="zh-py">Wǒ yào yì bēi zhēnzhū nǎichá, dà bēi, shǎo bīng, sān fēn táng.</div><div class="zh-vi">Cho tôi một ly trà sữa trân châu, ly lớn, ít đá, 30% đường.</div><div class="zh-note">Thứ tự dễ nhớ: món → size → đá → đường → topping.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="一杯冰美式，不另外加糖。" data-py="Yì bēi bīng měishì, bù lìngwài jiā táng." data-vi="Một ly americano đá, không thêm đường."><div class="zh-hz">一杯冰美式，不另外加糖。</div><div class="zh-py">Yì bēi bīng měishì, bù lìngwài jiā táng.</div><div class="zh-vi">Một ly americano đá, không thêm đường.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="一杯热拿铁，中杯。" data-py="Yì bēi rè nátiě, zhōng bēi." data-vi="Một ly latte nóng, size vừa."><div class="zh-hz">一杯热拿铁，中杯。</div><div class="zh-py">Yì bēi rè nátiě, zhōng bēi.</div><div class="zh-vi">Một ly latte nóng, size vừa.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="在这儿喝还是带走？" data-py="Zài zhèr hē háishi dàizǒu?" data-vi="Uống ở đây hay mang đi?"><div class="zh-hz">在这儿喝还是带走？</div><div class="zh-py">Zài zhèr hē háishi dàizǒu?</div><div class="zh-vi">Uống ở đây hay mang đi?</div><div class="zh-note">Câu nhân viên hay hỏi. Trả lời: 带走 (mang đi) hoặc 在这儿喝 (uống ở đây).</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以扫码点单吗？" data-py="Kěyǐ sǎo mǎ diǎn dān ma?" data-vi="Quét mã để đặt món được không?"><div class="zh-hz">可以扫码点单吗？</div><div class="zh-py">Kěyǐ sǎo mǎ diǎn dān ma?</div><div class="zh-vi">Quét mã để đặt món được không?</div><div class="zh-note">Nhiều chuỗi cho đặt qua 小程序 (mini app) trên WeChat hoặc Alipay, chọn đá, đường ngay trên màn hình.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="取餐码 / 取餐号" data-py="qǔcānmǎ / qǔcānhào" data-vi="Mã / số để lấy đồ"><div class="zh-hz">取餐码 / 取餐号</div><div class="zh-py">qǔcānmǎ / qǔcānhào</div><div class="zh-vi">Mã / số để lấy đồ</div><div class="zh-note">Đặt qua điện thoại xong sẽ có số này, đợi gọi số rồi lấy.</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-muasam">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">购物 <span class="py">(gòuwù)</span></span> Mua sắm và thanh toán</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Ở Trung Quốc gần như mọi nơi đều quét mã thanh toán.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="多少钱？" data-py="Duōshao qián?" data-vi="Bao nhiêu tiền?"><div class="zh-hz">多少钱？</div><div class="zh-py">Duōshao qián?</div><div class="zh-vi">Bao nhiêu tiền?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="太贵了！" data-py="Tài guì le!" data-vi="Đắt quá!"><div class="zh-hz">太贵了！</div><div class="zh-py">Tài guì le!</div><div class="zh-vi">Đắt quá!</div></li>
+        <li class="zh-item" tabindex="0" data-zh="便宜一点儿吧。" data-py="Piányi yìdiǎnr ba." data-vi="Bớt chút đi."><div class="zh-hz">便宜一点儿吧。</div><div class="zh-py">Piányi yìdiǎnr ba.</div><div class="zh-vi">Bớt chút đi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以用支付宝吗？" data-py="Kěyǐ yòng Zhīfùbǎo ma?" data-vi="Trả bằng Alipay được không?"><div class="zh-hz">可以用支付宝吗？</div><div class="zh-py">Kěyǐ yòng Zhīfùbǎo ma?</div><div class="zh-vi">Trả bằng Alipay được không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以用微信支付吗？" data-py="Kěyǐ yòng Wēixìn zhīfù ma?" data-vi="Trả bằng WeChat Pay được không?"><div class="zh-hz">可以用微信支付吗？</div><div class="zh-py">Kěyǐ yòng Wēixìn zhīfù ma?</div><div class="zh-vi">Trả bằng WeChat Pay được không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我扫你吧。" data-py="Wǒ sǎo nǐ ba." data-vi="Để tôi quét mã của bạn."><div class="zh-hz">我扫你吧。</div><div class="zh-py">Wǒ sǎo nǐ ba.</div><div class="zh-vi">Để tôi quét mã của bạn.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="可以刷卡吗？" data-py="Kěyǐ shuā kǎ ma?" data-vi="Quẹt thẻ được không?"><div class="zh-hz">可以刷卡吗？</div><div class="zh-py">Kěyǐ shuā kǎ ma?</div><div class="zh-vi">Quẹt thẻ được không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我看看。" data-py="Wǒ kànkan." data-vi="Tôi xem chút đã."><div class="zh-hz">我看看。</div><div class="zh-py">Wǒ kànkan.</div><div class="zh-vi">Tôi xem chút đã.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="不用了，谢谢。" data-py="Bú yòng le, xièxie." data-vi="Không cần đâu, cảm ơn."><div class="zh-hz">不用了，谢谢。</div><div class="zh-py">Bú yòng le, xièxie.</div><div class="zh-vi">Không cần đâu, cảm ơn.</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-diadanh">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">地名 <span class="py">(dìmíng)</span></span> Địa danh</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Đưa cho tài xế xem, hoặc nhận ra trên biển chỉ đường.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="贵州" data-py="Guìzhōu" data-vi="Quý Châu"><div class="zh-hz">贵州</div><div class="zh-py">Guìzhōu</div><div class="zh-vi">Quý Châu</div></li>
+        <li class="zh-item" tabindex="0" data-zh="贵阳" data-py="Guìyáng" data-vi="Quý Dương"><div class="zh-hz">贵阳</div><div class="zh-py">Guìyáng</div><div class="zh-vi">Quý Dương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="贵阳龙洞堡国际机场" data-py="Guìyáng Lóngdòngbǎo guójì jīchǎng" data-vi="Sân bay quốc tế Long Động Bảo, Quý Dương"><div class="zh-hz">贵阳龙洞堡国际机场</div><div class="zh-py">Guìyáng Lóngdòngbǎo guójì jīchǎng</div><div class="zh-vi">Sân bay quốc tế Long Động Bảo, Quý Dương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="贵阳北站" data-py="Guìyáng běi zhàn" data-vi="Ga Quý Dương Bắc, ga tàu cao tốc chính"><div class="zh-hz">贵阳北站</div><div class="zh-py">Guìyáng běi zhàn</div><div class="zh-vi">Ga Quý Dương Bắc, ga tàu cao tốc chính</div></li>
+        <li class="zh-item" tabindex="0" data-zh="凯里南站" data-py="Kǎilǐ nán zhàn" data-vi="Ga Khải Lý Nam"><div class="zh-hz">凯里南站</div><div class="zh-py">Kǎilǐ nán zhàn</div><div class="zh-vi">Ga Khải Lý Nam</div></li>
+        <li class="zh-item" tabindex="0" data-zh="西江千户苗寨" data-py="Xījiāng Qiānhù Miáozhài" data-vi="Làng Miêu nghìn hộ Tây Giang (Thiên Hộ Miêu Trại)"><div class="zh-hz">西江千户苗寨</div><div class="zh-py">Xījiāng Qiānhù Miáozhài</div><div class="zh-vi">Làng Miêu nghìn hộ Tây Giang (Thiên Hộ Miêu Trại)</div></li>
+        <li class="zh-item" tabindex="0" data-zh="甲秀楼" data-py="Jiǎxiù lóu" data-vi="Giáp Tú lâu, biểu tượng giữa trung tâm Quý Dương"><div class="zh-hz">甲秀楼</div><div class="zh-py">Jiǎxiù lóu</div><div class="zh-vi">Giáp Tú lâu, biểu tượng giữa trung tâm Quý Dương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="青岩古镇" data-py="Qīngyán gǔzhèn" data-vi="Cổ trấn Thanh Nham, phía nam Quý Dương"><div class="zh-hz">青岩古镇</div><div class="zh-py">Qīngyán gǔzhèn</div><div class="zh-vi">Cổ trấn Thanh Nham, phía nam Quý Dương</div></li>
+        <li class="zh-item" tabindex="0" data-zh="黄果树瀑布" data-py="Huángguǒshù pùbù" data-vi="Thác Hoàng Quả Thụ"><div class="zh-hz">黄果树瀑布</div><div class="zh-py">Huángguǒshù pùbù</div><div class="zh-vi">Thác Hoàng Quả Thụ</div></li>
+        <li class="zh-item" tabindex="0" data-zh="广州白云国际机场" data-py="Guǎngzhōu Báiyún guójì jīchǎng" data-vi="Sân bay quốc tế Bạch Vân, Quảng Châu"><div class="zh-hz">广州白云国际机场</div><div class="zh-py">Guǎngzhōu Báiyún guójì jīchǎng</div><div class="zh-vi">Sân bay quốc tế Bạch Vân, Quảng Châu</div></li>
+      </ul>
+      </div>
+    </div>
+        <div class="zh-sec" id="zh-khancap">
+      <h3 class="zh-h" tabindex="0" role="button" aria-expanded="false"><span class="zh-ht"><span class="zh-big">紧急 <span class="py">(jǐnjí)</span></span> Khẩn cấp và sức khỏe</span><span class="zh-chev" aria-hidden="true">▾</span></h3>
+      <div class="zh-body">
+        <p class="zh-sub">Mong là không cần dùng.</p>
+        <ul class="zh-list">
+        <li class="zh-item" tabindex="0" data-zh="洗手间在哪儿？" data-py="Xǐshǒujiān zài nǎr?" data-vi="Nhà vệ sinh ở đâu?"><div class="zh-hz">洗手间在哪儿？</div><div class="zh-py">Xǐshǒujiān zài nǎr?</div><div class="zh-vi">Nhà vệ sinh ở đâu?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我迷路了。" data-py="Wǒ mílù le." data-vi="Tôi bị lạc đường."><div class="zh-hz">我迷路了。</div><div class="zh-py">Wǒ mílù le.</div><div class="zh-vi">Tôi bị lạc đường.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我的护照丢了。" data-py="Wǒ de hùzhào diū le." data-vi="Tôi bị mất hộ chiếu."><div class="zh-hz">我的护照丢了。</div><div class="zh-py">Wǒ de hùzhào diū le.</div><div class="zh-vi">Tôi bị mất hộ chiếu.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="我不舒服。" data-py="Wǒ bù shūfu." data-vi="Tôi thấy không khỏe."><div class="zh-hz">我不舒服。</div><div class="zh-py">Wǒ bù shūfu.</div><div class="zh-vi">Tôi thấy không khỏe.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="附近有药店吗？" data-py="Fùjìn yǒu yàodiàn ma?" data-vi="Gần đây có hiệu thuốc không?"><div class="zh-hz">附近有药店吗？</div><div class="zh-py">Fùjìn yǒu yàodiàn ma?</div><div class="zh-vi">Gần đây có hiệu thuốc không?</div></li>
+        <li class="zh-item" tabindex="0" data-zh="请帮我叫救护车。" data-py="Qǐng bāng wǒ jiào jiùhùchē." data-vi="Làm ơn gọi xe cấp cứu giúp tôi."><div class="zh-hz">请帮我叫救护车。</div><div class="zh-py">Qǐng bāng wǒ jiào jiùhùchē.</div><div class="zh-vi">Làm ơn gọi xe cấp cứu giúp tôi.</div></li>
+        <li class="zh-item" tabindex="0" data-zh="救命！" data-py="Jiùmìng!" data-vi="Cứu với!"><div class="zh-hz">救命！</div><div class="zh-py">Jiùmìng!</div><div class="zh-vi">Cứu với!</div></li>
+        <li class="zh-item" tabindex="0" data-zh="报警 110，急救 120" data-py="bàojǐng yāo yāo líng, jíjiù yāo èr líng" data-vi="Báo cảnh sát gọi 110, cấp cứu gọi 120"><div class="zh-hz">报警 110，急救 120</div><div class="zh-py">bàojǐng yāo yāo líng, jíjiù yāo èr líng</div><div class="zh-vi">Báo cảnh sát gọi 110, cấp cứu gọi 120</div><div class="zh-note">Khi đọc số điện thoại, số 1 thường đọc là yāo.</div></li>
+      </ul>
+      </div>
+    </div>
+    </div>
+    <p class="zh-empty" id="zhEmpty" hidden>Không tìm thấy câu phù hợp.</p>
+  </div>
+  </section>
+
+  <section class="tab-panel" id="tab-luuy" role="tabpanel" aria-labelledby="btn-luuy">
+  <div class="day" id="notes">
+    <h2>Khách sạn</h2>
+    <div class="table-scroll">
+    <table class="summary">
+      <tr><th>Khách sạn</th><th>Đêm</th><th>Thông tin</th></tr>
+      <tr><td><b>Yibon International Hotel</b><br>逸柏国际酒店(贵阳喷水池国贸广场店) <span class="py">(Yìbǎi Guójì Jiǔdiàn (Guìyáng Pēnshuǐchí Guómào Guǎngchǎng diàn))</span></td><td>3 đêm<br>20, 21, 22/11</td><td>28th Floor, Zhenhua Technology Building, No. 1 Zhonghua North Road, Yunyan District, Quý Dương. Nhận phòng sau 14:00, trả phòng trước 14:00. Gửi vali từ sáng 23/11 đến 24/11.</td></tr>
+      <tr><td><b>First Seeing Panorama Hotel</b><br>(Xijiang Qianhu Miaozhai Observation Deck)</td><td>1 đêm<br>23/11</td><td>Khu đài quan sát, Tây Giang. Lưng chừng đồi, nhiều bậc thang, nằm trong khu thắng cảnh nên cần vé vào khu và shuttle. Bến xe khách đường dài cách ~1,9 km.</td></tr>
+    </table>
+    </div>
+    <p class="food-note">Ảnh đặt phòng Yibon trên app đang hiển thị 20/11 đến 24/11 (4 đêm). Nếu bạn chỉ ở 3 đêm thì cần chỉnh lại ngày trả phòng thành 23/11.</p>
+
+    <h2 style="margin-top:22px;">Cần đặt trước</h2>
+    <ul style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;padding-left:20px;margin:6px 0 0;">
+      <li>6 chặng tàu cao tốc (Quý Dương Bắc ↔ Anshun West, Libo, Kaili South), mở bán khoảng 15 ngày trước ngày đi.</li>
+      <li>Vé khu Hoàng Quả Thụ (đặt trước 1–15 ngày) và hang Thủy Liêm (mã QR).</li>
+      <li>Vé vào khu Tây Giang, xe đón từ Kaili South, tiệc bàn dài và xe 08:00 sáng 24/11.</li>
+      <li>Gửi vali tại Yibon Hotel từ 23/11 đến 24/11.</li>
+    </ul>
+
+    <h2 style="margin-top:22px;">Note trước khi đi</h2>
+    <ol class="notes">
+      <li>Không kéo vali lớn theo lịch tham quan — Quý Dương và nhiều khu thắng cảnh có dốc, bậc thang, đường núi. Gửi hành lý tại khách sạn/điểm gửi đồ.</li>
+      <li>Hoàng Quả Thụ, Xiaoqikong, Miêu Trại đều đi bộ nhiều — ưu tiên giày dễ đi, chống trượt.</li>
+      <li>Quý Châu khá nắng, UV mạnh — mang kem chống nắng, mũ hoặc ô.</li>
+      <li>Đồ ăn hay cay và có 折耳根 <span class="py">(zhé'ěrgēn)</span> (zhe'ergen — gốc lá diếp cá) — báo trước nếu không ăn được.</li>
+      <li>Chỉ dùng taxi chính thức hoặc xe đặt qua app, tránh xe dù/xe chèo kéo.</li>
+      <li>Jiaxiu Tower đẹp nhất vào buổi tối.</li>
+      <li>Bảo tàng Quý Châu cần mang giấy tờ tùy thân và đặt trước — thứ Hai đóng cửa.</li>
+      <li>Quý Châu nhiều núi, đường lên xuống dốc liên tục — giày thoải mái, chống trượt quan trọng hơn giày đẹp.</li>
+    </ol>
+  </div>
+  </section>
+
+  <footer>Quý Châu 5N4Đ · 20/11 → 24/11/2026</footer>
+</div>
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.tab-panel'));
+  function show(key, scroll) {
+    var found = false;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-tab') === key;
+      if (on) found = true;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    if (!found) return false;
+    panels.forEach(function (p) { p.classList.toggle('active', p.id === 'tab-' + key); });
+    if (scroll) {
+      var bar = document.querySelector('.tabbar');
+      if (bar && bar.scrollIntoView) bar.scrollIntoView({ block: 'start' });
+    }
+    return true;
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { show(t.getAttribute('data-tab'), true); });
+  });
+  var h = (location.hash || '').replace('#', '');
+  if (h) show(h, false);
+})();
+</script>
+<div id="zhZoom" role="dialog" aria-modal="true" aria-label="Câu phóng to"><div class="z-hz" id="zHz"></div><div class="z-py" id="zPy"></div><div class="z-vi" id="zVi"></div><button type="button" id="zClose">Đóng</button></div>
+<script>
+(function () {
+  var panel = document.getElementById('tab-tiengtrung');
+  if (!panel) return;
+  var zoom = document.getElementById('zhZoom');
+  var secs = Array.prototype.slice.call(panel.querySelectorAll('.zh-sec'));
+  var saved = null;
+  function setOpen(sec, on) {
+    sec.classList.toggle('open', on);
+    var h = sec.querySelector('.zh-h');
+    if (h) h.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+  function syncAllBtn() {
+    var all = secs.every(function (x) { return x.classList.contains('open'); });
+    var btn = document.getElementById('zhAll');
+    btn.textContent = all ? 'Đóng tất cả chủ đề' : 'Mở tất cả chủ đề';
+    btn.setAttribute('data-all', all ? '1' : '0');
+  }
+  function openZoom(li) {
+    document.getElementById('zHz').textContent = li.getAttribute('data-zh');
+    document.getElementById('zPy').textContent = li.getAttribute('data-py');
+    document.getElementById('zVi').textContent = li.getAttribute('data-vi');
+    zoom.classList.add('open');
+  }
+  function closeZoom() { zoom.classList.remove('open'); }
+  panel.addEventListener('click', function (e) {
+    var li = e.target.closest('.zh-item');
+    if (li) { openZoom(li); return; }
+    var h = e.target.closest('.zh-h');
+    if (h) { var sec = h.parentNode; setOpen(sec, !sec.classList.contains('open')); syncAllBtn(); return; }
+    var chip = e.target.closest('.zh-chip');
+    if (chip) {
+      var target = document.getElementById(chip.getAttribute('data-go'));
+      if (target) { setOpen(target, true); syncAllBtn(); if (target.scrollIntoView) target.scrollIntoView({ block: 'start' }); }
+      return;
+    }
+    if (e.target.id === 'zhAll') {
+      var on = e.target.getAttribute('data-all') !== '1';
+      secs.forEach(function (x) { setOpen(x, on); });
+      syncAllBtn();
+    }
+  });
+  panel.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target;
+    if (t.classList && t.classList.contains('zh-item')) { e.preventDefault(); openZoom(t); }
+    else if (t.classList && t.classList.contains('zh-h')) { e.preventDefault(); var sec = t.parentNode; setOpen(sec, !sec.classList.contains('open')); syncAllBtn(); }
+  });
+  zoom.addEventListener('click', closeZoom);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeZoom(); });
+  var input = document.getElementById('zhSearch');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    if (q && !saved) saved = secs.map(function (x) { return x.classList.contains('open'); });
+    var any = false;
+    secs.forEach(function (sec) {
+      var vis = 0;
+      Array.prototype.forEach.call(sec.querySelectorAll('.zh-item'), function (li) {
+        var hay = (li.getAttribute('data-zh') + ' ' + li.getAttribute('data-py') + ' ' + li.getAttribute('data-vi') + ' ' + li.textContent).toLowerCase();
+        var show = !q || hay.indexOf(q) !== -1;
+        li.style.display = show ? '' : 'none';
+        if (show) vis++;
+      });
+      sec.style.display = vis ? '' : 'none';
+      if (vis) any = true;
+      if (q) setOpen(sec, vis > 0);
+    });
+    if (!q && saved) { secs.forEach(function (sec, i) { setOpen(sec, saved[i]); }); saved = null; }
+    document.getElementById('zhEmpty').hidden = any || !q;
+    syncAllBtn();
+  });
+  var grid = panel.querySelector('.zh-grid');
+  var mq = window.matchMedia ? window.matchMedia('(min-width: 700px)') : null;
+  function layout() {
+    var wide = mq ? mq.matches : false;
+    var isTwo = grid.classList.contains('two');
+    if (wide && !isTwo) {
+      var c1 = document.createElement('div'); c1.className = 'zh-col';
+      var c2 = document.createElement('div'); c2.className = 'zh-col';
+      var w1 = 0, w2 = 0;
+      secs.forEach(function (sec) {
+        var w = sec.querySelectorAll('.zh-item').length + 3;
+        if (w1 <= w2) { c1.appendChild(sec); w1 += w; } else { c2.appendChild(sec); w2 += w; }
+      });
+      grid.appendChild(c1); grid.appendChild(c2); grid.classList.add('two');
+    } else if (!wide && isTwo) {
+      secs.forEach(function (sec) { grid.appendChild(sec); });
+      Array.prototype.slice.call(grid.querySelectorAll('.zh-col')).forEach(function (c) { grid.removeChild(c); });
+      grid.classList.remove('two');
+    }
+  }
+  layout();
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', layout); else if (mq.addListener) mq.addListener(layout); }
+  syncAllBtn();
+})();
+</script>
+<button id="toTop" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
+<script>
+(function () {
+  var b = document.getElementById('toTop');
+  function upd() { b.classList.toggle('show', (window.scrollY || document.documentElement.scrollTop) > 400); }
+  window.addEventListener('scroll', upd, { passive: true }); upd();
+  b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>
