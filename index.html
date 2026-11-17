@@ -37,7 +37,7 @@
     font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     line-height: 1.55;
   }
-  .wrap { max-width: 780px; margin: 0 auto; padding: 32px 20px 60px; }
+  .wrap { max-width: 850px; margin: 0 auto; padding: 32px 20px 60px; }
   header { margin-bottom: 20px; }
   .eyebrow { font-size: 17px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
   h1 { font-size: clamp(24px, 5vw, 32px); margin: 6px 0 8px; letter-spacing: -0.01em; }
@@ -45,7 +45,7 @@
 
   .map-card {
     background: var(--bg-card); border: 1px solid var(--line); border-radius: 20px;
-    padding: 8px 4px 4px; margin: 20px 0 28px; overflow: hidden; max-width: 620px; margin-left: auto; margin-right: auto; }
+    padding: 8px 4px 4px; margin: 20px 0 28px; overflow: hidden; }
   .map-card svg { width: 100%; height: auto; display: block; }
   .map-legend { display: flex; gap: 16px; flex-wrap: wrap; padding: 12px 16px 14px; font-size: 12.5px; color: var(--ink-soft); }
   .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -222,87 +222,86 @@
   }
   .hz { font-weight: 400; font-size: calc(1em + 2px); }
   /* ===== Tab Chi tiêu ===== */
-  #tab-chitieu label { display: block; font-size: 12.5px; color: var(--ink-soft); }
+  #tab-chitieu label { display: block; font-size: 11.5px; color: var(--ink-soft); }
   #tab-chitieu input[type="text"], #tab-chitieu input[type="number"], #tab-chitieu input[type="datetime-local"], #tab-chitieu select, #tab-chitieu textarea {
-    width: 100%; margin-top: 4px; font: inherit; font-size: 15px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); box-sizing: border-box; }
-  #tab-chitieu textarea { resize: vertical; font-size: 13px; }
-  #tab-chitieu form > * { margin-bottom: 10px; }
-  .ex-row { display: flex; gap: 8px; align-items: flex-end; }
+    width: 100%; margin-top: 3px; font: inherit; font-size: 13px; padding: 7px 8px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); color: var(--ink); box-sizing: border-box; }
+  #tab-chitieu textarea { resize: vertical; font-size: 11.5px; }
+  #tab-chitieu form > * { margin-bottom: 8px; }
+  .ex-row { display: flex; gap: 6px; align-items: flex-end; }
   .ex-wrap { flex-wrap: wrap; align-items: center; }
   .ex-grow { flex: 1 1 auto; min-width: 0; }
-  .ex-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-  .ex-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; }
-  .ex-seg { display: flex; gap: 6px; }
-  .ex-seg button { flex: 1; font: inherit; font-size: 14px; font-weight: 600; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink-soft); cursor: pointer; }
+  .ex-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .ex-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 8px; }
+  .ex-seg { display: flex; gap: 4.5px; }
+  .ex-seg button { flex: 1; font: inherit; font-size: 12px; font-weight: 600; padding: 7px 9.5px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); color: var(--ink-soft); cursor: pointer; }
   .ex-seg button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .ex-lbl { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 4px; }
-  .ex-hint { font-size: 12px; color: var(--ink-soft); line-height: 1.45; }
-  .ex-warn { font-size: 12.5px; background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 8px 10px; margin-bottom: 10px; }
-  .ex-err { color: #c0392b; font-size: 13px; min-height: 1em; }
-  .ex-msg { font-size: 13px; color: var(--teal); margin: 6px 0 10px; min-height: 1em; }
+  .ex-lbl { font-size: 11.5px; color: var(--ink-soft); margin-bottom: 3px; }
+  .ex-hint { font-size: 11.5px; color: var(--ink-soft); line-height: 1.45; }
+  .ex-warn { font-size: 11.5px; background: var(--accent-soft); color: var(--accent); border-radius: 9px; padding: 6px 8px; margin-bottom: 8px; }
+  .ex-err { color: #c0392b; font-size: 11.5px; min-height: 1em; }
+  .ex-msg { font-size: 11.5px; color: var(--teal); margin: 4.5px 0 8px; min-height: 1em; }
   .ex-msg.bad { color: #c0392b; }
-  .ex-parts { display: grid; gap: 6px; }
-  .ex-part { display: grid; grid-template-columns: 1fr auto minmax(0, 1.1fr); gap: 8px; align-items: center; padding: 6px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+  .ex-parts { display: grid; gap: 4.5px; }
+  .ex-part { display: grid; grid-template-columns: 1fr auto minmax(0, 1.1fr); gap: 6px; align-items: center; padding: 4.5px 6px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
   .ex-part.off { opacity: .45; }
-  .ex-part label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); }
-  .ex-part input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent); margin: 0; }
-  #tab-chitieu .ex-part input.ex-w { width: 64px; margin-top: 0; padding: 6px 8px; font-size: 14px; }
-  .ex-sh { text-align: right; font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
-  .ex-mini { margin-bottom: 10px; }
-  .ex-link { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 0; padding: 4px 2px; cursor: pointer; text-decoration: underline; }
-  .ex-primary, .ex-secondary, .ex-danger { font: inherit; font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 10px; cursor: pointer; border: 1px solid var(--accent); }
+  .ex-part label { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink); }
+  .ex-part input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--accent); margin: 0; }
+  #tab-chitieu .ex-part input.ex-w { width: 55px; margin-top: 0; padding: 4.5px 6px; font-size: 12px; }
+  .ex-sh { text-align: right; font-size: 11.5px; color: var(--ink-soft); white-space: nowrap; }
+  .ex-mini { margin-bottom: 8px; }
+  .ex-link { font: inherit; font-size: 11.5px; color: var(--accent); background: none; border: 0; padding: 3px 1.5px; cursor: pointer; text-decoration: underline; }
+  .ex-primary, .ex-secondary, .ex-danger { font: inherit; font-size: 12px; font-weight: 600; padding: 8px 12.5px; border-radius: 9px; cursor: pointer; border: 1px solid var(--accent); }
   .ex-primary { background: var(--accent); color: #fff; }
   .ex-secondary { background: var(--bg); color: var(--accent); }
-  .ex-danger { background: transparent; color: #c0392b; border-color: #c0392b; font-size: 13px; padding: 8px 12px; }
-  .ex-file { font-size: 12.5px; max-width: 100%; }
-  .ex-total { font-size: 15px; margin-bottom: 10px; }
-  .ex-total b { color: var(--accent); font-size: 18px; }
-  .ex-h3 { font-size: 14px; margin: 16px 0 6px; color: var(--accent); }
-  .ex-table td, .ex-table th { font-size: 13px; }
+  .ex-danger { background: transparent; color: #c0392b; border-color: #c0392b; font-size: 11.5px; padding: 6px 9.5px; }
+  .ex-file { font-size: 11.5px; max-width: 100%; }
+  .ex-total { font-size: 13px; margin-bottom: 8px; }
+  .ex-total b { color: var(--accent); font-size: 15.5px; }
+  .ex-h3 { font-size: 12px; margin: 12.5px 0 4.5px; color: var(--accent); }
+  .ex-table td, .ex-table th { font-size: 11.5px; }
   .ex-table td:not(:first-child), .ex-table th:not(:first-child) { text-align: right; white-space: nowrap; }
   .ex-pos { color: var(--teal); font-weight: 700; }
   .ex-neg { color: #c0392b; font-weight: 700; }
-  .ex-xfer { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 6px; background: var(--bg); font-size: 14px; }
-  .ex-xfer small { display: block; color: var(--ink-soft); font-size: 12px; }
-  .ex-xfer button { font: inherit; font-size: 12.5px; color: var(--accent); background: transparent; border: 1px solid var(--accent-soft); border-radius: 999px; padding: 5px 10px; cursor: pointer; white-space: nowrap; }
-  .ex-cat { margin-bottom: 8px; font-size: 13px; }
-  .ex-cat .bar { height: 7px; border-radius: 4px; background: var(--accent-soft); margin-top: 3px; overflow: hidden; }
+  .ex-xfer { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 9px; margin-bottom: 4.5px; background: var(--bg); font-size: 12px; }
+  .ex-xfer small { display: block; color: var(--ink-soft); font-size: 11.5px; }
+  .ex-xfer button { font: inherit; font-size: 11.5px; color: var(--accent); background: transparent; border: 1px solid var(--accent-soft); border-radius: 899px; padding: 4px 8px; cursor: pointer; white-space: nowrap; }
+  .ex-cat { margin-bottom: 6px; font-size: 11.5px; }
+  .ex-cat .bar { height: 6px; border-radius: 3.5px; background: var(--accent-soft); margin-top: 2.5px; overflow: hidden; }
   .ex-cat .bar i { display: block; height: 100%; background: var(--accent); }
-  .ex-cat .row { display: flex; justify-content: space-between; gap: 8px; }
-  .ex-date { font-size: 12.5px; font-weight: 700; color: var(--accent); margin: 14px 0 6px; }
-  .ex-item { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; background: var(--bg); }
-  .ex-item .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-  .ex-item .nm { font-size: 14.5px; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
-  .ex-item .am { font-size: 14.5px; font-weight: 700; white-space: nowrap; }
-  .ex-item .am small { display: block; font-weight: 400; font-size: 11.5px; color: var(--ink-soft); text-align: right; }
-  .ex-item .meta { font-size: 12px; color: var(--ink-soft); margin-top: 3px; line-height: 1.45; }
-  .ex-item .acts { margin-top: 6px; display: flex; gap: 12px; }
-  .ex-item .acts button { font: inherit; font-size: 12.5px; color: var(--accent); background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; }
+  .ex-cat .row { display: flex; justify-content: space-between; gap: 6px; }
+  .ex-date { font-size: 11.5px; font-weight: 700; color: var(--accent); margin: 11px 0 4.5px; }
+  .ex-item { border: 1px solid var(--line); border-radius: 11px; padding: 8px 9.5px; margin-bottom: 6px; background: var(--bg); }
+  .ex-item .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .ex-item .nm { font-size: 12.5px; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+  .ex-item .am { font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+  .ex-item .am small { display: block; font-weight: 400; font-size: 11px; color: var(--ink-soft); text-align: right; }
+  .ex-item .meta { font-size: 11.5px; color: var(--ink-soft); margin-top: 2.5px; line-height: 1.45; }
+  .ex-item .acts { margin-top: 4.5px; display: flex; gap: 9.5px; }
+  .ex-item .acts button { font: inherit; font-size: 11.5px; color: var(--accent); background: none; border: 0; padding: 1.5px 0; cursor: pointer; text-decoration: underline; }
   .ex-item.settle { border-style: dashed; }
-  .ex-empty { font-size: 13px; color: var(--ink-soft); padding: 8px 0; }
-  .ex-ratecard { padding: 12px 16px; }
-  #tab-chitieu .ex-rate { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); }
-  #tab-chitieu .ex-rate input { width: 110px; margin-top: 0; padding: 7px 10px; }
-  #tab-chitieu .ex-part label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); }
-  .ex-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: -4px; }
-  .ex-chip { font: inherit; font-size: 12.5px; color: var(--accent); background: var(--bg); border: 1px solid var(--accent-soft); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+  .ex-empty { font-size: 11.5px; color: var(--ink-soft); padding: 6px 0; }
+  .ex-ratecard { padding: 9.5px 12.5px; }
+  #tab-chitieu .ex-rate { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink); }
+  #tab-chitieu .ex-rate input { width: 94.5px; margin-top: 0; padding: 5.5px 8px; }
+  #tab-chitieu .ex-part label { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink); }
+  .ex-chips { display: flex; flex-wrap: wrap; gap: 4.5px; margin-top: -3px; }
+  .ex-chip { font: inherit; font-size: 11.5px; color: var(--accent); background: var(--bg); border: 1px solid var(--accent-soft); border-radius: 899px; padding: 3px 8px; cursor: pointer; }
   .ex-chip.on { background: var(--accent); color: #fff; border-color: var(--accent); }
   .ex-item { padding: 0; }
-  .ex-rowbtn { display: flex; align-items: center; gap: 10px; width: 100%; background: none; border: 0; padding: 10px 12px; font: inherit; color: var(--ink); text-align: left; cursor: pointer; border-radius: 12px; }
+  .ex-rowbtn { display: flex; align-items: center; gap: 8px; width: 100%; background: none; border: 0; padding: 8px 9.5px; font: inherit; color: var(--ink); text-align: left; cursor: pointer; border-radius: 11px; }
   .ex-rowbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-  .ex-rowbtn .rd { flex: 0 0 42px; font-size: 12px; color: var(--ink-soft); }
-  .ex-rowbtn .rn { flex: 1 1 auto; min-width: 0; font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
-  .ex-rowbtn .ra { flex: 0 0 auto; font-size: 14px; font-weight: 700; white-space: nowrap; }
-  .ex-rowbtn .rc { flex: 0 0 auto; font-size: 13px; color: var(--ink-soft); transition: transform .2s; }
+  .ex-rowbtn .rd { flex: 0 0 42px; font-size: 11.5px; color: var(--ink-soft); }
+  .ex-rowbtn .rn { flex: 1 1 auto; min-width: 0; font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
+  .ex-rowbtn .ra { flex: 0 0 auto; font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .ex-rowbtn .rc { flex: 0 0 auto; font-size: 11.5px; color: var(--ink-soft); transition: transform .2s; }
   .ex-item.open .rc { transform: rotate(180deg); }
-  .ex-detail { padding: 2px 12px 10px 64px; border-top: 1px dashed var(--line); margin: 0 0; padding-top: 8px; }
-  .ex-detail .meta { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
-  .ex-detail .acts { margin-top: 6px; display: flex; gap: 14px; }
-  .ex-detail .acts button { font: inherit; font-size: 12.5px; color: var(--accent); background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; }
-  @media (max-width: 420px) { .ex-detail { padding-left: 12px; } }
-  @media (min-width: 900px) {
-    .wrap.wide { max-width: 1060px; }
-    #tab-chitieu.active { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 16px; align-items: start; }
+  .ex-detail { padding: 1.5px 9.5px 8px 50px; border-top: 1px dashed var(--line); margin: 0 0; padding-top: 6px; }
+  .ex-detail .meta { font-size: 11.5px; color: var(--ink-soft); line-height: 1.5; }
+  .ex-detail .acts { margin-top: 4.5px; display: flex; gap: 11px; }
+  .ex-detail .acts button { font: inherit; font-size: 11.5px; color: var(--accent); background: none; border: 0; padding: 1.5px 0; cursor: pointer; text-decoration: underline; }
+  @media (max-width: 420px) { .ex-detail { padding-left: 9.5px; } }
+  @media (min-width: 860px) {
+    #tab-chitieu.active { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: 12px; align-items: start; }
     #tab-chitieu.active > .day { margin: 0; }
     #exFormCard { grid-column: 1; grid-row: 1; }
     #exListCard { grid-column: 2; grid-row: 1; }
@@ -311,129 +310,180 @@
   .ex-split { display: block; }
   .ex-splitcol { min-width: 0; }
   @media (min-width: 640px) {
-    .ex-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+    .ex-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18.5px; align-items: start; }
   }
-  .ex-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; }
-  .ex-pager button { font: inherit; font-size: 13px; min-width: 36px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+  .ex-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4.5px; margin-top: 9.5px; }
+  .ex-pager button { font: inherit; font-size: 11.5px; min-width: 36px; padding: 4.5px 8px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); color: var(--ink); cursor: pointer; }
   .ex-pager button.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
   .ex-pager button:disabled { opacity: .4; cursor: default; }
-  .ex-pager .dots { color: var(--ink-soft); padding: 0 2px; }
-  .ex-pager .info { flex-basis: 100%; text-align: center; font-size: 12px; color: var(--ink-soft); }
+  .ex-pager .dots { color: var(--ink-soft); padding: 0 1.5px; }
+  .ex-pager .info { flex-basis: 100%; text-align: center; font-size: 11.5px; color: var(--ink-soft); }
   /* danh sách chi tiêu dạng dày: nhiều dòng hơn trên một màn hình */
-  #exList.ex-listbox { border: 1px solid var(--line); border-radius: 12px; background: var(--bg); overflow: hidden; }
+  #exList.ex-listbox { border: 1px solid var(--line); border-radius: 11px; background: var(--bg); overflow: hidden; }
   #exList .ex-item { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; margin: 0; background: transparent; }
   #exList .ex-item.settle { border-style: solid; border-width: 0 0 1px 0; }
   #exList .ex-item:last-child { border-bottom: 0; }
-  #exList .ex-rowbtn { padding: 6px 10px; gap: 8px; border-radius: 0; line-height: 1.25; }
+  #exList .ex-rowbtn { padding: 4.5px 8px; gap: 6px; border-radius: 0; line-height: 1.25; }
   #exList .ex-rowbtn:hover { background: var(--bg-card); }
-  #exList .ex-rowbtn .rd { flex-basis: 36px; font-size: 11.5px; }
-  #exList .ex-rowbtn .rn { font-size: 13.5px; }
-  #exList .ex-rowbtn .ra { font-size: 13.5px; }
-  #exList .ex-rowbtn .rc { font-size: 11px; }
-  #exList .ex-detail { padding: 4px 10px 8px 54px; margin: 0; border-top: 0; background: var(--bg-card); }
-  #exList .ex-detail .meta { font-size: 11.5px; }
-  @media (max-width: 420px) { #exList .ex-detail { padding-left: 10px; } }
+  #exList .ex-rowbtn .rd { flex-basis: 36px; font-size: 11px; }
+  #exList .ex-rowbtn .rn { font-size: 12.5px; }
+  #exList .ex-rowbtn .ra { font-size: 12.5px; }
+  #exList .ex-rowbtn .rc { font-size: 10.5px; }
+  #exList .ex-detail { padding: 3px 8px 6px 42px; margin: 0; border-top: 0; background: var(--bg-card); }
+  #exList .ex-detail .meta { font-size: 11px; }
+  @media (max-width: 420px) { #exList .ex-detail { padding-left: 8px; } }
   /* Ai trả ai: nổi bật */
-  #exTransfers .ex-xsum { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 9px 12px; margin-bottom: 10px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; }
-  #exTransfers .ex-xsum b { font-size: 15px; }
-  #exTransfers .ex-xfer { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px 12px 12px 14px; border: 1px solid var(--accent-soft); border-left: 5px solid var(--accent); border-radius: 12px; background: var(--bg-card); box-shadow: 0 1px 3px rgba(0, 0, 0, .07); margin-bottom: 10px; font-size: 14px; }
-  #exTransfers .ex-people { display: flex; align-items: center; gap: 6px; }
-  #exTransfers .ex-pp { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 44px; }
-  #exTransfers .ex-av { width: 34px; height: 34px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
-  #exTransfers .ex-pn { font-size: 11.5px; color: var(--ink); max-width: 64px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  #exTransfers .ex-arrow { color: var(--accent); font-size: 22px; font-weight: 700; margin-bottom: 14px; }
+  #exTransfers .ex-xsum { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; padding: 7px 9.5px; margin-bottom: 8px; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-size: 11.5px; font-weight: 600; }
+  #exTransfers .ex-xsum b { font-size: 13px; }
+  #exTransfers .ex-xfer { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 9.5px 9.5px 9.5px 11px; border: 1px solid var(--accent-soft); border-left: 5px solid var(--accent); border-radius: 11px; background: var(--bg-card); box-shadow: 0 1px 3px rgba(0, 0, 0, .07); margin-bottom: 8px; font-size: 12px; }
+  #exTransfers .ex-people { display: flex; align-items: center; gap: 4.5px; }
+  #exTransfers .ex-pp { display: flex; flex-direction: column; align-items: center; gap: 1.5px; min-width: 44px; }
+  #exTransfers .ex-av { width: 29px; height: 29px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  #exTransfers .ex-pn { font-size: 11px; color: var(--ink); max-width: 64px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #exTransfers .ex-arrow { color: var(--accent); font-size: 19px; font-weight: 700; margin-bottom: 11px; }
   #exTransfers .ex-xamt { flex: 1 1 110px; min-width: 0; text-align: right; }
-  #exTransfers .ex-xamt b { display: block; font-size: 19px; color: var(--accent); line-height: 1.15; }
-  #exTransfers .ex-xamt small { font-size: 12px; color: var(--ink-soft); }
-  #exTransfers .ex-xfer button { flex: 0 0 auto; font: inherit; font-size: 13px; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+  #exTransfers .ex-xamt b { display: block; font-size: 16.5px; color: var(--accent); line-height: 1.15; }
+  #exTransfers .ex-xamt small { font-size: 11.5px; color: var(--ink-soft); }
+  #exTransfers .ex-xfer button { flex: 0 0 auto; font: inherit; font-size: 11.5px; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 899px; padding: 6px 12.5px; cursor: pointer; }
   #exTransfers .ex-xfer button:hover { filter: brightness(1.08); }
   /* Tổng kết: nổi bật, gọn */
-  #exTotal { margin-bottom: 12px; padding: 14px 16px; border-radius: 14px; background: var(--accent); color: #fff; }
-  #exTotal .lbl { font-size: 12.5px; opacity: .9; }
-  #exTotal .big { font-size: 26px; font-weight: 800; line-height: 1.15; margin: 2px 0; }
-  #exTotal .sub { font-size: 12.5px; opacity: .92; }
-  .ex-bal { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .ex-mc { border: 1px solid var(--line); border-top: 4px solid var(--ink-soft); border-radius: 12px; padding: 10px 12px; background: var(--bg-card); box-shadow: 0 1px 3px rgba(0, 0, 0, .06); min-width: 0; }
+  #exTotal { margin-bottom: 9.5px; padding: 11px 12.5px; border-radius: 12.5px; background: var(--accent); color: #fff; }
+  #exTotal .lbl { font-size: 11.5px; opacity: .9; }
+  #exTotal .big { font-size: 22.5px; font-weight: 800; line-height: 1.15; margin: 1.5px 0; }
+  #exTotal .sub { font-size: 11.5px; opacity: .92; }
+  .ex-bal { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .ex-mc { border: 1px solid var(--line); border-top: 4px solid var(--ink-soft); border-radius: 11px; padding: 8px 9.5px; background: var(--bg-card); box-shadow: 0 1px 3px rgba(0, 0, 0, .06); min-width: 0; }
   .ex-mc.pos { border-top-color: var(--teal); }
   .ex-mc.neg { border-top-color: #c0392b; }
-  .ex-mc .ex-mt { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-  .ex-mc .ex-av { width: 28px; height: 28px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
-  .ex-mc .nm { font-size: 14px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .ex-mc .ex-net { font-size: 18px; font-weight: 800; line-height: 1.15; overflow-wrap: anywhere; }
+  .ex-mc .ex-mt { display: flex; align-items: center; gap: 6px; margin-bottom: 4.5px; }
+  .ex-mc .ex-av { width: 24px; height: 24px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 11.5px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+  .ex-mc .nm { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ex-mc .ex-net { font-size: 15.5px; font-weight: 800; line-height: 1.15; overflow-wrap: anywhere; }
   .ex-mc.pos .ex-net { color: var(--teal); }
   .ex-mc.neg .ex-net { color: #c0392b; }
-  .ex-mc .ex-nl { font-size: 11.5px; color: var(--ink-soft); margin-bottom: 6px; }
-  .ex-mc .ex-ml { display: flex; justify-content: space-between; gap: 6px; font-size: 11.5px; color: var(--ink-soft); padding-top: 3px; border-top: 1px dashed var(--line); margin-top: 3px; }
+  .ex-mc .ex-nl { font-size: 11px; color: var(--ink-soft); margin-bottom: 4.5px; }
+  .ex-mc .ex-ml { display: flex; justify-content: space-between; gap: 4.5px; font-size: 11px; color: var(--ink-soft); padding-top: 2.5px; border-top: 1px dashed var(--line); margin-top: 2.5px; }
   .ex-mc .ex-ml b { color: var(--ink); font-weight: 600; white-space: nowrap; }
   @media (max-width: 639px) { .ex-bal > .ex-mc:last-child:nth-child(odd) { grid-column: 1 / -1; } }
   @media (min-width: 640px) { .ex-bal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (min-width: 900px) { .ex-bal { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
   /* Tab Chi tiêu: tiêu đề +3px */
-  #tab-chitieu .day h2 { font-size: 19.5px; }
-  #tab-chitieu .ex-h3 { font-size: 17px; }
+  #tab-chitieu .day h2 { font-size: 17px; }
+  #tab-chitieu .ex-h3 { font-size: 14.5px; }
   /* Tổng chi: gọn, căn giữa */
-  #exTotal { width: fit-content; max-width: 100%; min-width: 210px; margin: 0 auto 14px; padding: 8px 22px; border-radius: 12px; text-align: center; }
-  #exTotal .lbl { font-size: 12px; }
-  #exTotal .big { font-size: 20px; margin: 1px 0; }
-  #exTotal .sub { font-size: 12px; }
+  #exTotal { width: fit-content; max-width: 100%; min-width: 210px; margin: 0 auto 11px; padding: 6px 17px; border-radius: 11px; text-align: center; }
+  #exTotal .lbl { font-size: 11.5px; }
+  #exTotal .big { font-size: 17px; margin: 1px 0; }
+  #exTotal .sub { font-size: 11.5px; }
   /* Thẻ thành viên: chữ +3px */
-  .ex-mc .nm { font-size: 17px; }
-  .ex-mc .ex-av { width: 32px; height: 32px; font-size: 15px; }
-  .ex-mc .ex-net { font-size: 21px; }
-  .ex-mc .ex-nl { font-size: 14.5px; }
-  .ex-mc .ex-ml { font-size: 14.5px; flex-wrap: wrap; }
-  @media (min-width: 900px) { .ex-bal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (min-width: 1100px) { .ex-bal { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  .ex-mc .nm { font-size: 14.5px; }
+  .ex-mc .ex-av { width: 27.5px; height: 27.5px; font-size: 13px; }
+  .ex-mc .ex-net { font-size: 18px; }
+  .ex-mc .ex-nl { font-size: 12.5px; }
+  .ex-mc .ex-ml { font-size: 12.5px; flex-wrap: wrap; }
   /* Theo danh mục: nổi bật, dòng gọn */
-  .ex-cat { margin-bottom: 7px; font-size: 15px; }
-  .ex-cat .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; line-height: 1.2; font-size: 15px; }
-  .ex-cat .cn { display: flex; align-items: center; gap: 7px; font-weight: 600; min-width: 0; }
-  .ex-cat .cdot { width: 11px; height: 11px; border-radius: 3px; flex: 0 0 auto; }
-  .ex-cat .cp { font-style: normal; font-size: 12.5px; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .ex-cat { margin-bottom: 5.5px; font-size: 13px; }
+  .ex-cat .row { display: flex; justify-content: space-between; align-items: center; gap: 6px; line-height: 1.2; font-size: 13px; }
+  .ex-cat .cn { display: flex; align-items: center; gap: 5.5px; font-weight: 600; min-width: 0; }
+  .ex-cat .cdot { width: 9.5px; height: 9.5px; border-radius: 2.5px; flex: 0 0 auto; }
+  .ex-cat .cp { font-style: normal; font-size: 11.5px; font-weight: 700; padding: 1px 6px; border-radius: 899px; background: var(--accent-soft); color: var(--accent); }
   .ex-cat .amt { font-weight: 700; white-space: nowrap; }
-  .ex-cat .bar { height: 7px; margin-top: 3px; border-radius: 4px; background: var(--line); }
+  .ex-cat .bar { height: 6px; margin-top: 2.5px; border-radius: 3.5px; background: var(--line); }
   .ex-cat .bar i { background: var(--accent); }
   .ex-cat.zero { opacity: .55; }
   /* Sao lưu: gọn hơn */
-  #exBackup .subtitle { margin-bottom: 8px; }
-  #exBackup .ex-hint { font-size: 11.5px; margin-top: 8px; }
-  #exBackup .ex-wrap { margin-bottom: 8px; }
-  #exBackup .ex-primary, #exBackup .ex-secondary { padding: 8px 14px; font-size: 13.5px; }
-  #exBackup .ex-danger { padding: 5px 10px; font-size: 12px; margin-top: 4px; }
-  #exBackup .ex-msg { margin: 2px 0 6px; }
+  #exBackup .subtitle { margin-bottom: 6px; }
+  #exBackup .ex-hint { font-size: 11px; margin-top: 6px; }
+  #exBackup .ex-wrap { margin-bottom: 6px; }
+  #exBackup .ex-primary, #exBackup .ex-secondary { padding: 6px 11px; font-size: 11.5px; }
+  #exBackup .ex-danger { padding: 4px 8px; font-size: 11.5px; margin-top: 3px; }
+  #exBackup .ex-msg { margin: 1.5px 0 4.5px; }
   /* Chọn người: chip gọn */
-  #tab-chitieu .ex-parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; }
-  #tab-chitieu .ex-pchip { display: flex; align-items: center; gap: 7px; margin: 0; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-size: 14px; color: var(--ink); cursor: pointer; }
+  #tab-chitieu .ex-parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 4.5px; }
+  #tab-chitieu .ex-pchip { display: flex; align-items: center; gap: 5.5px; margin: 0; padding: 4.5px 8px; border: 1px solid var(--line); border-radius: 899px; background: var(--bg); font-size: 12px; color: var(--ink); cursor: pointer; }
   #tab-chitieu .ex-pchip.off { opacity: .45; }
-  #tab-chitieu .ex-pchip input[type="checkbox"] { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+  #tab-chitieu .ex-pchip input[type="checkbox"] { width: 15.5px; height: 15.5px; margin: 0; accent-color: var(--accent); }
   /* Sao lưu: hộp nằm trong cột phải, dưới Theo danh mục */
-  .ex-backup { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--accent-soft); border-radius: 12px; background: var(--bg); }
+  .ex-backup { margin-top: 12.5px; padding: 9.5px 11px; border: 1px solid var(--accent-soft); border-radius: 11px; background: var(--bg); }
   .ex-backup .ex-h3 { margin-top: 0; }
-  .ex-backup .subtitle { font-size: 12.5px; margin: 0 0 8px; }
-  .ex-backup .ex-hint { font-size: 11.5px; margin-top: 8px; }
-  .ex-backup .ex-wrap { margin-bottom: 8px; }
-  .ex-backup .ex-primary, .ex-backup .ex-secondary { padding: 8px 14px; font-size: 13.5px; }
-  .ex-backup .ex-danger { padding: 5px 10px; font-size: 12px; margin-top: 4px; }
-  .ex-backup .ex-msg { margin: 2px 0 6px; }
-  .ex-backup .ex-restore { display: block; margin: -2px 0 8px; padding: 2px 0; font-size: 13px; }
+  .ex-backup .subtitle { font-size: 11.5px; margin: 0 0 6px; }
+  .ex-backup .ex-hint { font-size: 11px; margin-top: 6px; }
+  .ex-backup .ex-wrap { margin-bottom: 6px; }
+  .ex-backup .ex-primary, .ex-backup .ex-secondary { padding: 6px 11px; font-size: 11.5px; }
+  .ex-backup .ex-danger { padding: 4px 8px; font-size: 11.5px; margin-top: 3px; }
+  .ex-backup .ex-msg { margin: 1.5px 0 4.5px; }
+  .ex-backup .ex-restore { display: block; margin: -1.5px 0 6px; padding: 1.5px 0; font-size: 11.5px; }
   /* Tông xanh lá đậm chỉ cho thẻ Thêm khoản chi */
   #exFormCard { --accent: #1f5a42; --accent-soft: #cfe4d8; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #exFormCard { --accent: #6fc59a; --accent-soft: #1f3a2f; } }
   :root[data-theme="dark"] #exFormCard { --accent: #6fc59a; --accent-soft: #1f3a2f; }
-  .ex-sync { font-size: 12.5px; line-height: 1.4; padding: 6px 10px 6px 26px; border-radius: 8px; margin: 0 0 8px; position: relative; background: var(--accent-soft); color: var(--ink); }
-  .ex-sync::before { content: ''; position: absolute; left: 10px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--ink-soft); }
+  .ex-sync { font-size: 11.5px; line-height: 1.4; padding: 4.5px 8px 4.5px 20.5px; border-radius: 7px; margin: 0 0 6px; position: relative; background: var(--accent-soft); color: var(--ink); }
+  .ex-sync::before { content: ''; position: absolute; left: 10px; top: 50%; width: 7px; height: 7px; margin-top: -3px; border-radius: 50%; background: var(--ink-soft); }
   .ex-sync.on::before { background: var(--teal); }
   .ex-sync.ro::before, .ex-sync.err::before { background: #c0392b; }
   .ex-sync.wait::before { background: #b9822a; }
-  .ex-dlg { position: fixed; inset: 0; z-index: 70; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(0, 0, 0, .45); }
+  .ex-dlg { position: fixed; inset: 0; z-index: 70; display: flex; align-items: center; justify-content: center; padding: 12.5px; background: rgba(0, 0, 0, .45); }
   .ex-dlg[hidden] { display: none; }
-  .ex-dlgbox { width: 100%; max-width: 360px; background: var(--bg-card); color: var(--ink); border-radius: 14px; padding: 18px 18px 14px; box-shadow: 0 10px 30px rgba(0, 0, 0, .3); }
-  .ex-dlgbox p { margin: 0 0 14px; font-size: 15px; line-height: 1.45; }
-  .ex-dlgbtns { justify-content: flex-end; gap: 10px; }
+  .ex-dlgbox { width: 100%; max-width: 360px; background: var(--bg-card); color: var(--ink); border-radius: 12.5px; padding: 14px 14px 11px; box-shadow: 0 10px 30px rgba(0, 0, 0, .3); }
+  .ex-dlgbox p { margin: 0 0 11px; font-size: 13px; line-height: 1.45; }
+  .ex-dlgbtns { justify-content: flex-end; gap: 8px; }
   .ex-sr { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; clip: rect(0 0 0 0); }
   label.ex-filebtn { display: inline-block; margin: 0; cursor: pointer; text-align: center; box-sizing: border-box; }
   label.ex-filebtn:focus-within, label.ex-filebtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  /* Ảnh hóa đơn */
+  .ex-rcpt { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .ex-rcpt .ex-secondary { padding: 6px 12px; font-size: 13px; }
+  .ex-rcptst { font-size: 12px; color: var(--ink-soft); flex: 1 1 140px; min-width: 0; }
+  .ex-rcptprev { display: flex; align-items: center; gap: 10px; }
+  .ex-rcptprev img { max-height: 84px; max-width: 140px; border: 1px solid var(--line); border-radius: 8px; object-fit: cover; cursor: zoom-in; background: #fff; }
+  .rcthumb { display: flex; align-items: flex-start; gap: 10px; margin: 6px 0 2px; font-size: 12px; color: var(--ink-soft); }
+  .rcthumb img { max-height: 90px; max-width: 130px; border: 1px solid var(--line); border-radius: 8px; cursor: zoom-in; background: #fff; }
+  .rcthumb button { font: inherit; font-size: 12.5px; color: var(--accent); background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; }
+  .rcb { flex: 0 0 auto; font-size: 10.5px; color: var(--accent); border: 1px solid var(--accent-soft); border-radius: 999px; padding: 0 6px; line-height: 1.5; }
+  .ex-lb { position: fixed; inset: 0; z-index: 75; display: flex; align-items: center; justify-content: center; padding: 14px; background: rgba(0, 0, 0, .7); }
+  .ex-lb[hidden] { display: none; }
+  .ex-lbbox { width: 100%; max-width: 560px; max-height: 100%; overflow: auto; background: var(--bg-card); color: var(--ink); border-radius: 14px; padding: 12px; text-align: center; }
+  .ex-lbbox img { max-width: 100%; max-height: 70vh; border-radius: 8px; background: #fff; }
+  .ex-lbbox img:not([src]) { display: none; }
+  .ex-lbmsg { font-size: 13px; color: var(--ink-soft); margin: 6px 0; }
+  .ex-lbbox .ex-primary { margin-top: 8px; }
+  /* Thuộc tính hidden luôn thắng các display đặt trong CSS của tab */
+  #tab-chitieu [hidden] { display: none !important; }
   @media (max-width: 420px) { .ex-filters { grid-template-columns: 1fr 1fr; } .ex-part { grid-template-columns: 1fr auto; } .ex-sh { grid-column: 1 / -1; text-align: left; } }
+  @media (max-width: 639px) { #tab-chitieu input[type="text"], #tab-chitieu input[type="number"], #tab-chitieu select, #tab-chitieu textarea { font-size: 16px; } }
+  #tab-chitieu .day { padding: 13px 15px; margin-bottom: 12px; }
+  #tab-chitieu .day .subtitle { margin-bottom: 8px; }
+  /* Form gọn: ít dòng hơn, chừa chỗ cho danh sách */
+  #tab-chitieu form > * { margin-bottom: 6px; }
+  #exForm .ex-row { gap: 6px; }
+  #exForm .ex-dayrow { display: flex; align-items: flex-end; gap: 8px; flex-wrap: wrap; }
+  #exForm .ex-dayrow label { flex: 0 0 118px; }
+  #exForm .ex-dayrow .ex-chips { flex: 1 1 140px; min-width: 0; margin: 0 0 4px; }
+  #exForm .ex-actions { display: flex; align-items: center; gap: 8px; }
+  #exForm .ex-actions .ex-seg { flex: 1 1 auto; }
+  #exForm .ex-actions .ex-seg button { padding: 7px 8px; }
+  #exForm .ex-actions .ex-primary { flex: 0 0 auto; padding: 8px 14px; }
+  #exForm .ex-2col { margin-bottom: 6px; gap: 8px; }
+  #exForm .ex-hint:empty { display: none; }
+  #exForm .ex-err:empty { display: none; }
+  /* Bảng tên địa điểm cho Amap */
+  .amap-table td.han { cursor: pointer; user-select: all; -webkit-user-select: all; background: var(--bg); }
+  .amap-table td.han:hover, .amap-table td.han:focus-visible { background: var(--accent-soft); outline: none; }
+  .amap-table td.han .hz { font-size: calc(1em + 3px); }
+  .amap-table .amap-py { color: var(--ink-soft); font-size: 12.5px; }
+  .amap-table .amap-note { font-size: 11.5px; color: var(--ink-soft); margin-top: 2px; }
+  .amap-table .amap-miss { font-size: 12px; color: var(--ink-soft); font-style: italic; }
+  #cpToast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 80; background: #1b1b1b; color: #fff; font-size: 13px; padding: 8px 14px; border-radius: 999px; max-width: calc(100vw - 40px); text-align: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  #cpToast.show { opacity: 1; }
+  /* Bảng Amap: dòng gọn */
+  table.summary.amap-table th, table.summary.amap-table td { padding: 3px 8px; line-height: 1.25; font-size: 13px; }
+  table.summary.amap-table th { font-size: 12.5px; }
+  table.summary.amap-table tr.grp td { padding: 4px 8px; font-size: 12.5px; }
+  table.summary.amap-table td.han .hz { font-size: calc(1em + 2px); }
+  table.summary.amap-table td.amap-py { font-size: 11.5px; }
+  table.summary.amap-table .amap-note { font-size: 11px; margin-top: 1px; }
+  table.summary.amap-table th:nth-child(1) { width: 30%; }
+  table.summary.amap-table th:nth-child(2) { width: 36%; }
   @media print {
     .tabbar { display: none; }
     #toTop { display: none !important; }
@@ -486,20 +536,20 @@
 
   <section class="tab-panel active" id="tab-tomtat" role="tabpanel" aria-labelledby="btn-tomtat">
   <div class="map-card">
-    <svg viewBox="0 56 700 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ tuyến đường minh họa">
+    <svg viewBox="-40 66 780 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ tuyến đường minh họa">
   <line x1="350" y1="190" x2="120" y2="130" stroke="#3f6b5a" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
   <line x1="350" y1="190" x2="590" y2="140" stroke="#b5502e" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
   <line x1="350" y1="190" x2="300" y2="320" stroke="#6b5a94" stroke-width="3" stroke-dasharray="6 6" opacity="0.75"/>
   <circle cx="350" cy="190" r="10" fill="#2b3a34"/><circle cx="350" cy="190" r="16" fill="none" stroke="#2b3a34" stroke-width="1.5" opacity="0.35"/>
   <circle cx="120" cy="130" r="9" fill="#3f6b5a"/><circle cx="590" cy="140" r="9" fill="#b5502e"/><circle cx="300" cy="320" r="9" fill="#6b5a94"/>
-  <text class="mp-t" x="374" y="214" font-size="17.5" font-weight="700" fill="#2b3a34">Quý Dương</text>
-  <text class="mp-s" x="374" y="234" font-size="13.5" fill="#5b6660">Yibon Hotel (3 đêm) · KWE</text>
-  <text x="120" y="86" text-anchor="middle" font-size="16.5" font-weight="700" fill="#3f6b5a">Hoàng Quả Thụ</text>
-  <text class="mp-s" x="120" y="106" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 2 · Tây, An Thuận</text>
-  <text x="590" y="92" text-anchor="middle" font-size="16.5" font-weight="700" fill="#b5502e">Tây Giang</text>
-  <text class="mp-s" x="590" y="112" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 4–5 · Đông, ở lại 1 đêm</text>
-  <text x="300" y="352" text-anchor="middle" font-size="16.5" font-weight="700" fill="#6b5a94">Libo Xiaoqikong</text>
-  <text class="mp-s" x="300" y="372" text-anchor="middle" font-size="13.5" fill="#5b6660">Day 3 · Nam, xa nhất</text>
+  <text class="mp-t" x="374" y="214" font-size="15" font-weight="700" fill="#2b3a34">Quý Dương</text>
+  <text class="mp-s" x="374" y="234" font-size="11.5" fill="#5b6660">Yibon Hotel (3 đêm) · KWE</text>
+  <text x="120" y="86" text-anchor="middle" font-size="14" font-weight="700" fill="#3f6b5a">Hoàng Quả Thụ</text>
+  <text class="mp-s" x="120" y="106" text-anchor="middle" font-size="11.5" fill="#5b6660">Day 2 · Tây, An Thuận</text>
+  <text x="590" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#b5502e">Tây Giang</text>
+  <text class="mp-s" x="590" y="112" text-anchor="middle" font-size="11.5" fill="#5b6660">Day 4–5 · Đông, ở lại 1 đêm</text>
+  <text x="300" y="352" text-anchor="middle" font-size="14" font-weight="700" fill="#6b5a94">Libo Xiaoqikong</text>
+  <text class="mp-s" x="300" y="372" text-anchor="middle" font-size="11.5" fill="#5b6660">Day 3 · Nam, xa nhất</text>
 </svg>
     <div class="map-legend">
       <span><span class="dot" style="background:#3f6b5a"></span>Day 2 · Tây</span>
@@ -558,7 +608,7 @@
         <a class="pin" href="https://www.google.com/maps/place/?q=place_id:EjFNaW4gU2hlbmcgTHUsIEd1aSBZYW5nIFNoaSwgR3VpIFpob3UgU2hlbmcsIENoaW5hIi4qLAoUChIJG1RwWdb6wzYRH3BXSVzseKQSFAoSCTcb7FXDZ782EVVkMdjAgTMX" target="_blank" rel="noopener">Xem bản đồ</a>
         <div class="stop-detail">Cách khách sạn ~0,7 km, đi bộ được. Ăn nhẹ (để dành bụng cho Qingyun Market tối nay). Món ưu tiên:
           <ul><li><span class="hz">蛋包洋芋</span> <span class="py">(dàn bāo yángyù)</span> — khoai tây bọc trứng</li><li><span class="hz">现炸洋芋片</span> <span class="py">(xiàn zhà yángyù piàn)</span> — khoai tây chiên</li><li><span class="hz">烙锅</span> <span class="py">(làoguō)</span> — luoguo</li></ul></div></li>
-      <li><div class="row"><span class="stop-time">17:45–19:00</span><span class="stop-name">Qingyun Market <span class="hz">青云集市</span> <span class="py">(Qīngyún jíshì)</span></span></div>
+      <li><div class="row"><span class="stop-time">17:45–19:00</span><span class="stop-name">Qingyun Market <span class="hz">青云市集</span> <span class="py">(Qīngyún shìjí)</span></span></div>
         <a class="pin" href="https://www.google.com/maps/place/?q=place_id:ChIJW7SyEORnvzYRqPiDGbK88Go" target="_blank" rel="noopener">Xem bản đồ</a>
         <div class="stop-detail">~1,7 km từ Minsheng Road (taxi/đi bộ). Đi khi bắt đầu lên đèn, ~1g15p: ăn tối, dạo, xem quầy handmade, mua lưu niệm, chụp ảnh. Không nên nán quá lâu vì còn Jiaxiu Tower, đẹp nhất khi lên đèn.</div></li>
       <li><div class="row"><span class="stop-time">19:15–20:10</span><span class="stop-name">Jiaxiu Tower <span class="hz">甲秀楼</span> <span class="py">(Jiǎxiù Lóu)</span></span></div>
@@ -688,7 +738,7 @@
       <li><div class="row"><span class="stop-time">17:15–19:00</span><span class="stop-name">Đài quan sát: hoàng hôn và làng lên đèn</span></div>
         <div class="stop-detail">Phần không nên bỏ của chuyến đi.</div></li>
       <li><div class="row"><span class="stop-time">19:00–21:00</span><span class="stop-name">Ăn tối + dạo đêm</span></div>
-        <div class="stop-detail">Thử tiệc bàn dài của người Miêu (nên đặt trước) với nghi thức mời rượu "cao sơn lưu thủy". Nghỉ đêm tại khách sạn.</div></li>
+        <div class="stop-detail">Ăn tối quanh quảng trường Lusheng rồi dạo đêm ngắm làng lên đèn. Nghỉ đêm tại khách sạn.</div></li>
     </ul>
   </div>
   </section>
@@ -829,11 +879,10 @@
     <table class="summary food">
       <tr><th>Món nên thử</th><th>Là gì</th><th>Ăn ở đâu / lưu ý</th></tr>
       <tr><td><b><span class="hz">酸汤鱼</span> <span class="py">(suāntāng yú)</span> Canh chua cá Miêu</b></td><td>Món "linh hồn" của làng: cá ruộng nấu canh chua lên men từ quả maola dại</td><td>Quán trên phố cổ hoặc Youfang Street, ví dụ <span class="hz">黔山溪</span> <span class="py">(Qiánshānxī)</span> (canh chua chuẩn di sản). Một số khách thấy nước lạt, hỏi thêm ớt</td></tr>
-      <tr><td><b><span class="hz">长桌宴</span> <span class="py">(chángzhuōyàn)</span> Tiệc bàn dài</b></td><td>Tiệc người Miêu có thịt xông khói, canh chua cá, xôi ngũ sắc, nghi thức mời rượu "cao sơn lưu thủy"</td><td>Khoảng 50–80 tệ/người, nên đặt trước. Hợp làm bữa tối Day 4</td></tr>
       <tr><td><b><span class="hz">苗王鱼</span> <span class="py">(Miáowáng yú)</span> Cá vua Miêu</b></td><td>Cá nấu chín giã nhuyễn trộn ớt nướng, tỏi, được gọi là "vịt quay Bắc Kinh của người Miêu"</td><td>Nhà hàng trong làng</td></tr>
       <tr><td><b>Thịt xông khói Miêu <span class="hz">腊肉</span> <span class="py">(làròu)</span></b></td><td>Thịt hun khói, thái lát ăn trực tiếp hoặc xào, ăn kèm xôi</td><td>Nhà hàng/quán lẻ trong làng</td></tr>
       <tr><td><b><span class="hz">糍粑</span> <span class="py">(cíbā)</span> Bánh nếp giã tay</b></td><td>Bánh nếp giã tại chỗ, phủ bột đậu nành và đường nâu, mềm ngọt</td><td>Phố cổ, ăn vặt lúc đi dạo</td></tr>
-      <tr><td><b>Rượu gạo Miêu <span class="hz">米酒</span> <span class="py">(mǐjiǔ)</span></b></td><td>Rượu nếp nhà làm, độ cồn thấp, ngọt dịu</td><td>Thường đi kèm tiệc bàn dài. Uống vừa phải nếu hôm sau phải dậy sớm</td></tr>
+      <tr><td><b>Rượu gạo Miêu <span class="hz">米酒</span> <span class="py">(mǐjiǔ)</span></b></td><td>Rượu nếp nhà làm, độ cồn thấp, ngọt dịu</td><td>Uống vừa phải nếu hôm sau phải dậy sớm</td></tr>
     </table>
     </div>
     <p class="food-note">Ngày này bạn đến ~11:00 nên bữa trưa ăn ở phố ăn uống gần quảng trường Lusheng. Có thể gặp nghi thức rót rượu chào khách ở quảng trường cổng (10:30–12:00 và 15:30–17:00).</p>
@@ -985,7 +1034,6 @@
         <li class="zh-item" tabindex="0" data-zh="糯米饭" data-py="nuòmǐfàn" data-vi="Xôi, món sáng phổ biến ở Quý Dương"><div class="zh-hz">糯米饭</div><div class="zh-py">nuòmǐfàn</div><div class="zh-vi">Xôi, món sáng phổ biến ở Quý Dương</div></li>
         <li class="zh-item" tabindex="0" data-zh="洋芋粑" data-py="yángyùbā" data-vi="Bánh khoai tây chiên giòn"><div class="zh-hz">洋芋粑</div><div class="zh-py">yángyùbā</div><div class="zh-vi">Bánh khoai tây chiên giòn</div></li>
         <li class="zh-item" tabindex="0" data-zh="恋爱豆腐果" data-py="liàn&#x27;ài dòufuguǒ" data-vi="Đậu phụ nướng nhồi nước chấm, tên gọi là “đậu phụ yêu đương”"><div class="zh-hz">恋爱豆腐果</div><div class="zh-py">liàn&#x27;ài dòufuguǒ</div><div class="zh-vi">Đậu phụ nướng nhồi nước chấm, tên gọi là “đậu phụ yêu đương”</div></li>
-        <li class="zh-item" tabindex="0" data-zh="长桌宴" data-py="chángzhuōyàn" data-vi="Tiệc bàn dài của người Miêu, gặp ở Tây Giang"><div class="zh-hz">长桌宴</div><div class="zh-py">chángzhuōyàn</div><div class="zh-vi">Tiệc bàn dài của người Miêu, gặp ở Tây Giang</div></li>
       </ul>
       </div>
     </div>
@@ -1172,29 +1220,41 @@
       </div>
       <div class="ex-hint" id="exAmtHint"></div>
       <div class="ex-rateitem" id="exRateRow" hidden>
-        <label>Tỷ giá cho khoản này: 1 CNY = ? VND<input id="exRateItem" type="text" inputmode="decimal"></label>
+        <label>Tỷ giá khoản này: 1 CNY = ? VND<input id="exRateItem" type="text" inputmode="decimal"></label>
       </div>
       <div class="ex-2col">
         <label>Người trả<select id="exPayer"></select></label>
         <label>Danh mục<select id="exCat"></select></label>
       </div>
       <label>Nội dung<input id="exNote" type="text" maxlength="120" placeholder="VD: Vé Hoàng Quả Thụ, taxi ra ga"></label>
-      <label>Ngày chi<input id="exTime" type="text" inputmode="numeric" placeholder="dd/mm/yyyy" maxlength="10" autocomplete="off" aria-describedby="exDayChips"></label>
-      <div class="ex-chips" id="exDayChips" role="group" aria-label="Chọn nhanh ngày">
-        <button type="button" class="ex-chip" data-d="20/11/2026">20/11</button>
-        <button type="button" class="ex-chip" data-d="21/11/2026">21/11</button>
-        <button type="button" class="ex-chip" data-d="22/11/2026">22/11</button>
-        <button type="button" class="ex-chip" data-d="23/11/2026">23/11</button>
-        <button type="button" class="ex-chip" data-d="24/11/2026">24/11</button>
-        <button type="button" class="ex-chip" data-d="today">Hôm nay</button>
+      <div class="ex-rcpt">
+        <label class="ex-secondary ex-filebtn" for="exRcptFile" id="exRcptBtn" tabindex="0" role="button">Ảnh hóa đơn</label>
+        <input type="file" id="exRcptFile" class="ex-sr" accept="image/*" aria-label="Chọn hoặc chụp ảnh hóa đơn">
+        <button type="button" class="ex-secondary" id="exRcptRead" hidden>Đọc hóa đơn bằng Claude</button>
+        <span class="ex-rcptst" id="exRcptSt"></span>
       </div>
-      <div class="ex-lbl">Chia cho ai</div>
-      <div class="ex-seg" id="exMode" role="group" aria-label="Cách chia">
-        <button type="button" data-mode="equal" class="on" aria-pressed="true">Chia đều</button>
-        <button type="button" data-mode="ratio" aria-pressed="false">Chọn người</button>
+      <div class="ex-rcptprev" id="exRcptPrev" hidden><img id="exRcptImg" alt="Ảnh hóa đơn"><button type="button" class="ex-link" id="exRcptDel">Xóa ảnh</button></div>
+      <div class="ex-dayrow">
+        <label>Ngày chi<input id="exTime" type="text" inputmode="numeric" placeholder="dd/mm/yyyy" maxlength="10" autocomplete="off" aria-describedby="exDayChips"></label>
+        <div class="ex-chips" id="exDayChips" role="group" aria-label="Chọn nhanh ngày">
+          <button type="button" class="ex-chip" data-d="20/11/2026">20/11</button>
+          <button type="button" class="ex-chip" data-d="21/11/2026">21/11</button>
+          <button type="button" class="ex-chip" data-d="22/11/2026">22/11</button>
+          <button type="button" class="ex-chip" data-d="23/11/2026">23/11</button>
+          <button type="button" class="ex-chip" data-d="24/11/2026">24/11</button>
+          <button type="button" class="ex-chip" data-d="today">Hôm nay</button>
+        </div>
+      </div>
+      <div class="ex-actions">
+        <div class="ex-seg" id="exMode" role="group" aria-label="Cách chia">
+          <button type="button" data-mode="equal" class="on" aria-pressed="true">Chia đều</button>
+          <button type="button" data-mode="ratio" aria-pressed="false">Chọn người</button>
+        </div>
+        <button type="submit" class="ex-primary" id="exSave">Lưu khoản chi</button>
+        <button type="button" class="ex-secondary" id="exCancel" hidden>Hủy sửa</button>
       </div>
       <div id="exPartsWrap" hidden>
-        <div class="ex-hint" id="exModeHint">Bỏ tick người không tham gia khoản này.</div>
+        <div class="ex-hint" id="exModeHint">Bỏ tick người không tham gia. Số tiền chia đều cho những người được chọn.</div>
         <div id="exParts" class="ex-parts"></div>
         <div class="ex-row ex-mini">
           <button type="button" class="ex-link" id="exAll">Chọn tất cả</button>
@@ -1202,10 +1262,6 @@
         </div>
       </div>
       <div class="ex-err" id="exErr" role="alert"></div>
-      <div class="ex-row">
-        <button type="submit" class="ex-primary" id="exSave">Lưu khoản chi</button>
-        <button type="button" class="ex-secondary" id="exCancel" hidden>Hủy sửa</button>
-      </div>
     </form>
   </div>
 
@@ -1258,6 +1314,9 @@
     <div class="ex-pager" id="exPager" hidden></div>
   </div>
 
+  <div class="ex-lb" id="exLb" role="dialog" aria-modal="true" aria-label="Ảnh hóa đơn" hidden>
+    <div class="ex-lbbox"><img id="exLbImg" alt="Ảnh hóa đơn"><div id="exLbMsg" class="ex-lbmsg"></div><button type="button" class="ex-primary" id="exLbClose">Đóng</button></div>
+  </div>
   <div class="ex-dlg" id="exDlg" role="alertdialog" aria-modal="true" aria-labelledby="exDlgText" hidden>
     <div class="ex-dlgbox">
       <p id="exDlgText"></p>
@@ -1270,6 +1329,48 @@
   </section>
 
   <section class="tab-panel" id="tab-luuy" role="tabpanel" aria-labelledby="btn-luuy">
+  <div class="day" id="amap">
+    <h2>Tên địa điểm để tìm trên Amap (高德地图)</h2>
+    <p class="food-note">Bấm vào chữ Hán để sao chép rồi dán vào Amap, hoặc đưa màn hình cho tài xế taxi. Nếu trình duyệt không cho tự sao chép, chữ sẽ được chọn sẵn, bạn bấm Sao chép trên điện thoại. Tìm bằng chữ Hán chính xác hơn pinyin.</p>
+    <div class="table-scroll">
+    <table class="summary amap-table">
+      <tr><th>Địa điểm</th><th>Hán tự (bấm để chép)</th><th>Pinyin</th></tr>
+      <tr class="grp"><td colspan="3">Sân bay và ga tàu</td></tr>
+      <tr><td>Sân bay Quý Dương Longdongbao (KWE)</td><td class="han" tabindex="0" role="button" data-copy="贵阳龙洞堡国际机场" title="Bấm để sao chép"><span class="hz">贵阳龙洞堡国际机场</span></td><td class="amap-py">Guìyáng Lóngdòngbǎo Guójì Jīchǎng</td></tr>
+      <tr><td>Ga Quý Dương Bắc (tàu cao tốc)</td><td class="han" tabindex="0" role="button" data-copy="贵阳北站" title="Bấm để sao chép"><span class="hz">贵阳北站</span></td><td class="amap-py">Guìyáng Běi Zhàn</td></tr>
+      <tr><td>Ga Anshun West (An Thuận Tây)</td><td class="han" tabindex="0" role="button" data-copy="安顺西站" title="Bấm để sao chép"><span class="hz">安顺西站</span></td><td class="amap-py">Ānshùn Xī Zhàn</td></tr>
+      <tr><td>Ga Libo</td><td class="han" tabindex="0" role="button" data-copy="荔波站" title="Bấm để sao chép"><span class="hz">荔波站</span></td><td class="amap-py">Lìbō Zhàn</td></tr>
+      <tr><td>Ga Kaili South (Khải Lý Nam)</td><td class="han" tabindex="0" role="button" data-copy="凯里南站" title="Bấm để sao chép"><span class="hz">凯里南站</span></td><td class="amap-py">Kǎilǐ Nán Zhàn</td></tr>
+      <tr class="grp"><td colspan="3">Khách sạn</td></tr>
+      <tr><td>Yibon International Hotel (Quý Dương)</td><td class="han" tabindex="0" role="button" data-copy="逸柏国际酒店(贵阳喷水池国贸广场店)" title="Bấm để sao chép"><span class="hz">逸柏国际酒店(贵阳喷水池国贸广场店)</span></td><td class="amap-py">Yìbǎi Guójì Jiǔdiàn (Guìyáng Pēnshuǐchí Guómào Guǎngchǎng Diàn)</td></tr>
+      <tr><td>First Seeing Panorama Hotel (Tây Giang)</td><td class="han" tabindex="0" role="button" data-copy="初见全景·村上画框美宿(西江千户苗寨观景台店)" title="Bấm để sao chép"><span class="hz">初见全景·村上画框美宿(西江千户苗寨观景台店)</span></td><td class="amap-py">Chūjiàn Quánjǐng · Cūnshàng Huàkuàng Měisù (Xījiāng Qiānhù Miáozhài Guānjǐngtái Diàn)</td></tr>
+      <tr class="grp"><td colspan="3">Day 1 · Quý Dương</td></tr>
+      <tr><td>Minsheng Road (phố ẩm thực)<div class="amap-note">Nếu ra nhiều kết quả, thêm 贵阳 ở đầu</div></td><td class="han" tabindex="0" role="button" data-copy="民生路" title="Bấm để sao chép"><span class="hz">民生路</span></td><td class="amap-py">Mínshēng Lù</td></tr>
+      <tr><td>Qingyun Market</td><td class="han" tabindex="0" role="button" data-copy="青云市集" title="Bấm để sao chép"><span class="hz">青云市集</span></td><td class="amap-py">Qīngyún Shìjí</td></tr>
+      <tr><td>Jiaxiu Tower</td><td class="han" tabindex="0" role="button" data-copy="甲秀楼" title="Bấm để sao chép"><span class="hz">甲秀楼</span></td><td class="amap-py">Jiǎxiù Lóu</td></tr>
+      <tr class="grp"><td colspan="3">Day 2 · Hoàng Quả Thụ (An Thuận)</td></tr>
+      <tr><td>Khu Hoàng Quả Thụ<div class="amap-note">Trên Amap chọn điểm cổng hoặc trung tâm du khách</div></td><td class="han" tabindex="0" role="button" data-copy="黄果树瀑布景区" title="Bấm để sao chép"><span class="hz">黄果树瀑布景区</span></td><td class="amap-py">Huángguǒshù Pùbù Jǐngqū</td></tr>
+      <tr><td>Đại thác Hoàng Quả Thụ</td><td class="han" tabindex="0" role="button" data-copy="黄果树大瀑布" title="Bấm để sao chép"><span class="hz">黄果树大瀑布</span></td><td class="amap-py">Huángguǒshù Dà Pùbù</td></tr>
+      <tr><td>Hang Thủy Liêm</td><td class="han" tabindex="0" role="button" data-copy="水帘洞" title="Bấm để sao chép"><span class="hz">水帘洞</span></td><td class="amap-py">Shuǐlián Dòng</td></tr>
+      <tr><td>Doupotang</td><td class="han" tabindex="0" role="button" data-copy="陡坡塘瀑布" title="Bấm để sao chép"><span class="hz">陡坡塘瀑布</span></td><td class="amap-py">Dǒupōtáng Pùbù</td></tr>
+      <tr><td>Tianxing Bridge</td><td class="han" tabindex="0" role="button" data-copy="天星桥景区" title="Bấm để sao chép"><span class="hz">天星桥景区</span></td><td class="amap-py">Tiānxīngqiáo Jǐngqū</td></tr>
+      <tr class="grp"><td colspan="3">Day 3 · Xiaoqikong (Libo)</td></tr>
+      <tr><td>Khu Xiaoqikong<div class="amap-note">Cổng Tây 西门 (xīmén), cổng Đông 东门 (dōngmén)</div></td><td class="han" tabindex="0" role="button" data-copy="荔波小七孔景区" title="Bấm để sao chép"><span class="hz">荔波小七孔景区</span></td><td class="amap-py">Lìbō Xiǎoqīkǒng Jǐngqū</td></tr>
+      <tr><td>Wolong Lake</td><td class="han" tabindex="0" role="button" data-copy="卧龙潭" title="Bấm để sao chép"><span class="hz">卧龙潭</span></td><td class="amap-py">Wòlóng Tán</td></tr>
+      <tr><td>Cuigu Waterfall</td><td class="han" tabindex="0" role="button" data-copy="翠谷瀑布" title="Bấm để sao chép"><span class="hz">翠谷瀑布</span></td><td class="amap-py">Cuìgǔ Pùbù</td></tr>
+      <tr><td>Cầu cổ Xiaoqikong</td><td class="han" tabindex="0" role="button" data-copy="小七孔古桥" title="Bấm để sao chép"><span class="hz">小七孔古桥</span></td><td class="amap-py">Xiǎoqīkǒng Gǔqiáo</td></tr>
+      <tr class="grp"><td colspan="3">Day 4–5 · Tây Giang</td></tr>
+      <tr><td>Làng Miêu Tây Giang</td><td class="han" tabindex="0" role="button" data-copy="西江千户苗寨" title="Bấm để sao chép"><span class="hz">西江千户苗寨</span></td><td class="amap-py">Xījiāng Qiānhù Miáozhài</td></tr>
+      <tr><td>Cổng Bắc Tây Giang</td><td class="han" tabindex="0" role="button" data-copy="西江千户苗寨北门" title="Bấm để sao chép"><span class="hz">西江千户苗寨北门</span></td><td class="amap-py">Xījiāng Qiānhù Miáozhài Běi Mén</td></tr>
+      <tr><td>Cổng Tây Tây Giang</td><td class="han" tabindex="0" role="button" data-copy="西江千户苗寨景区西门" title="Bấm để sao chép"><span class="hz">西江千户苗寨景区西门</span></td><td class="amap-py">Xījiāng Qiānhù Miáozhài Jǐngqū Xī Mén</td></tr>
+      <tr><td>Đài quan sát (gần khách sạn)</td><td class="han" tabindex="0" role="button" data-copy="西江千户苗寨观景台" title="Bấm để sao chép"><span class="hz">西江千户苗寨观景台</span></td><td class="amap-py">Xījiāng Qiānhù Miáozhài Guānjǐngtái</td></tr>
+      <tr><td>Quảng trường Lusheng</td><td class="han" tabindex="0" role="button" data-copy="芦笙场" title="Bấm để sao chép"><span class="hz">芦笙场</span></td><td class="amap-py">Lúshēng Chǎng</td></tr>
+      <tr><td>Bảo tàng Miêu Tây Giang</td><td class="han" tabindex="0" role="button" data-copy="西江苗族博物馆" title="Bấm để sao chép"><span class="hz">西江苗族博物馆</span></td><td class="amap-py">Xījiāng Miáozú Bówùguǎn</td></tr>
+      <tr><td>Cầu Fengyu số 1</td><td class="han" tabindex="0" role="button" data-copy="西江一号风雨桥" title="Bấm để sao chép"><span class="hz">西江一号风雨桥</span></td><td class="amap-py">Xījiāng Yī Hào Fēngyǔ Qiáo</td></tr>
+    </table>
+    </div>
+  </div>
+
   <div class="day" id="notes">
     <h2>Khách sạn</h2>
     <div class="table-scroll">
@@ -1284,7 +1385,7 @@
     <ul style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;padding-left:20px;margin:6px 0 0;">
       <li>6 chặng tàu cao tốc (Quý Dương Bắc ↔ Anshun West, Libo, Kaili South), mở bán khoảng 15 ngày trước ngày đi.</li>
       <li>Vé khu Hoàng Quả Thụ (đặt trước 1–15 ngày) và hang Thủy Liêm (mã QR).</li>
-      <li>Vé vào khu Tây Giang, xe đón từ Kaili South, tiệc bàn dài và xe 08:00 sáng 24/11.</li>
+      <li>Vé vào khu Tây Giang, xe đón từ Kaili South và xe 08:00 sáng 24/11.</li>
       <li>Gửi vali tại Yibon Hotel từ 23/11 đến 24/11.</li>
     </ul>
 
@@ -1299,6 +1400,45 @@
       <li>Bảo tàng Quý Châu cần mang giấy tờ tùy thân và đặt trước — thứ Hai đóng cửa.</li>
       <li>Quý Châu nhiều núi, đường lên xuống dốc liên tục — giày thoải mái, chống trượt quan trọng hơn giày đẹp.</li>
     </ol>
+    <h2 style="margin-top:26px;">Vé tàu cao tốc</h2>
+    <p class="food-note">Vé mở bán trước 15 ngày (tính cả ngày đi) và mua được đến khoảng 30 phút trước giờ tàu chạy. Cả 6 chặng dưới đây đã mở bán, không bị khóa. Giờ đi là giờ dự kiến theo lịch, giờ thật bạn chọn theo lịch tàu khi đặt.</p>
+    <div class="table-scroll">
+    <table class="summary">
+      <tr><th>Ngày</th><th>Chặng</th><th>Giờ đi dự kiến</th><th>Mở bán từ</th></tr>
+      <tr><td>21/11</td><td>Quý Dương Bắc → Anshun West</td><td>~07:30, đến ~08:10</td><td>07/11</td></tr>
+      <tr><td>21/11</td><td>Anshun West → Quý Dương Bắc</td><td>~17:30, đến ~18:10</td><td>07/11</td></tr>
+      <tr><td>22/11</td><td>Quý Dương Bắc → Libo</td><td>~06:00–06:30, đến ~07:30</td><td>08/11</td></tr>
+      <tr><td>22/11</td><td>Libo → Quý Dương Bắc</td><td>~18:30–19:30</td><td>08/11</td></tr>
+      <tr><td>23/11</td><td>Quý Dương Bắc → Kaili South</td><td>~08:30, đến ~09:10</td><td>09/11</td></tr>
+      <tr><td>24/11</td><td>Kaili South → Quý Dương Bắc</td><td>~10:00, đến ~10:45</td><td>10/11</td></tr>
+    </table>
+    </div>
+    <ul style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;padding-left:20px;margin:8px 0 0;">
+      <li>Mua được trên Trip.com. Phí dịch vụ khoảng 20–40 tệ mỗi vé (mỗi nguồn ghi một khác).</li>
+      <li>Khi đặt chọn đúng ga Guiyangbei (Quý Dương Bắc), không chọn ga Guiyang hay Guiyang East.</li>
+      <li>Hộ chiếu dùng để đặt chính là vé: mang bản gốc, không dùng ảnh chụp.</li>
+      <li>Hủy hoặc đổi: Trip.com không thu phí xử lý nếu hủy trước giờ chạy ít nhất 8 ngày. Mua trong tuần này thì các chặng đều nằm trong vòng 8 ngày, có thể mất phí.</li>
+      <li>Lịch tàu tham khảo: Quý Dương Bắc → Libo có tàu từ khoảng 06:10 (đến 07:30). Quý Dương Bắc → Kaili South có tàu từ khoảng 06:52, mất khoảng 38 phút. Chiều về Libo nên xem kỹ chuyến 18:30–19:30.</li>
+    </ul>
+
+    <h2 style="margin-top:26px;">Vé tham quan</h2>
+    <p class="food-note">Giá và quy định lấy từ Trip.com và các trang du lịch, có thể thay đổi nên kiểm tra lại khi đặt. Vé theo tên thật thì mang hộ chiếu gốc.</p>
+    <div class="table-scroll">
+    <table class="summary">
+      <tr><th>Điểm (ngày)</th><th>Cần đặt trước?</th><th>Giá tham khảo</th><th>Trip.com</th></tr>
+      <tr><td><b>Hoàng Quả Thụ</b><br>21/11</td><td>Bắt buộc, theo tên thật và khung giờ. Đặt tối đa 15 ngày, tối thiểu 1 ngày trước, hạn chót nửa đêm hôm trước.</td><td>~160 tệ + xe nội khu 50 tệ (mùa cao điểm tháng 3–11)</td><td>Có</td></tr>
+      <tr><td><b>Hang Thủy Liêm</b><br>21/11</td><td>Vào theo khung giờ, giới hạn số người: đặt chỗ ngay sau khi vào khu (qua mã QR).</td><td>Nằm trong vé khu</td><td>Qua vé khu</td></tr>
+      <tr><td><b>Xiaoqikong</b><br>22/11</td><td>Bắt buộc. Trip.com ghi đặt trước 15 ngày.</td><td>~170 tệ gồm xe nội khu (mùa cao điểm tháng 3–11)</td><td>Có</td></tr>
+      <tr><td><b>Tây Giang</b><br>23/11</td><td>Nên mua trước nhưng cũng mua được trong ngày (Trip.com ghi mua được cho hôm nay).</td><td>~90 tệ, gồm 4 lượt shuttle (các nguồn ghi 65–110 tệ)</td><td>Có</td></tr>
+    </table>
+    </div>
+    <ul style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;padding-left:20px;margin:8px 0 0;">
+      <li>Không cần vé: Minsheng Road, Qingyun Market, Jiaxiu Tower (chụp ngoài trời; vé vào bên trong lầu chưa xác minh).</li>
+      <li>Kiểm tra thông báo trên trang Trip.com của Hoàng Quả Thụ trước khi đặt: trang ghi cáp treo Thiên Tinh Kiều tạm dừng, khu hang Thiên Tinh đóng và hang Thủy Liêm giới hạn số người. Lịch Day 2 có hang Thiên Tinh và cáp treo.</li>
+      <li>Kiểm tra thông báo của Xiaoqikong: Trip.com ghi khu Water Forest tạm đóng. Lịch Day 3 có Water Forest.</li>
+      <li>Mình chưa biết các thông báo trên còn hiệu lực đến ngày đi không.</li>
+    </ul>
+
   </div>
   </section>
 
@@ -1317,7 +1457,6 @@
       t.setAttribute('aria-selected', on ? 'true' : 'false');
     });
     if (!found) return false;
-    var wrapEl = document.querySelector('.wrap'); if (wrapEl) wrapEl.classList.toggle('wide', key === 'chitieu');
     panels.forEach(function (p) { p.classList.toggle('active', p.id === 'tab-' + key); });
     if (scroll) {
       var bar = document.querySelector('.tabbar');
@@ -1453,6 +1592,7 @@
   var CAT_COLORS = ['#b5502e', '#2f6f9f', '#6b5a94', '#3f6b5a', '#b9822a', '#7a7f85'];
   var memoryOnly = false;
   var state = load();
+  if (!state.pendingRcpt) state.pendingRcpt = [];
   var editingId = null;
   var cur = 'VND';
   var mode = 'equal';
@@ -1645,6 +1785,200 @@
     hint.textContent = (cur === 'CNY' ? fmtCNY(amt) + ' ≈ ' : '= ') + fmtVND(total) + (even ? '  ·  mỗi người ' + fmtVND(total / names.length) + (names.length < MEMBERS.length ? ' (' + names.length + ' người)' : '') : '');
   }
 
+  /* ---------- ảnh hóa đơn ---------- */
+  var rcptMem = {}, idbP = null, idbTried = false;
+  var rcpt = { id: null, data: null, isNew: false };
+  var sampleFn = null, compressFn = null;
+  var MAX_DATA_CHARS = 190000;
+  function idbOpen() {
+    return new Promise(function (res) {
+      if (!window.indexedDB) { res(null); return; }
+      try {
+        var rq = window.indexedDB.open('qc_receipts_v1', 1);
+        rq.onupgradeneeded = function () { rq.result.createObjectStore('receipts', { keyPath: 'id' }); };
+        rq.onsuccess = function () { res(rq.result); };
+        rq.onerror = function () { res(null); };
+        rq.onblocked = function () { res(null); };
+      } catch (e) { res(null); }
+    });
+  }
+  function idbDB() { if (!idbTried) { idbTried = true; idbP = idbOpen(); } return idbP; }
+  function rcptPut(id, data) {
+    rcptMem[id] = data;
+    return idbDB().then(function (db) {
+      if (!db) return;
+      return new Promise(function (res) {
+        try { var tx = db.transaction('receipts', 'readwrite'); tx.objectStore('receipts').put({ id: id, data: data }); tx.oncomplete = res; tx.onerror = res; tx.onabort = res; } catch (e) { res(); }
+      });
+    });
+  }
+  function rcptGetLocal(id) {
+    if (rcptMem[id]) return Promise.resolve(rcptMem[id]);
+    return idbDB().then(function (db) {
+      if (!db) return null;
+      return new Promise(function (res) {
+        try {
+          var r = db.transaction('receipts').objectStore('receipts').get(id);
+          r.onsuccess = function () { var v = r.result; if (v && v.data) { rcptMem[id] = v.data; res(v.data); } else res(null); };
+          r.onerror = function () { res(null); };
+        } catch (e) { res(null); }
+      });
+    });
+  }
+  function rcptDelLocal(id) {
+    delete rcptMem[id];
+    return idbDB().then(function (db) {
+      if (!db) return;
+      return new Promise(function (res) { try { var tx = db.transaction('receipts', 'readwrite'); tx.objectStore('receipts').delete(id); tx.oncomplete = res; tx.onerror = res; } catch (e) { res(); } });
+    });
+  }
+  function validRcptData(d) { return typeof d === 'string' && d.length <= 300000 && /^data:image\/jpeg;base64,[A-Za-z0-9+\/=]+$/.test(d); }
+  function validRcptId(i) { return typeof i === 'string' && /^[A-Za-z0-9_.:@+\-]{1,80}$/.test(i); }
+  function rcptGet(id) {
+    return rcptGetLocal(id).then(function (local) {
+      if (local) return local;
+      if (!sync.db) return null;
+      return sync.db.doc('receipts/' + id).get().then(function (snap) {
+        var dd = snap && snap.exists ? snap.data() : null;
+        if (dd && validRcptData(dd.data)) { rcptPut(id, dd.data); return dd.data; }
+        return null;
+      }, function () { return null; });
+    });
+  }
+  function pushReceipt(id) {
+    if (!state.pendingRcpt) state.pendingRcpt = [];
+    if (state.pendingRcpt.indexOf(id) < 0) { state.pendingRcpt.push(id); save(); }
+    flushReceipts();
+  }
+  var rcptRunning = false;
+  function flushReceipts() {
+    if (rcptRunning || !sync.db || !sync.canWrite || !state.pendingRcpt || !state.pendingRcpt.length) return;
+    rcptRunning = true;
+    (function next() {
+      var id = state.pendingRcpt && state.pendingRcpt[0];
+      if (!id) { rcptRunning = false; return; }
+      rcptGetLocal(id).then(function (data) {
+        if (!data) { state.pendingRcpt.shift(); save(); next(); return; }
+        sync.db.doc('receipts/' + id).set({ id: id, data: data, updatedAt: Date.now() }).then(function () { state.pendingRcpt.shift(); save(); next(); }, function (err) {
+          rcptRunning = false;
+          var code = err && err.code;
+          if (code === 'invalid_argument' || code === 'not_granted') { sync.canWrite = false; }
+        });
+      });
+    })();
+  }
+  function cleanupReceipt(id) {
+    if (!id) return;
+    if (state.pendingRcpt) { var k = state.pendingRcpt.indexOf(id); if (k >= 0) { state.pendingRcpt.splice(k, 1); save(); } }
+    rcptDelLocal(id);
+    if (sync.db && sync.canWrite) sync.db.doc('receipts/' + id).delete().then(function () {}, function () {});
+  }
+  function dataUrlToBlob(d) {
+    var m = /^data:([^;]+);base64,(.*)$/.exec(d); if (!m) return null;
+    var bin = atob(m[2]), arr = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    return new Blob([arr], { type: m[1] });
+  }
+  function compressImage(file) {
+    if (compressFn) return compressFn(file);
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () {
+        try {
+          var w0 = img.naturalWidth || img.width, h0 = img.naturalHeight || img.height;
+          if (!w0 || !h0) throw new Error('empty');
+          var scale = Math.min(1, 1280 / Math.max(w0, h0)), q = 0.72, out = null, tries = 0;
+          var c = document.createElement('canvas'), ctx = c.getContext('2d');
+          while (tries < 12) {
+            c.width = Math.max(1, Math.round(w0 * scale)); c.height = Math.max(1, Math.round(h0 * scale));
+            ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height); ctx.drawImage(img, 0, 0, c.width, c.height);
+            out = c.toDataURL('image/jpeg', q);
+            if (out.length <= MAX_DATA_CHARS) break;
+            if (q > 0.45) q -= 0.1; else { scale *= 0.85; q = 0.6; }
+            tries++;
+          }
+          URL.revokeObjectURL(url);
+          if (!out || out.length > MAX_DATA_CHARS) reject(new Error('too_big')); else resolve({ data: out, w: c.width, h: c.height });
+        } catch (e) { URL.revokeObjectURL(url); reject(e); }
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('decode')); };
+      img.src = url;
+    });
+  }
+  function setRcptPreview(data) {
+    var has = !!data;
+    $('exRcptPrev').hidden = !has;
+    if (has) $('exRcptImg').src = data; else $('exRcptImg').removeAttribute('src');
+    $('exRcptRead').hidden = !(sampleFn && rcpt.data);
+    $('exRcptBtn').textContent = has ? 'Đổi ảnh hóa đơn' : 'Ảnh hóa đơn';
+  }
+  function clearRcpt() { rcpt = { id: null, data: null, isNew: false }; setRcptPreview(null); $('exRcptSt').textContent = ''; }
+  function onRcptFile() {
+    var f = $('exRcptFile').files && $('exRcptFile').files[0];
+    if (!f) return;
+    if (!/^image\//.test(f.type || 'image/')) { $('exRcptSt').textContent = 'File này không phải ảnh.'; $('exRcptFile').value = ''; return; }
+    $('exRcptSt').textContent = 'Đang xử lý ảnh...';
+    compressImage(f).then(function (r) {
+      rcpt = { id: 'r' + uid(), data: r.data, isNew: true };
+      setRcptPreview(r.data);
+      $('exRcptSt').textContent = 'Ảnh ' + Math.round(r.data.length * 0.75 / 1024) + ' KB';
+      $('exRcptFile').value = '';
+    }, function () { $('exRcptSt').textContent = 'Không xử lý được ảnh này, hãy thử ảnh khác.'; $('exRcptFile').value = ''; });
+  }
+  function showLightbox(id) {
+    var box = $('exLb'); $('exLbImg').removeAttribute('src'); $('exLbMsg').textContent = 'Đang tải ảnh...'; box.hidden = false; $('exLbClose').focus();
+    rcptGet(id).then(function (d) {
+      if (box.hidden) return;
+      if (d) { $('exLbImg').src = d; $('exLbMsg').textContent = ''; }
+      else $('exLbMsg').textContent = 'Máy này chưa có ảnh. Ảnh sẽ hiện khi máy kết nối đồng bộ với Claude hoặc khi bạn nhập lại dữ liệu có kèm ảnh.';
+    });
+  }
+  function closeLightbox() { $('exLb').hidden = true; $('exLbImg').removeAttribute('src'); }
+  function hydrateThumbs() {
+    Array.prototype.forEach.call($('exList').querySelectorAll('img[data-rid]'), function (img) {
+      var id = img.getAttribute('data-rid');
+      rcptGet(id).then(function (d) {
+        if (d) img.src = d; else { var n = img.parentNode && img.parentNode.querySelector('.rcmiss'); if (n) n.hidden = false; img.hidden = true; }
+      });
+    });
+  }
+  function rcptReadWithClaude() {
+    if (!sampleFn || !rcpt.data) return;
+    var blob = dataUrlToBlob(rcpt.data); if (!blob) return;
+    var st = $('exRcptSt'), btn = $('exRcptRead');
+    btn.disabled = true; st.textContent = 'Claude đang đọc hóa đơn...';
+    var prompt = 'You are reading a photographed receipt or payment screenshot, often in Chinese. Reply with ONLY one JSON object with these keys: ' +
+      '"amount" (number: the final total actually paid, digits only, or null), ' +
+      '"currency" ("CNY" or "VND" or "OTHER", or null), ' +
+      '"date" (string dd/mm/yyyy: the date on the receipt, or null), ' +
+      '"shop" (string: the name of the restaurant or shop exactly as printed, or null). ' +
+      'Use null whenever something is unclear. Do not guess.';
+    sampleFn.json(prompt, { images: [blob], modelTier: 'quick', cache: false }).then(function (r) {
+      btn.disabled = false;
+      if (!r || typeof r !== 'object') { st.textContent = 'Không đọc được hóa đơn. Hãy nhập tay.'; return; }
+      var filled = [];
+      var a = +r.amount;
+      if (a > 0 && isFinite(a)) { $('exAmt').value = String(a); filled.push('số tiền'); }
+      if (r.currency === 'CNY' || r.currency === 'VND') { setCur(r.currency); filled.push('đơn vị'); }
+      if (typeof r.date === 'string' && isFinite(parseDate(r.date))) { $('exTime').value = r.date.replace(/^(\d)\//, '0$1/').replace(/\/(\d)\//, '/0$1/'); filled.push('ngày'); }
+      if (typeof r.shop === 'string' && r.shop.trim() && !$('exNote').value.trim()) { $('exNote').value = r.shop.trim().slice(0, 60); filled.push('tên quán'); }
+      markChips(); preview();
+      st.textContent = filled.length ? 'Đã điền ' + filled.join(', ') + ' từ hóa đơn. Bạn kiểm tra lại trước khi lưu.' : 'Claude không đọc được thông tin nào rõ ràng. Hãy nhập tay.';
+    }, function (e) {
+      btn.disabled = false;
+      var c = e && e.code;
+      st.textContent = c === 'not_granted' ? 'Bạn chưa cho phép Claude đọc ảnh.' : (c === 'rate_limited' ? 'Đang gọi quá nhiều, hãy đợi một lúc rồi thử lại.' : (c === 'images_unavailable' ? 'Nơi xem này không gửi ảnh cho Claude được.' : 'Không đọc được hóa đơn lúc này. Hãy nhập tay.'));
+    });
+  }
+  function initSample() {
+    var c = window.claude;
+    if (!c || typeof c.use !== 'function') return;
+    c.use('sample').then(function (fn) {
+      if (!fn || typeof fn.limits !== 'function') return;
+      fn.limits().then(function (l) { if (l && l.images) { sampleFn = fn; setRcptPreview(rcpt.data); } }, function () {});
+    }, function () {});
+  }
+
   function resetForm(keepTime) {
     editingId = null;
     $('exAmt').value = ''; $('exNote').value = ''; $('exErr').textContent = '';
@@ -1655,6 +1989,7 @@
     Array.prototype.forEach.call($('exParts').querySelectorAll('.ex-w'), function (w) { w.value = '1'; });
     setCur('VND'); setMode('equal');
     $('exFormTitle').textContent = 'Thêm khoản chi'; $('exSave').textContent = 'Lưu khoản chi'; $('exCancel').hidden = true;
+    clearRcpt();
   }
   resetForm();
 
@@ -1781,6 +2116,7 @@
       var d = new Date(e.ts);
       btn.appendChild(el('span', 'rd', pad(d.getDate()) + '/' + pad(d.getMonth() + 1)));
       btn.appendChild(el('span', 'rn', e.type === 'settle' ? 'Thanh toán: ' + e.from + ' → ' + e.to : (e.note || e.cat)));
+      if (e.receipt) { var bg = el('span', 'rcb', 'Ảnh'); bg.title = 'Có ảnh hóa đơn'; btn.appendChild(bg); }
       btn.appendChild(el('span', 'ra', e.type === 'settle' ? fmtVND(e.amount) : (e.cur === 'CNY' ? fmtCNY(e.amount) : fmtVND(e.amount))));
       btn.appendChild(el('span', 'rc', '▾'));
       it.appendChild(btn);
@@ -1792,6 +2128,12 @@
           det.appendChild(el('div', 'meta', e.cat + ' · ' + e.payer + ' trả · ' + partsText(e)));
           if (e.cur === 'CNY') det.appendChild(el('div', 'meta', '≈ ' + fmtVND(vndOf(e)) + ' (tỷ giá ' + rateOf(e).toLocaleString('vi-VN') + ')'));
         }
+        if (e.receipt) {
+          var rc = el('div', 'rcthumb'); var im = el('img'); im.setAttribute('data-rid', e.receipt); im.alt = 'Ảnh hóa đơn';
+          var miss = el('span', 'rcmiss', 'Máy này chưa có ảnh.'); miss.hidden = true;
+          var vb = el('button', null, 'Xem ảnh lớn'); vb.type = 'button'; vb.setAttribute('data-rcpt', e.receipt);
+          rc.appendChild(im); rc.appendChild(miss); rc.appendChild(vb); det.appendChild(rc);
+        }
         var acts = el('div', 'acts');
         if (e.type !== 'settle') { var eb = el('button', null, 'Sửa'); eb.type = 'button'; eb.setAttribute('data-edit', e.id); acts.appendChild(eb); }
         var db = el('button', null, 'Xóa'); db.type = 'button'; db.setAttribute('data-del', e.id); acts.appendChild(db);
@@ -1799,6 +2141,7 @@
       }
       box.appendChild(it);
     });
+    hydrateThumbs();
   }
   function renderBackup() {
     var n = active().length, s = n + ' khoản đang lưu trên máy này.';
@@ -1829,12 +2172,16 @@
     var obj = {
       type: 'expense', ts: ts, amount: cur === 'VND' ? Math.round(amt) : Math.round(amt * 100) / 100, cur: cur, rate: rate,
       payer: $('exPayer').value, cat: $('exCat').value, note: $('exNote').value.trim(), mode: mode, parts: parts,
+      receipt: rcpt.id || null,
       createdAt: old ? (old.createdAt || old.ts) : Date.now(), updatedAt: Date.now(), deleted: false
     };
+    var prevRcpt = old ? old.receipt : null;
     var ratedChanged = false;
     if (cur === 'CNY' && obj.rate !== state.settings.rate) { state.settings.rate = obj.rate; state.settings.rateUpdated = Date.now(); ratedChanged = true; }
     if (old) { obj.id = old.id; state.expenses[state.expenses.indexOf(old)] = obj; }
     else { obj.id = uid(); state.expenses.push(obj); }
+    if (rcpt.isNew && rcpt.data) { rcptPut(rcpt.id, rcpt.data); pushReceipt(rcpt.id); }
+    if (prevRcpt && prevRcpt !== obj.receipt) cleanupReceipt(prevRcpt);
     save(); listPage = 1; resetForm(true); render();
     enqueue([obj.id]); if (ratedChanged) pushSettings();
     msg('Đã lưu khoản chi.');
@@ -1853,6 +2200,13 @@
     var someoneOut = MEMBERS.some(function (n) { return !(e.parts && e.parts[n] > 0); });
     setCur(e.cur); setMode((e.mode === 'ratio' || someoneOut) ? 'ratio' : 'equal');
     (function () { var ws = MEMBERS.filter(function (n) { return e.parts && e.parts[n] > 0; }).map(function (n) { return e.parts[n]; }); if (ws.some(function (w) { return w !== ws[0]; })) $('exModeHint').textContent = 'Khoản này đang chia theo tỉ lệ ' + MEMBERS.filter(function (n) { return e.parts[n] > 0; }).map(function (n) { return n + ' ' + e.parts[n]; }).join(' : ') + ', được giữ nguyên.'; })();
+    clearRcpt();
+    if (e.receipt) {
+      rcpt = { id: e.receipt, data: null, isNew: false }; $('exRcptSt').textContent = 'Đang tải ảnh...';
+      rcptGet(e.receipt).then(function (d) {
+        if (editingId === e.id && rcpt.id === e.receipt) { rcpt.data = d; setRcptPreview(d); $('exRcptSt').textContent = d ? '' : 'Máy này chưa có ảnh, ảnh vẫn được giữ cho khoản chi.'; }
+      });
+    }
     $('exFormTitle').textContent = 'Sửa khoản chi'; $('exSave').textContent = 'Cập nhật'; $('exCancel').hidden = false;
     var fcard = $('exFormCard'); if (fcard.scrollIntoView) fcard.scrollIntoView({ block: 'start' });
   }
@@ -1881,6 +2235,14 @@
   function exportText() {
     return JSON.stringify({ app: 'quychau-chitieu', v: 1, exportedAt: Date.now(), settings: { rate: state.settings.rate, rateUpdated: state.settings.rateUpdated }, expenses: state.expenses });
   }
+  function exportTextAsync(withR) {
+    return new Promise(function (resolve) {
+      var o = { app: 'quychau-chitieu', v: 1, exportedAt: Date.now(), settings: { rate: state.settings.rate, rateUpdated: state.settings.rateUpdated }, expenses: state.expenses };
+      if (!withR) { resolve(JSON.stringify(o)); return; }
+      var ids = state.expenses.filter(function (e) { return !e.deleted && e.receipt; }).map(function (e) { return e.receipt; }), out = {};
+      Promise.all(ids.map(function (id) { return rcptGetLocal(id).then(function (d) { if (d) out[id] = d; }); })).then(function () { o.receipts = out; resolve(JSON.stringify(o)); });
+    });
+  }
   function markExported() { state.settings.lastExport = Date.now(); save(); renderBackup(); }
   function validExp(e) {
     if (!e || typeof e.id !== 'string' || !isFinite(e.ts) || !isFinite(e.updatedAt)) return false;
@@ -1892,7 +2254,7 @@
   function sanitize(inc) {
     if (!validExp(inc)) return null;
     var clean = { id: inc.id, type: inc.type, ts: +inc.ts, amount: +inc.amount, cur: inc.cur === 'CNY' ? 'CNY' : 'VND', rate: +inc.rate > 0 ? +inc.rate : 1, payer: inc.payer, cat: CATS.indexOf(inc.cat) >= 0 ? inc.cat : 'Khác',
-      note: String(inc.note || '').slice(0, 120), mode: inc.mode === 'ratio' ? 'ratio' : 'equal', parts: {}, from: inc.from, to: inc.to, createdAt: +inc.createdAt || +inc.ts, updatedAt: +inc.updatedAt, deleted: !!inc.deleted };
+      note: String(inc.note || '').slice(0, 120), receipt: validRcptId(inc.receipt) ? inc.receipt : null, mode: inc.mode === 'ratio' ? 'ratio' : 'equal', parts: {}, from: inc.from, to: inc.to, createdAt: +inc.createdAt || +inc.ts, updatedAt: +inc.updatedAt, deleted: !!inc.deleted };
     if (inc.parts) MEMBERS.forEach(function (n) { if (inc.parts[n] > 0) clean.parts[n] = +inc.parts[n]; });
     return clean;
   }
@@ -1924,13 +2286,16 @@
     if (Array.isArray(o)) o = { app: 'quychau-chitieu', expenses: o };
     if (!o || typeof o !== 'object' || !Array.isArray(o.expenses)) return { err: 'Nội dung không có danh sách khoản chi (thiếu mục "expenses"). Hãy dùng đúng dữ liệu lấy từ trang này.' };
     if (o.app !== 'quychau-chitieu') return { err: 'Đây không phải dữ liệu chi tiêu của chuyến đi này (thiếu dấu nhận diện quychau-chitieu).' };
-    var res = { added: 0, updated: 0, restored: 0, skipped: 0, same: 0, total: o.expenses.length, reasons: [] }, changed = [];
+    var res = { added: 0, updated: 0, restored: 0, receipts: 0, skipped: 0, same: 0, total: o.expenses.length, reasons: [] }, changed = [];
     o.expenses.forEach(function (inc) {
       var r = mergeOne(inc, true);
       res[r]++;
       if (r === 'skipped') { var w = whyInvalid(inc); if (res.reasons.indexOf(w) < 0 && res.reasons.length < 3) res.reasons.push(w); }
       if (r === 'added' || r === 'updated' || r === 'restored') changed.push(inc.id);
     });
+    var rn = 0;
+    if (o.receipts && typeof o.receipts === 'object') Object.keys(o.receipts).forEach(function (id) { if (validRcptId(id) && validRcptData(o.receipts[id])) { rcptPut(id, o.receipts[id]); pushReceipt(id); rn++; } });
+    res.receipts = rn;
     var rs = o.settings;
     if (rs && +rs.rate > 0 && +rs.rateUpdated > state.settings.rateUpdated) { state.settings.rate = +rs.rate; state.settings.rateUpdated = +rs.rateUpdated; pushSettings(); }
     save(); render(); enqueue(changed);
@@ -1942,12 +2307,14 @@
     var bad = r.skipped ? ', ' + r.skipped + ' mục lỗi bị bỏ qua (' + r.reasons.join('; ') + ')' : '';
     if (!r.total) { msg(from + 'file không có khoản chi nào.', true); return; }
     if (!r.added && !r.updated && !r.restored && r.skipped === r.total) { msg(from + 'không nhập được khoản nào, cả ' + r.skipped + ' mục đều bị bỏ qua (' + r.reasons.join('; ') + ').', true); return; }
+    if (!r.added && !r.updated && !r.restored && r.receipts) { msg(from + 'không có khoản mới, đã nhập thêm ' + r.receipts + ' ảnh hóa đơn.'); return; }
     if (!r.added && !r.updated && !r.restored) { msg(from + 'không có khoản mới. Cả ' + r.same + ' khoản trong file đã có sẵn và đang hiển thị trên máy này' + bad + '.'); return; }
     var parts = [];
     if (r.added) parts.push('thêm ' + r.added);
     if (r.restored) parts.push('khôi phục ' + r.restored + ' khoản đã bị xóa trước đó');
     if (r.updated) parts.push('cập nhật ' + r.updated);
     if (r.same) parts.push('giữ nguyên ' + r.same);
+    if (r.receipts) parts.push('nhập ' + r.receipts + ' ảnh hóa đơn');
     msg(from + 'đã gộp: ' + parts.join(', ') + bad + '.');
   }
 
@@ -2008,7 +2375,7 @@
     if (!snap.metadata.fromCache) {
       sync.got = true; clearTimeout(sync.timer);
       if (sync.canWrite) setSync('on', 'Đã đồng bộ qua Claude. Khoản chi tự cập nhật giữa các máy mở cùng link này.');
-      setTimeout(pushMissing, 0);
+      setTimeout(pushMissing, 0); setTimeout(flushReceipts, 60);
     }
     if (changed) { save(); render(); }
   }
@@ -2074,7 +2441,9 @@
   $('exCancel').addEventListener('click', function () { resetForm(); });
   ['exFDay', 'exFCat', 'exFPayer'].forEach(function (id) { $(id).addEventListener('change', function () { listPage = 1; renderList(); }); });
   $('exList').addEventListener('click', function (e) {
+    var im = e.target.closest && e.target.closest('img[data-rid]'); if (im) { showLightbox(im.getAttribute('data-rid')); return; }
     var b = e.target.closest('button'); if (!b) return;
+    if (b.hasAttribute('data-rcpt')) { showLightbox(b.getAttribute('data-rcpt')); return; }
     if (b.hasAttribute('data-toggle')) { var id = b.getAttribute('data-toggle'); if (openIds[id]) delete openIds[id]; else openIds[id] = true; renderList(); }
     else if (b.hasAttribute('data-edit')) startEdit(b.getAttribute('data-edit'));
     else if (b.hasAttribute('data-del')) delExpense(b.getAttribute('data-del'));
@@ -2094,7 +2463,8 @@
     var b = e.target.closest('button'); if (b && b.hasAttribute('data-from')) addSettle(b.getAttribute('data-from'), b.getAttribute('data-to'), parseInt(b.getAttribute('data-amt'), 10));
   });
   $('exDownload').addEventListener('click', function () {
-    var text = exportText(), fname = 'chi-tieu-quy-chau.json';
+    exportTextAsync(true).then(function (text) {
+    var fname = 'chi-tieu-quy-chau.json';
     function viaAnchor() {
       try {
         var blob = new Blob([text], { type: 'application/json' }); var url = URL.createObjectURL(blob);
@@ -2112,6 +2482,7 @@
         });
       }, function () { msg('Không tải được file ở nơi này.', true); });
     } else viaAnchor();
+    });
   });
   $('exImport').addEventListener('click', function () {
     var t = $('exIO').value.trim();
@@ -2156,6 +2527,14 @@
       save(); listPage = 1; render(); enqueue(ids); msg('Đã khôi phục ' + ids.length + ' khoản.');
     });
   });
+  $('exRcptFile').addEventListener('change', onRcptFile);
+  $('exRcptBtn').addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); $('exRcptFile').click(); } });
+  $('exRcptDel').addEventListener('click', function () { clearRcpt(); $('exRcptSt').textContent = 'Đã bỏ ảnh. Bấm Lưu để áp dụng.'; });
+  $('exRcptImg').addEventListener('click', function () { if (rcpt.data) { $('exLbImg').src = rcpt.data; $('exLbMsg').textContent = ''; $('exLb').hidden = false; $('exLbClose').focus(); } });
+  $('exRcptRead').addEventListener('click', rcptReadWithClaude);
+  $('exLbClose').addEventListener('click', closeLightbox);
+  $('exLb').addEventListener('click', function (e) { if (e.target === $('exLb')) closeLightbox(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('exLb').hidden) closeLightbox(); });
   $('exDlgYes').addEventListener('click', function () { var f = dlgYes; closeDlg(); if (f) f(); });
   $('exDlgNo').addEventListener('click', closeDlg);
   $('exDlg').addEventListener('click', function (e) { if (e.target === $('exDlg')) closeDlg(); });
@@ -2163,8 +2542,33 @@
 
   syncParts(); markChips();
   initSync();
-  window.__qcEx = { parseDate: parseDate, dateInput: dateInput, parseNum: parseNum, allocate: allocate, compute: compute, suggest: suggest, mergeText: mergeText, exportText: exportText, state: function () { return state; } };
+  initSample();
+  window.__qcEx = { setCompress: function (f) { compressFn = f; }, rcptGetLocal: rcptGetLocal, exportTextAsync: exportTextAsync, rcptState: function () { return rcpt; }, parseDate: parseDate, dateInput: dateInput, parseNum: parseNum, allocate: allocate, compute: compute, suggest: suggest, mergeText: mergeText, exportText: exportText, state: function () { return state; } };
   render();
+})();
+</script>
+<div id="cpToast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  var toast = document.getElementById('cpToast'), timer = null;
+  function say(t) { toast.textContent = t; toast.classList.add('show'); clearTimeout(timer); timer = setTimeout(function () { toast.classList.remove('show'); }, 2200); }
+  function selectCell(cell) {
+    try { var r = document.createRange(); r.selectNodeContents(cell); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); return true; } catch (e) { return false; }
+  }
+  function handle(cell) {
+    var text = cell.getAttribute('data-copy') || cell.textContent.trim();
+    function fallback() {
+      selectCell(cell);
+      var ok = false;
+      try { ok = document.execCommand && document.execCommand('copy'); } catch (e) { ok = false; }
+      say(ok ? 'Đã sao chép: ' + text : 'Đã chọn chữ, hãy bấm Sao chép');
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { selectCell(cell); say('Đã sao chép: ' + text); }, fallback);
+    } else fallback();
+  }
+  document.addEventListener('click', function (e) { var c = e.target.closest && e.target.closest('td.han'); if (c) handle(c); });
+  document.addEventListener('keydown', function (e) { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('han')) { e.preventDefault(); handle(e.target); } });
 })();
 </script>
 </body>
